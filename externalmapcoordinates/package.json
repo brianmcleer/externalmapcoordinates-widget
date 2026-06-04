@@ -1,0 +1,26 @@
+{
+  "name": "externalmapcoordinates",
+  "version": "1.11.0",
+  "description": "ArcGIS Experience Builder widget that displays the latitude/longitude, scale, and zoom of the current map view, with configurable one-click links to Pictometry, Google Street View, Google Maps 3D, Bing Satellite, Bing Streetside, and a copy-coordinates button.",
+  "keywords": [
+    "exb-widget",
+    "experience-builder",
+    "exb",
+    "arcgis",
+    "coordinates",
+    "latitude-longitude",
+    "pictometry",
+    "google-street-view",
+    "google-maps-3d",
+    "bing-maps"
+  ],
+  "license": "Apache-2.0",
+  "author": "Brian McLeer",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/brianmcleer/externalmapcoordinates-widget"
+  },
+  "bugs": {
+    "url": "https://github.com/brianmcleer/externalmapcoordinates-widget/issues"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "showScale": true,
+  "showZoom": true,
+  "showPictometry": true,
+  "showGoogleStreetView": true,
+  "showGoogleMaps3D": true,
+  "showBingSatellite": true,
+  "showBingStreetside": true,
+  "showCopyButton": true,
+  "pictometryBaseUrl": ""
+}
