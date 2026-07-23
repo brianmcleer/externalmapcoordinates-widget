@@ -1,3 +1,5 @@
+/// <reference path="../emotion-jsx-runtime.d.ts" />
+
 import { React, AllWidgetProps, jsx, loadArcGISJSAPIModules } from 'jimu-core'
 import type { IMConfig } from '../config'
 import { JimuMapViewComponent } from 'jimu-arcgis'
@@ -6,9 +8,11 @@ import { WidgetPlaceholder, Button, TextInput, Tooltip } from 'jimu-ui'
 
 import '../index.css'
 
-import Point from 'esri/geometry/Point'
-import SpatialReference from 'esri/geometry/SpatialReference'
 import defaultMessages from './translations/default'
+
+// Webpack supplies require at runtime for static assets. This local declaration
+// keeps the browser bundle unchanged without pulling Node.js types into the widget.
+declare const require: (assetPath: string) => any
 
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const squareCrossIcon = require('./assets/target-square-cross.svg')
@@ -17,8 +21,8 @@ const squareCrossIcon = require('./assets/target-square-cross.svg')
 const ERR = (...args: any[]) => console.error('[EMC]', ...args)
 const WARN = (...args: any[]) => console.warn('[EMC]', ...args)
 
-// ── EB 1.20 notes ─────────────────────────────────────────────────────────────
-// projection.load() hangs in EB 1.20 because it triggers a WASM load that stalls.
+// ── EB 1.21 notes ─────────────────────────────────────────────────────────────
+// projection.load() can hang in this Experience Builder runtime because it triggers a WASM load that stalls.
 // The map is already rendering (in any SR), so the JSAPI projection engine is
 // already loaded internally. We do projection in pure math: Web Mercator, UTM,
 // and Lambert Conformal Conic state plane (Colorado preloaded, extensible).
@@ -37,6 +41,19 @@ const WARN = (...args: any[]) => console.warn('[EMC]', ...args)
 //              https://epsg.io/26953 https://epsg.io/26954 https://epsg.io/26955
 //   ESRI variants: 102253, 102254, 102255 (ftUS equivalents)
 //
+interface SpatialReferenceLike {
+    wkid?: number
+    latestWkid?: number
+}
+
+interface MapPointLike {
+    x: number
+    y: number
+    spatialReference?: SpatialReferenceLike
+}
+
+const WGS84_SPATIAL_REFERENCE: SpatialReferenceLike = { wkid: 4326 }
+
 interface LCCParams {
     lat0: number     // latitude of origin (degrees)
     lon0: number     // central meridian (degrees)
@@ -82,7 +99,12 @@ interface IState {
     jimuMapView: JimuMapView | null
 }
 
-export default class Widget extends React.PureComponent<AllWidgetProps<IMConfig>, IState> {
+type WidgetProps = AllWidgetProps<IMConfig> & {
+    id: string
+    useMapWidgetIds?: string[] | any
+}
+
+class Widget extends React.PureComponent<WidgetProps, IState> {
     // Module handles stored as instance properties so they do not cause re-renders
     private GraphicModule: any = null
     // View, pin, and click listener kept as instance variables so they survive
@@ -145,7 +167,7 @@ export default class Widget extends React.PureComponent<AllWidgetProps<IMConfig>
         document.addEventListener('keydown', this.handleKeyDown)
     }
 
-    componentDidUpdate(prevProps: AllWidgetProps<IMConfig>) {
+    componentDidUpdate(prevProps: WidgetProps) {
         // Clean up when widget closes (OPENED -> CLOSED).
         if (prevProps.state === 'OPENED' && this.props.state === 'CLOSED') {
             this.handleWidgetClose()
@@ -310,7 +332,7 @@ export default class Widget extends React.PureComponent<AllWidgetProps<IMConfig>
     // Synchronous, pure-math. Handles WGS84 passthrough, Web Mercator, UTM, and
     // Lambert Conformal Conic state plane (Colorado preloaded, extensible via
     // the LCC_TABLE at the top of this file).
-    projectToWGS84 = (point: Point, spatialReference: SpatialReference): Point | null => {
+    projectToWGS84 = (point: MapPointLike, spatialReference: SpatialReferenceLike | null | undefined): MapPointLike | null => {
         const wkid = spatialReference?.wkid ?? (spatialReference as any)?.latestWkid
 
         if (!spatialReference || wkid === 4326) {
@@ -321,7 +343,7 @@ export default class Widget extends React.PureComponent<AllWidgetProps<IMConfig>
         if (wkid === 102100 || wkid === 3857) {
             const lon = (point.x / 20037508.34) * 180
             const lat = (180 / Math.PI) * (2 * Math.atan(Math.exp((point.y / 20037508.34) * Math.PI / 180)) - Math.PI / 2)
-            return new Point({ x: lon, y: lat, spatialReference: new SpatialReference({ wkid: 4326 }) })
+            return { x: lon, y: lat, spatialReference: WGS84_SPATIAL_REFERENCE }
         }
 
         // UTM North: EPSG 32601–32660 (WGS84) or 26901–26960 (NAD83)
@@ -335,7 +357,7 @@ export default class Widget extends React.PureComponent<AllWidgetProps<IMConfig>
         if (utmZone > 0) {
             const result = this.utmToLatLon(point.x, point.y, utmZone, isNorth)
             if (!result) { return null }
-            return new Point({ x: result.lon, y: result.lat, spatialReference: new SpatialReference({ wkid: 4326 }) })
+            return { x: result.lon, y: result.lat, spatialReference: WGS84_SPATIAL_REFERENCE }
         }
 
         // Lambert Conformal Conic state plane.
@@ -343,7 +365,7 @@ export default class Widget extends React.PureComponent<AllWidgetProps<IMConfig>
         if (lccParams) {
             const result = this.lccToLatLon(point.x, point.y, lccParams)
             if (!result) { return null }
-            return new Point({ x: result.lon, y: result.lat, spatialReference: new SpatialReference({ wkid: 4326 }) })
+            return { x: result.lon, y: result.lat, spatialReference: WGS84_SPATIAL_REFERENCE }
         }
 
         WARN('Unsupported WKID:', wkid)
@@ -471,7 +493,7 @@ export default class Widget extends React.PureComponent<AllWidgetProps<IMConfig>
         }
     }
 
-    addPinToMap = (point: Point, jmv: JimuMapView) => {
+    addPinToMap = (point: MapPointLike, jmv: JimuMapView) => {
         if (!this.GraphicModule) { return }
         try {
             // Remove only OUR previous pin, never view.graphics.removeAll().
@@ -531,7 +553,7 @@ export default class Widget extends React.PureComponent<AllWidgetProps<IMConfig>
     }
 
     // ── Main click handler ───────────────────────────────────────────────────────
-    handleMapClick = (point: Point, spatialReference: SpatialReference, jmv: JimuMapView) => {
+    handleMapClick = (point: MapPointLike, spatialReference: SpatialReferenceLike | null | undefined, jmv: JimuMapView) => {
         const projectedPoint = this.projectToWGS84(point, spatialReference)
 
         if (!projectedPoint) {
@@ -724,7 +746,7 @@ export default class Widget extends React.PureComponent<AllWidgetProps<IMConfig>
                 <h2 id={titleId} style={srOnly}>{defaultMessages.ariaWidgetTitle}</h2>
 
                 <JimuMapViewComponent
-                    useMapWidgetId={this.props.useMapWidgetIds[0]}
+                    useMapWidgetId={useMapWidget}
                     onActiveViewChange={this.activeViewChangeHandler}
                 />
 
@@ -831,3 +853,13 @@ export default class Widget extends React.PureComponent<AllWidgetProps<IMConfig>
         )
     }
 }
+
+// Type-only Visual Studio fallback. When VS partially resolves jimu-core
+// through pnpm, it can see the base class but lose inherited React members.
+// Class/interface merging emits no JavaScript.
+interface Widget {
+    readonly props: Readonly<WidgetProps>
+    setState(...args: any[]): void
+}
+
+export default Widget

@@ -1,3 +1,5 @@
+/// <reference path="../emotion-jsx-runtime.d.ts" />
+
 import { React } from "jimu-core";
 import { AllWidgetSettingProps } from "jimu-for-builder";
 import {
@@ -6,10 +8,18 @@ import {
     MapWidgetSelector
 } from "jimu-ui/advanced/setting-components";
 import { Switch, TextInput, Label } from "jimu-ui";
-import { IMConfig } from "../config";
+import type { Config, IMConfig } from "../config";
 
-export default class Setting extends React.PureComponent<AllWidgetSettingProps<IMConfig>, {}> {
+type SettingProps = AllWidgetSettingProps<IMConfig> & {
+    id: string;
+    useMapWidgetIds?: string[] | any;
+};
 
+type BooleanConfigKey = {
+    [K in keyof Config]: Config[K] extends boolean ? K : never;
+}[keyof Config];
+
+class Setting extends React.PureComponent<SettingProps, Record<string, never>> {
     onMapWidgetSelected = (useMapWidgetIds: string[]) => {
         this.props.onSettingChange({
             id: this.props.id,
@@ -17,7 +27,7 @@ export default class Setting extends React.PureComponent<AllWidgetSettingProps<I
         });
     };
 
-    onToggleProperty = (propertyName: keyof IMConfig, value: boolean) => {
+    onToggleProperty = (propertyName: BooleanConfigKey, value: boolean) => {
         this.props.onSettingChange({
             id: this.props.id,
             config: this.props.config.set(propertyName, value)
@@ -32,7 +42,7 @@ export default class Setting extends React.PureComponent<AllWidgetSettingProps<I
         });
     };
 
-    renderToggle = (label: string, propName: keyof IMConfig, checkedDefault = false) => {
+    renderToggle = (label: string, propName: BooleanConfigKey, checkedDefault = false) => {
         const checked = this.props.config[propName] !== false && (this.props.config[propName] !== undefined ? this.props.config[propName] : checkedDefault);
         return (
             <SettingRow>
@@ -103,3 +113,10 @@ export default class Setting extends React.PureComponent<AllWidgetSettingProps<I
         );
     }
 }
+
+// Type-only Visual Studio fallback; class/interface merging emits no JavaScript.
+interface Setting {
+    readonly props: Readonly<SettingProps>
+}
+
+export default Setting

@@ -18,8 +18,8 @@ An ArcGIS Experience Builder custom widget that displays the latitude/longitude,
 
 ## Requirements
 
-- ArcGIS Experience Builder Developer Edition **1.20** (built and tested)
-- React 19 environment (Developer Edition 1.19 and 1.20 ship with React 19; 1.18 and earlier are not supported)
+- ArcGIS Experience Builder Developer Edition **1.21**
+- Dependencies installed from the Experience Builder `client` folder with **pnpm**
 
 ## Install
 
@@ -31,17 +31,43 @@ An ArcGIS Experience Builder custom widget that displays the latitude/longitude,
    ```
 
    `manifest.json` must sit **directly inside** that folder. Do not nest it a second level deep (for example `widgets\externalmapcoordinates\externalmapcoordinates\`). Nesting is the most common cause of a widget not registering.
-3. From the `client` folder, install dependencies:
+3. From the Experience Builder `client` folder, install dependencies:
 
    ```
-   npm install
+   pnpm ci
    ```
+
+   Do not run `npm install` inside the widget folder on Experience Builder 1.21.
 4. Start (or restart) Experience Builder:
 
    ```
-   npm start
+   pnpm start
    ```
 5. The widget appears in the builder under **Custom**.
+
+## Experience Builder 1.21 TypeScript editor setup
+
+This package includes a widget-level `tsconfig.json` plus a self-contained Visual Studio fallback in `src/emotion-jsx-runtime.d.ts`. Both TSX entrypoints reference that declaration file directly, so the JSX fix remains active even when Visual Studio ignores the nearest `tsconfig.json` or only partially follows pnpm symlinks.
+
+The runtime and setting classes also use TypeScript class/interface merging to supply editor-only `props`/`setState` fallbacks. Interfaces emit no JavaScript and do not alter widget behavior.
+
+After replacing an older copy of the widget:
+
+1. Close every Visual Studio window.
+2. Confirm this file is present at exactly:
+
+   ```
+   client\your-extensions\widgets\externalmapcoordinates\tsconfig.json
+   ```
+
+   `manifest.json` must be beside it. There must not be a second nested `externalmapcoordinates` folder.
+3. Delete `.vs` folders under both the `client` folder and the widget folder if present.
+4. Run `pnpm ci` from the Experience Builder `client` folder.
+5. Reopen the full `client` folder in Visual Studio and let the TypeScript language service reload.
+
+A quick installation check: the first line of both `src/runtime/widget.tsx` and `src/setting/setting.tsx` must reference `../emotion-jsx-runtime.d.ts`.
+
+The widget-level configuration uses `noEmit`, so it changes editor analysis only; Experience Builder remains responsible for the runtime build. Do not install `@types/node` merely for the SVG `require`; this package already supplies a local compile-time declaration.
 
 ## Configuration
 

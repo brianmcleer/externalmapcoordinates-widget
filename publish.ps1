@@ -22,7 +22,7 @@ $ErrorActionPreference = "Stop"
 # ----- EDIT THESE THREE PER WIDGET -----------------------------------------
 $WidgetName    = "externalmapcoordinates"
 $RepoName      = "externalmapcoordinates-widget"
-$ExbWidgetPath = "C:\arcgis-experience-builder-1.20\client\your-extensions\widgets\$WidgetName"
+$ExbWidgetPath = "C:\arcgis-experience-builder-1.21\client\your-extensions\widgets\$WidgetName"
 # ----------------------------------------------------------------------------
 
 $RepoPath   = $PSScriptRoot
