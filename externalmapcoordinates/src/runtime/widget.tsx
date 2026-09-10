@@ -1,14 +1,17 @@
-/// <reference path="../emotion-jsx-runtime.d.ts" />
-
-import { React, AllWidgetProps, jsx, loadArcGISJSAPIModules } from 'jimu-core'
+import { React, AllWidgetProps, jsx, loadArcGISJSAPIModules, WidgetState } from 'jimu-core'
 import type { IMConfig } from '../config'
 import { JimuMapViewComponent } from 'jimu-arcgis'
 import type { JimuMapView } from 'jimu-arcgis'
 import { WidgetPlaceholder, Button, TextInput, Tooltip } from 'jimu-ui'
+import { CalciteIcon } from 'calcite-components'
 
 import '../index.css'
 
 import defaultMessages from './translations/default'
+import HelpPopup from './components/HelpPopup'
+import FirstRunHint from './components/FirstRunHint'
+import { buildHelpSections } from './helpSections'
+import type { HelpFeatures } from './helpSections'
 
 // Webpack supplies require at runtime for static assets. This local declaration
 // keeps the browser bundle unchanged without pulling Node.js types into the widget.
@@ -17,7 +20,7 @@ declare const require: (assetPath: string) => any
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const squareCrossIcon = require('./assets/target-square-cross.svg')
 
-// ── Debug logging — filter console by [EMC] ──────────────────────────────────
+// ── Debug logging - filter console by [EMC] ──────────────────────────────────
 const ERR = (...args: any[]) => console.error('[EMC]', ...args)
 const WARN = (...args: any[]) => console.warn('[EMC]', ...args)
 
@@ -97,6 +100,10 @@ interface IState {
     clicked: boolean
     coordinatesCopied: boolean
     jimuMapView: JimuMapView | null
+    /** Whether the in-widget help guide is open. */
+    helpOpen: boolean
+    /** Whether the first-run hint banner is showing (until dismissed once, per browser). */
+    showFirstRunHint: boolean
 }
 
 type WidgetProps = AllWidgetProps<IMConfig> & {
@@ -107,6 +114,9 @@ type WidgetProps = AllWidgetProps<IMConfig> & {
 class Widget extends React.PureComponent<WidgetProps, IState> {
     // Module handles stored as instance properties so they do not cause re-renders
     private GraphicModule: any = null
+    private reactiveUtilsModule: any = null
+    // Live scale/zoom watcher on the view. Removed on close and unmount.
+    private viewWatchHandle: any = null
     // View, pin, and click listener kept as instance variables so they survive
     // setState races and are reachable during unmount.
     private currentView: any = null
@@ -137,7 +147,9 @@ class Widget extends React.PureComponent<WidgetProps, IState> {
         mapViewReady: false,
         clicked: false,
         coordinatesCopied: false,
-        jimuMapView: null
+        jimuMapView: null,
+        helpOpen: false,
+        showFirstRunHint: false
     }
 
     textInputRef = React.createRef<HTMLInputElement>()
@@ -158,24 +170,30 @@ class Widget extends React.PureComponent<WidgetProps, IState> {
     componentDidMount() {
         // Load Graphic so we can drop a pin. Click registration does not wait on
         // this since by the time the user clicks, the module is ready.
-        loadArcGISJSAPIModules(['esri/Graphic'])
-            .then(([Graphic]: any[]) => {
+        loadArcGISJSAPIModules(['esri/Graphic', 'esri/core/reactiveUtils'])
+            .then(([Graphic, reactiveUtils]: any[]) => {
                 this.GraphicModule = Graphic
+                this.reactiveUtilsModule = reactiveUtils
+                // If the view arrived before the module did, start watching now.
+                if (this.currentView && !this.viewWatchHandle) { this.addViewWatch(this.currentView) }
             })
-            .catch((e: any) => { ERR('Graphic load failed:', e) })
+            .catch((e: any) => { ERR('Module load failed:', e) })
 
         document.addEventListener('keydown', this.handleKeyDown)
+
+        // First-run hint shows until the user dismisses it once (or opens the guide).
+        if (!this.readHintDismissed()) { this.safeSetState({ showFirstRunHint: true }) }
     }
 
     componentDidUpdate(prevProps: WidgetProps) {
         // Clean up when widget closes (OPENED -> CLOSED).
-        if (prevProps.state === 'OPENED' && this.props.state === 'CLOSED') {
+        if (prevProps.state === WidgetState.Opened && this.props.state === WidgetState.Closed) {
             this.handleWidgetClose()
         }
         // Re-initialize when widget re-opens (CLOSED -> OPENED). JimuMapViewComponent
         // does NOT re-fire onActiveViewChange because the view itself hasn't changed,
         // so we re-attach the click listener and re-disable popup/highlight ourselves.
-        if (prevProps.state === 'CLOSED' && this.props.state === 'OPENED') {
+        if (prevProps.state === WidgetState.Closed && this.props.state === WidgetState.Opened) {
             this.handleWidgetReopen()
         }
     }
@@ -196,7 +214,81 @@ class Widget extends React.PureComponent<WidgetProps, IState> {
     }
 
     handleKeyDown = (e: KeyboardEvent) => {
+        // While the guide is open, Escape closes the guide (jimu Modal handles it); do not
+        // also clear the user's pin.
+        if (this.state.helpOpen) { return }
         if (e.key === 'Escape') { this.resetState() }
+    }
+
+    // ── In-widget help guide (shared pattern, see WIDGETHANDOFF Section 10) ─────────
+    // Class component, so strings are read from defaultMessages directly and passed to
+    // HelpPopup / FirstRunHint as props. Those two function components own the theme hook.
+
+    /** Translate helper for the guide. Fills {tokens} with the values supplied. */
+    private t = (id: string, values?: Record<string, string>): string => {
+        let text: string = (defaultMessages as any)[id] ?? id
+        if (values) {
+            Object.keys(values).forEach((k) => { text = text.split(`{${k}}`).join(values[k]) })
+        }
+        return text
+    }
+
+    /** Storage key for the first-run hint dismissal, namespaced by widget id so two copies in one app do not share it. */
+    private get firstRunHintKey(): string {
+        return `externalMapCoordinates.helpHintDismissed.${this.props.id}`
+    }
+
+    private readHintDismissed(): boolean {
+        try {
+            return typeof window !== 'undefined' && !!window.localStorage && window.localStorage.getItem(this.firstRunHintKey) === '1'
+        } catch (_) {
+            // Private browsing can throw on read; the guide is not worth breaking the widget over.
+            return false
+        }
+    }
+
+    private dismissFirstRunHint = (): void => {
+        try {
+            if (typeof window !== 'undefined' && window.localStorage) { window.localStorage.setItem(this.firstRunHintKey, '1') }
+        } catch (_) { /* private browsing */ }
+        this.safeSetState({ showFirstRunHint: false })
+    }
+
+    /** Opening the guide counts as answering the hint, so it dismisses the hint too. */
+    private openHelp = (): void => {
+        if (this.state.showFirstRunHint) { this.dismissFirstRunHint() }
+        this.safeSetState({ helpOpen: true })
+    }
+
+    private closeHelp = (): void => {
+        this.safeSetState({ helpOpen: false })
+    }
+
+    /**
+     * Feature flags for the guide, computed with the same checks render() uses for each
+     * button, so the guide never describes a control that is not on screen.
+     */
+    private helpFeatures(): HelpFeatures {
+        const config: any = this.props.config || {}
+        return {
+            pictometry: config.showPictometry !== false && !!config.pictometryBaseUrl,
+            googleStreetView: config.showGoogleStreetView !== false,
+            googleMaps3D: config.showGoogleMaps3D !== false,
+            bingSatellite: config.showBingSatellite !== false,
+            bingStreetside: config.showBingStreetside !== false,
+            copyButton: config.showCopyButton !== false,
+            showZoom: !!config.showZoom,
+            showScale: !!config.showScale,
+            labels: {
+                pictometry: defaultMessages.pictometryImagery,
+                googleStreetView: defaultMessages.googleStreetView,
+                googleMaps3D: defaultMessages.googleMaps3D,
+                bingSatellite: defaultMessages.bingSatelliteMaps,
+                bingStreetside: defaultMessages.bingStreetside,
+                copy: defaultMessages.copyLatLon,
+                copied: defaultMessages.copied
+            }
+        }
     }
 
     // ── View connection ──────────────────────────────────────────────────────────
@@ -210,10 +302,12 @@ class Widget extends React.PureComponent<WidgetProps, IState> {
                 this.applyViewSuppression(jmv.view)
                 this.safeSetState({ jimuMapView: jmv, mapViewReady: true })
                 this.addClickListener(jmv)
+                this.addViewWatch(jmv.view)
             },
             (_err: any) => {
                 this.safeSetState({ jimuMapView: jmv, mapViewReady: true })
                 this.addClickListener(jmv)
+                this.addViewWatch(jmv.view)
             }
         )
     }
@@ -223,6 +317,49 @@ class Widget extends React.PureComponent<WidgetProps, IState> {
         if (!jimuMapView?.view) { return }
         this.applyViewSuppression(jimuMapView.view)
         this.addClickListener(jimuMapView)
+        this.addViewWatch(jimuMapView.view)
+    }
+
+    // ── Live scale / zoom ────────────────────────────────────────────────────────
+    // Scale and zoom follow the map as the user zooms, not just at click time.
+    // reactiveUtils is the Maps SDK 5.x way; view.watch() is kept as a fallback for
+    // older builds. Values are rounded the same way handleMapClick rounds them.
+    addViewWatch = (view: any) => {
+        this.removeViewWatch()
+        if (!view) { return }
+
+        const update = () => {
+            const scale = Number(view.scale)
+            const zoom = Number(view.zoom)
+            this.safeSetState({
+                scale: isFinite(scale) ? Math.round(scale) : 0,
+                zoom: isFinite(zoom) ? Math.round(zoom) : 0
+            })
+        }
+
+        try {
+            const ru = this.reactiveUtilsModule
+            if (ru && typeof ru.watch === 'function') {
+                this.viewWatchHandle = ru.watch(() => [view.scale, view.zoom], update, { initial: true })
+                return
+            }
+            if (typeof view.watch === 'function') {
+                this.viewWatchHandle = view.watch(['scale', 'zoom'], update)
+                update()
+                return
+            }
+        } catch (e) {
+            WARN('scale/zoom watch failed:', e)
+        }
+        // No watcher available yet (module still loading); show the current values once.
+        update()
+    }
+
+    removeViewWatch = () => {
+        if (this.viewWatchHandle) {
+            try { this.viewWatchHandle.remove() } catch (_) { }
+            this.viewWatchHandle = null
+        }
     }
 
     // ── Popup and highlight suppression ──────────────────────────────────────────
@@ -372,7 +509,7 @@ class Widget extends React.PureComponent<WidgetProps, IState> {
         return null
     }
 
-    // Standard Transverse Mercator reverse projection — WGS84 ellipsoid.
+    // Standard Transverse Mercator reverse projection - WGS84 ellipsoid.
     utmToLatLon = (easting: number, northing: number, zone: number, isNorth: boolean): { lat: number, lon: number } | null => {
         try {
             const a = 6378137.0
@@ -618,16 +755,16 @@ class Widget extends React.PureComponent<WidgetProps, IState> {
     }
 
     // ── Reset / close ────────────────────────────────────────────────────────────
-    // Clear the user's click result. Note: does NOT reset mapViewReady because
-    // the map view itself is still connected and ready; only the user's data
-    // is being cleared.
+    // Clear the user's click result. Note: does NOT reset mapViewReady, scale or
+    // zoom because the map view itself is still connected and ready; only the
+    // user's data is being cleared. Scale and zoom follow the map live.
     resetState = () => {
         if (this.currentView && this.currentPinGraphic) {
             try { this.currentView.graphics.remove(this.currentPinGraphic) } catch (_) { }
             this.currentPinGraphic = null
         }
         this.safeSetState({
-            latitude: '', longitude: '', scale: 0, zoom: 0,
+            latitude: '', longitude: '',
             Pictometry3dUrl: '', GoogleStreetViewUrl: '', GoogleMaps3DUrl: '',
             BingSatelliteUrl: '', BingStreetsideUrl: '',
             clicked: false, coordinatesCopied: false
@@ -635,6 +772,9 @@ class Widget extends React.PureComponent<WidgetProps, IState> {
     }
 
     handleWidgetClose = () => {
+        // Close the guide if it was left open.
+        if (this.state.helpOpen) { this.safeSetState({ helpOpen: false }) }
+
         // Restore other widgets' highlight settings first so they work normally
         // the moment this widget closes.
         this.restoreSuppression()
@@ -650,6 +790,7 @@ class Widget extends React.PureComponent<WidgetProps, IState> {
         }
 
         this.removeClickListener()
+        this.removeViewWatch()
         this.resetState()
     }
 
@@ -657,7 +798,7 @@ class Widget extends React.PureComponent<WidgetProps, IState> {
     render() {
         const useMapWidget = this.props.useMapWidgetIds?.[0]
         const { config, theme, id: widgetId } = this.props
-        const { clicked, coordinatesCopied, mapViewReady, latitude, longitude, zoom, scale } = this.state
+        const { clicked, coordinatesCopied, mapViewReady, latitude, longitude, zoom, scale, helpOpen, showFirstRunHint } = this.state
 
         if (!useMapWidget) {
             return (
@@ -749,6 +890,24 @@ class Widget extends React.PureComponent<WidgetProps, IState> {
                     useMapWidgetId={useMapWidget}
                     onActiveViewChange={this.activeViewChangeHandler}
                 />
+
+                {/* Header row: Help button at the top right (shared help pattern). */}
+                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-end', padding: '2px 4px', flexShrink: 0 }}>
+                    <Button size="sm" type="tertiary" icon onClick={this.openHelp} title={this.t('helpTitle')} aria-label={this.t('helpTitle')} style={{ flexShrink: 0 }}>
+                        <CalciteIcon icon="question" scale="s" />
+                    </Button>
+                </div>
+
+                {showFirstRunHint && (
+                    <FirstRunHint
+                        title={this.t('firstRunTitle')}
+                        body={this.t('firstRunBody')}
+                        linkLabel={this.t('firstRunHelpLink')}
+                        dismissLabel={this.t('firstRunDismiss')}
+                        onOpenHelp={this.openHelp}
+                        onDismiss={this.dismissFirstRunHint}
+                    />
+                )}
 
                 <div style={containerStyle}>
                     <p id={instructionsId} role="alert" aria-live="polite" style={{ fontFamily }}>
@@ -849,6 +1008,17 @@ class Widget extends React.PureComponent<WidgetProps, IState> {
                         </p>
                     </div>
                 </div>
+
+                <HelpPopup
+                    open={helpOpen}
+                    onClose={this.closeHelp}
+                    sections={buildHelpSections(this.t, this.helpFeatures())}
+                    title={this.t('helpTitle')}
+                    intro={this.t('helpIntro')}
+                    searchPlaceholder={this.t('helpSearchPlaceholder')}
+                    noMatches={this.t('helpNoMatches')}
+                    closeLabel={this.t('close')}
+                />
             </div>
         )
     }

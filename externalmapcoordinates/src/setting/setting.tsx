@@ -1,5 +1,3 @@
-/// <reference path="../emotion-jsx-runtime.d.ts" />
-
 import { React } from "jimu-core";
 import { AllWidgetSettingProps } from "jimu-for-builder";
 import {

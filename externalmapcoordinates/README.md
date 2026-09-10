@@ -5,6 +5,7 @@ An ArcGIS Experience Builder custom widget that displays the latitude/longitude,
 ## Features
 
 - Click anywhere on the map to drop a pin and capture coordinates (latitude/longitude, scale, zoom)
+- Scale and zoom update live as the map zooms in and out
 - Type or paste coordinates manually to zoom to a location
 - One-click links to:
   - Pictometry (with configurable base URL for organizations on a custom deployment)
@@ -15,6 +16,7 @@ An ArcGIS Experience Builder custom widget that displays the latitude/longitude,
 - Per-button visibility toggles in the settings panel
 - Copy coordinates to clipboard
 - Suppresses default popups and feature highlights from other widgets while open, restores them on close
+- Built-in help guide: a Help button at the top right opens a short, searchable guide written in plain language. The guide only describes the buttons the app has turned on. A one-time "New here?" hint points new users to it.
 
 ## Requirements
 
@@ -45,29 +47,25 @@ An ArcGIS Experience Builder custom widget that displays the latitude/longitude,
    ```
 5. The widget appears in the builder under **Custom**.
 
-## Experience Builder 1.21 TypeScript editor setup
+## Experience Builder 1.21 TypeScript editor setup (Visual Studio)
 
-This package includes a widget-level `tsconfig.json` plus a self-contained Visual Studio fallback in `src/emotion-jsx-runtime.d.ts`. Both TSX entrypoints reference that declaration file directly, so the JSX fix remains active even when Visual Studio ignores the nearest `tsconfig.json` or only partially follows pnpm symlinks.
+Experience Builder 1.21 installs the `client` folder with pnpm. Visual Studio cannot read through the pnpm junctions under `client\node_modules` (the Error List shows `IDE1100 "Access to the path ... is denied"`), so its TypeScript service has no types for React, jimu or the Maps SDK and reports hundreds of errors that the webpack build does not have.
 
-The runtime and setting classes also use TypeScript class/interface merging to supply editor-only `props`/`setState` fallbacks. Interfaces emit no JavaScript and do not alter widget behavior.
+This package ships the GIS Division's standard fix. It is editor-only (`noEmit`) and changes nothing about the build or the runtime bundle; webpack (`pnpm start` in `client`) remains the only type authority.
+
+- `tsconfig.json` next to `manifest.json`: no `baseUrl` or `paths`, `"types": []`, classic `"jsx": "react"`. Visual Studio never opens `node_modules` or `client\jimu-core`.
+- `src/exb-editor-shims.d.ts`: every module the widget imports (`react`, `jimu-core`, `jimu-arcgis`, `jimu-ui`, `jimu-theme`, `calcite-components`, `esri/*`, `*.css`, `*.svg`) declared ambiently, plus a global `JSX` namespace so classic JSX type-checks. This file is a copy of the shared master and is identical across the GIS Division's widgets.
+- `src/vendor-shims.d.ts`: the few additions this widget needs beyond the master (`WidgetPlaceholder`).
 
 After replacing an older copy of the widget:
 
 1. Close every Visual Studio window.
-2. Confirm this file is present at exactly:
+2. Delete the old `src/emotion-jsx-runtime.d.ts` if it is still present. It is superseded by the two shim files above.
+3. Delete the `.vs` folder inside the widget folder if present.
+4. Open the widget folder in Visual Studio (`File > Open > Folder` on `client\your-extensions\widgets\externalmapcoordinates`), not the `client` folder or the Experience Builder root.
+5. In the Error List, set the scope to **Open Documents**. Errors whose File column is under `client\jimu-core` or `client\node_modules` are Esri's, appear only when one of those files is open in a tab, and are not actionable.
 
-   ```
-   client\your-extensions\widgets\externalmapcoordinates\tsconfig.json
-   ```
-
-   `manifest.json` must be beside it. There must not be a second nested `externalmapcoordinates` folder.
-3. Delete `.vs` folders under both the `client` folder and the widget folder if present.
-4. Run `pnpm ci` from the Experience Builder `client` folder.
-5. Reopen the full `client` folder in Visual Studio and let the TypeScript language service reload.
-
-A quick installation check: the first line of both `src/runtime/widget.tsx` and `src/setting/setting.tsx` must reference `../emotion-jsx-runtime.d.ts`.
-
-The widget-level configuration uses `noEmit`, so it changes editor analysis only; Experience Builder remains responsible for the runtime build. Do not install `@types/node` merely for the SVG `require`; this package already supplies a local compile-time declaration.
+Quick check: in the widget folder, `npx tsc -p .` reports 0 errors (TypeScript 5.6). If `F12` on `PureComponent` lands in `jimu-core` or `node_modules` rather than `src/exb-editor-shims.d.ts`, the widget `tsconfig.json` is not the one in effect.
 
 ## Configuration
 
@@ -76,6 +74,8 @@ Open the widget settings panel in the builder to configure:
 - Pictometry base URL
 - Which external link buttons to show (Pictometry, Google Street View, Google Maps 3D, Bing Satellite, Bing Streetside, Copy)
 - Whether to show scale and zoom
+
+The help guide reads the same settings, so a button that is turned off is not mentioned in the guide.
 
 ## Feedback
 
