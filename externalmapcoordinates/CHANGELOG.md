@@ -2,6 +2,11 @@
 
 Newest first. Every release bumps `manifest.json` and `package.json` together.
 
+## 1.12.1 (2026-09-17)
+
+- Packaging: the Visual Studio editor shims are no longer in the release zip. `publish.ps1` strips them from a staging copy (`$ReleaseOnlyExclude`) and refuses to zip if any ambient `declare module` of react, jimu or esri survives. The shims stay in the GitHub repo; clone users delete them before building.
+- Fixed: Maps SDK 5.x (Experience Builder 1.21) compatibility. The view-level highlight is now hidden and restored through the view.highlights default entry on 5.x (MapView.highlightOptions was removed); 4.x keeps the old path.
+
 ## 1.12.0 (2026-09-10)
 
 ### Added

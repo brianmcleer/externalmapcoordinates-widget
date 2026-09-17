@@ -382,13 +382,34 @@ class Widget extends React.PureComponent<WidgetProps, IState> {
             }
         } catch (_) { }
 
-        // Save the original view-level highlightOptions exactly once per open
-        // cycle so we restore the user's actual setting, not a hardcoded default.
-        if (this.savedViewHighlightOptions === undefined) {
-            try { this.savedViewHighlightOptions = view.highlightOptions } catch (_) { }
-        }
+        // Save the original view-level highlight exactly once per open cycle so we
+        // restore the user's actual setting, not a hardcoded default. Maps SDK 5.x
+        // (EB 1.21) removed MapView.highlightOptions; the "default" entry of
+        // view.highlights styles every highlight() call instead. Both are handled.
         try {
-            view.highlightOptions = { color: [0, 0, 0, 0], fillOpacity: 0, haloOpacity: 0 }
+            const highlights: any = view.highlights
+            if (highlights && typeof highlights.find === 'function') {
+                const def = highlights.find((h: any) => h?.name === 'default') ?? highlights.getItemAt?.(0)
+                if (def) {
+                    if (this.savedViewHighlightOptions === undefined) {
+                        this.savedViewHighlightOptions = {
+                            color: def.color?.clone ? def.color.clone() : def.color,
+                            haloColor: def.haloColor?.clone ? def.haloColor.clone() : def.haloColor,
+                            fillOpacity: def.fillOpacity,
+                            haloOpacity: def.haloOpacity
+                        }
+                    }
+                    def.color = [0, 0, 0, 0]
+                    def.haloColor = [0, 0, 0, 0]
+                    def.fillOpacity = 0
+                    def.haloOpacity = 0
+                }
+            } else if ('highlightOptions' in view) {
+                if (this.savedViewHighlightOptions === undefined) {
+                    this.savedViewHighlightOptions = view.highlightOptions
+                }
+                view.highlightOptions = { color: [0, 0, 0, 0], fillOpacity: 0, haloOpacity: 0 }
+            }
         } catch (_) { }
 
         this.suppressLayerViewHighlights(view)
@@ -423,9 +444,25 @@ class Widget extends React.PureComponent<WidgetProps, IState> {
     }
 
     restoreSuppression = () => {
-        // Restore view-level highlightOptions to whatever it was before we touched it.
+        // Restore the view-level highlight to whatever it was before we touched it
+        // (view.highlights "default" entry on Maps SDK 5.x, highlightOptions on 4.x).
         if (this.currentView && this.savedViewHighlightOptions !== undefined) {
-            try { this.currentView.highlightOptions = this.savedViewHighlightOptions } catch (_) { }
+            try {
+                const view: any = this.currentView
+                const highlights: any = view.highlights
+                if (highlights && typeof highlights.find === 'function') {
+                    const def = highlights.find((h: any) => h?.name === 'default') ?? highlights.getItemAt?.(0)
+                    const saved = this.savedViewHighlightOptions
+                    if (def && saved) {
+                        if (saved.color !== undefined) def.color = saved.color
+                        if (saved.haloColor !== undefined) def.haloColor = saved.haloColor
+                        if (saved.fillOpacity !== undefined) def.fillOpacity = saved.fillOpacity
+                        if (saved.haloOpacity !== undefined) def.haloOpacity = saved.haloOpacity
+                    }
+                } else {
+                    view.highlightOptions = this.savedViewHighlightOptions
+                }
+            } catch (_) { }
             this.savedViewHighlightOptions = undefined
         }
 

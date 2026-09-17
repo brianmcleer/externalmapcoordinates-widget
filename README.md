@@ -29,6 +29,12 @@ externalmapcoordinates-widget/
 
 Pre-built downloadable zips are published as [GitHub Releases](https://github.com/brianmcleer/externalmapcoordinates-widget/releases). Each release zip contains the `externalmapcoordinates/` folder ready to drop into `client\your-extensions\widgets\`.
 
+### The release zip and the editor shims
+
+The zip is the widget only. The Visual Studio type shims in the repo (`externalmapcoordinates/src/exb-editor-shims.d.ts`, `externalmapcoordinates/src/vendor-shims.d.ts`) are left out on purpose: their ambient `declare module` blocks are not file-scoped and would rewrite the react, jimu and esri types for every other widget in your `your-extensions` folder.
+
+If you clone the repository instead of using the zip, delete `externalmapcoordinates/src/exb-editor-shims.d.ts` and the other shim files listed above before building; nothing else depends on them.
+
 ## Publishing updates (maintainer notes)
 
 After changes have been made in the live EB folder at `C:\arcgis-experience-builder-1.20\client\your-extensions\widgets\externalmapcoordinates\`, from a terminal opened in this repo folder:

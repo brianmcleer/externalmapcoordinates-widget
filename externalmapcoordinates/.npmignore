@@ -25,3 +25,7 @@ npm-debug.log*
 # Source-control metadata
 .git/
 .gitignore
+
+# Cowork working folder and release zips never ship
+Claude outputs/
+*.zip
