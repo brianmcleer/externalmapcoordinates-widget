@@ -1,5 +1,7 @@
 # External Map Coordinates Widget for ArcGIS Experience Builder
 
+[![License](https://img.shields.io/github/license/brianmcleer/externalmapcoordinates-widget)](LICENSE) [![Release](https://img.shields.io/github/v/release/brianmcleer/=tag)](https://github.com/brianmcleer/externalmapcoordinates-widget/releases) [![Issues](https://img.shields.io/github/issues/brianmcleer/externalmapcoordinates-widget)](https://github.com/brianmcleer/externalmapcoordinates-widget/issues)
+
 A custom widget for ArcGIS Experience Builder Developer Edition 1.20. Displays the latitude/longitude, scale, and zoom of the current map view, and provides one-click links to external map services (Pictometry, Google Street View, Google Maps 3D, Bing Satellite, Bing Streetside) for the clicked location.
 
 See the [widget README](./externalmapcoordinates/README.md) for installation, features, and troubleshooting.
@@ -8,21 +10,21 @@ See the [widget README](./externalmapcoordinates/README.md) for installation, fe
 
 ```
 externalmapcoordinates-widget/
-├── README.md                       (this file: GitHub landing page)
-├── LICENSE                         (Apache-2.0)
-├── .gitignore
-├── publish.ps1                     (automation: sync widget from EB, commit, push, release)
-└── externalmapcoordinates/         (the widget itself, drops into your-extensions/widgets/)
-    ├── manifest.json
-    ├── package.json
-    ├── package-lock.json
-    ├── config.json
-    ├── icon.svg
-    ├── README.md
-    ├── LICENSE
-    ├── .gitignore
-    ├── .npmignore
-    └── src/ ...
+â”œâ”€â”€ README.md                       (this file: GitHub landing page)
+â”œâ”€â”€ LICENSE                         (Apache-2.0)
+â”œâ”€â”€ .gitignore
+â”œâ”€â”€ publish.ps1                     (automation: sync widget from EB, commit, push, release)
+â””â”€â”€ externalmapcoordinates/         (the widget itself, drops into your-extensions/widgets/)
+    â”œâ”€â”€ manifest.json
+    â”œâ”€â”€ package.json
+    â”œâ”€â”€ package-lock.json
+    â”œâ”€â”€ config.json
+    â”œâ”€â”€ icon.svg
+    â”œâ”€â”€ README.md
+    â”œâ”€â”€ LICENSE
+    â”œâ”€â”€ .gitignore
+    â”œâ”€â”€ .npmignore
+    â””â”€â”€ src/ ...
 ```
 
 ## Releases

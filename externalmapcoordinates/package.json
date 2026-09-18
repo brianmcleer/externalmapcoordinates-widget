@@ -1,6 +1,6 @@
 {
   "name": "externalmapcoordinates",
-  "version": "1.12.3",
+  "version": "1.12.4",
   "description": "ArcGIS Experience Builder widget that displays the latitude/longitude, scale, and zoom of the current map view, with configurable one-click links to Pictometry, Google Street View, Google Maps 3D, Bing Satellite, Bing Streetside, and a copy-coordinates button.",
   "keywords": [
     "exb-widget",

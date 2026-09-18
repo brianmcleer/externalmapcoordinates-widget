@@ -937,12 +937,14 @@ class Widget extends React.PureComponent<WidgetProps, IState> {
 
                 {/* Header row: Help button at the top right (shared help pattern). */}
                 <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-end', padding: '2px 4px', flexShrink: 0 }}>
-                    <Button size="sm" type="tertiary" icon onClick={this.openHelp} title={this.t('helpTitle')} aria-label={this.t('helpTitle')} style={{ flexShrink: 0 }}>
-                        <CalciteIcon icon="question" scale="s" />
-                    </Button>
+                    {this.props.config?.showHelp !== false && (
+                        <Button size="sm" type="tertiary" icon onClick={this.openHelp} title={this.t('helpTitle')} aria-label={this.t('helpTitle')} style={{ flexShrink: 0 }}>
+                            <CalciteIcon icon="question" scale="s" />
+                        </Button>
+                    )}
                 </div>
 
-                {showFirstRunHint && (
+                {this.props.config?.showHelp !== false && showFirstRunHint && (
                     <FirstRunHint
                         title={this.t('firstRunTitle')}
                         body={this.t('firstRunBody')}
