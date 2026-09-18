@@ -2,7 +2,7 @@
   "name": "externalmapcoordinates",
   "label": "External Map Coordinates",
   "type": "widget",
-  "version": "1.12.2",
+  "version": "1.12.3",
   "exbVersion": "1.21.0",
   "author": "EsriAU Frederic Poliart, David Das Maricopa County, Brian McLeer City of Grand Junction",
   "description": "This widget displays the latitude/longitude, scale, and zoom. Links to configurable Pictometry, Google Street View, Google Maps 3D, Bing Satellite, Bing Streetside, and copy coordinates with customizable button visibility",
