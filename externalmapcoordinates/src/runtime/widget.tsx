@@ -8,6 +8,8 @@ import { CalciteIcon } from 'calcite-components'
 import '../index.css'
 
 import defaultMessages from './translations/default'
+import { beacon } from '../shared/beacon'
+import type { BeaconHandle } from '../shared/beacon'
 import HelpPopup from './components/HelpPopup'
 import FirstRunHint from './components/FirstRunHint'
 import { buildHelpSections } from './helpSections'
@@ -133,6 +135,7 @@ class Widget extends React.PureComponent<WidgetProps, IState> {
     private savedLayerViewHighlights: Array<{ lv: any, opts: any }> = []
     // Guard setState during unmount to avoid React warnings.
     private isUnmounted = false
+    private beacon: BeaconHandle | null = null
 
     state: IState = {
         latitude: '',
@@ -168,6 +171,7 @@ class Widget extends React.PureComponent<WidgetProps, IState> {
 
     // ── Lifecycle ────────────────────────────────────────────────────────────────
     componentDidMount() {
+        this.beacon = beacon.init(this.props)
         // Load Graphic so we can drop a pin. Click registration does not wait on
         // this since by the time the user clicks, the module is ready.
         loadArcGISJSAPIModules(['esri/Graphic', 'esri/core/reactiveUtils'])
@@ -728,6 +732,7 @@ class Widget extends React.PureComponent<WidgetProps, IState> {
 
     // ── Main click handler ───────────────────────────────────────────────────────
     handleMapClick = (point: MapPointLike, spatialReference: SpatialReferenceLike | null | undefined, jmv: JimuMapView) => {
+        this.beacon?.action('identify')
         const projectedPoint = this.projectToWGS84(point, spatialReference)
 
         if (!projectedPoint) {
@@ -776,6 +781,7 @@ class Widget extends React.PureComponent<WidgetProps, IState> {
 
     // ── Clipboard ────────────────────────────────────────────────────────────────
     copyToClipboard = () => {
+        this.beacon?.action('copy')
         // Use the ref rather than document.querySelector so multiple instances
         // of this widget on the same page do not interfere with each other.
         const textBox = this.textInputRef.current
@@ -788,7 +794,7 @@ class Widget extends React.PureComponent<WidgetProps, IState> {
                 this.safeSetState({ coordinatesCopied: true })
                 setTimeout(() => { this.safeSetState({ coordinatesCopied: false }) }, 3000)
             })
-            .catch((e: any) => { ERR('clipboard write failed:', e) })
+            .catch((e: any) => { this.beacon?.error(e, 'copy'); ERR('clipboard write failed:', e) })
     }
 
     // ── Reset / close ────────────────────────────────────────────────────────────
@@ -907,6 +913,7 @@ class Widget extends React.PureComponent<WidgetProps, IState> {
                         aria-disabled={!clicked ? true : undefined}
                         aria-label={ariaLabel}
                         ref={btnRef}
+                        onClick={() => { this.beacon?.action('open-external', keyName) }}
                     >
                         {label}
                     </Button>

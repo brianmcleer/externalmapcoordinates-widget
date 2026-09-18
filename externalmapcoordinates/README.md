@@ -82,6 +82,10 @@ The help guide reads the same settings, so a button that is turned off is not me
 - Issues and feature requests: <https://github.com/brianmcleer/externalmapcoordinates-widget/issues>
 - Esri Community discussion: see the post linked from the repository's README
 
+## Usage telemetry
+
+This widget records anonymous usage counts and errors so the GIS Division can see which widgets and versions are in use and which errors users hit. It records the app id and title, widget name and version, the action name, a truncated error message, the site host name and browser family. It never records usernames, coordinates, addresses, attribute values or URLs with query strings. Where the data goes: on page load the widget asks the app's portal for a public item tagged `exb-beacon-sink` and posts to that table. If your portal has no such item, nothing is sent anywhere. To turn it off for an app, set `"telemetry": false` in the widget's config, or users can enable Do Not Track in their browser. The shared module is `src/shared/beacon.ts`.
+
 ## Troubleshooting: `externalmapcoordinates is duplicated`
 
 Experience Builder registers widgets by the `name` value in `manifest.json` and throws this error when the same name is registered more than once. A correctly placed single copy cannot duplicate itself, so a second copy is present somewhere.
