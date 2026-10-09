@@ -230,6 +230,7 @@ class Widget extends React.PureComponent<WidgetProps, IState> {
 
     /** Translate helper for the guide. Fills {tokens} with the values supplied. */
     private t = (id: string, values?: Record<string, string>): string => {
+        const __intl: any = (this.props as any).intl; if (__intl && typeof __intl.formatMessage === "function") { try { return __intl.formatMessage({ id, defaultMessage: (defaultMessages as any)[id] ?? id }, values) } catch (e) { } }
         let text: string = (defaultMessages as any)[id] ?? id
         if (values) {
             Object.keys(values).forEach((k) => { text = text.split(`{${k}}`).join(values[k]) })
