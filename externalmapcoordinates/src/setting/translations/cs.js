@@ -13,7 +13,13 @@ System.register([], function (e) {
         uiButtonVisibility: "Viditelnost tlačítka",
         uiHelp: "Nápověda",
         uiShowHelpGuide: "Zobrazit nápovědu",
-        uiShowTheQuestionMarkButtonThat: "Zobrazit tlačítko question- mark, které otevře nápovědu widget"
+        uiShowTheQuestionMarkButtonThat: "Zobrazit tlačítko question- mark, které otevře nápovědu widget",
+        showPictometryButton: "Zobrazit tlačítko Pictometrie",
+        showGoogleStreetViewButton: "Zobrazit tlačítko Google Street View",
+        showGoogleMaps3dButton: "Zobrazit tlačítko Google Maps 3D",
+        showBingSatelliteButton: "Zobrazit Bing Satellite Button",
+        showBingStreetsideButton: "Zobrazit tlačítko Bing Streetside",
+        showCopyCoordinatesButton: "Zobrazit tlačítko Kopírovat souřadnice"
       })
     }
   }

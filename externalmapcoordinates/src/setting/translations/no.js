@@ -13,7 +13,13 @@ System.register([], function (e) {
         uiButtonVisibility: "Synlighet av knapp",
         uiHelp: "Hjelp",
         uiShowHelpGuide: "Vis hjelpguide",
-        uiShowTheQuestionMarkButtonThat: "Vis spørsmålsmerkeknappen som åpner widget-hjelpeguiden"
+        uiShowTheQuestionMarkButtonThat: "Vis spørsmålsmerkeknappen som åpner widget-hjelpeguiden",
+        showPictometryButton: "Vis Pictometry knapp",
+        showGoogleStreetViewButton: "Vis Google Street View-knappen",
+        showGoogleMaps3dButton: "Vis Google Maps 3D-knapp",
+        showBingSatelliteButton: "Vis Bing Satellittknapp",
+        showBingStreetsideButton: "Vis Bing Streetside-knappen",
+        showCopyCoordinatesButton: "Vis kopikoordinatknapp"
       })
     }
   }

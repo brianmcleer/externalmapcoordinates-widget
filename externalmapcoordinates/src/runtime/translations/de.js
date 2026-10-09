@@ -106,8 +106,8 @@ System.register([], function (e) {
         helpTips1: "Drücken Sie Esc, um den Pin zu löschen und von vorne zu beginnen.",
         helpTips2: "Klicken Sie jederzeit auf einen neuen Ort. Der Pin und die Koordinaten bewegen sich an die neue Stelle.",
         helpTips3: "Der Pin verschwindet, wenn Sie das Widget schließen. Kopieren Sie die Koordinaten zuerst, wenn Sie sie behalten müssen.",
-        unknownError: "unknown error",
-        unserializableError: "unserializable error"
+        unknownError: "Unbekannter Fehler",
+        unserializableError: "nichtialisierbarer Fehler"
       })
     }
   }

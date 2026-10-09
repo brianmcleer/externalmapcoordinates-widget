@@ -13,7 +13,13 @@ System.register([], function (e) {
         uiButtonVisibility: "Knap sigtbarhed",
         uiHelp: "Hjælp",
         uiShowHelpGuide: "Vis hjælpeguide",
-        uiShowTheQuestionMarkButtonThat: "Vis spørgsmåls- markerings- knappen der åbner kontrolhjælpevejledningen"
+        uiShowTheQuestionMarkButtonThat: "Vis spørgsmåls- markerings- knappen der åbner kontrolhjælpevejledningen",
+        showPictometryButton: "Vis piktometriknap",
+        showGoogleStreetViewButton: "Vis Google Street Visningsknap",
+        showGoogleMaps3dButton: "Vis Google Maps 3D-knap",
+        showBingSatelliteButton: "Vis Bing Satellitknap",
+        showBingStreetsideButton: "Vis Bing streetside knap",
+        showCopyCoordinatesButton: "Vis Kopiér koordinatknap"
       })
     }
   }

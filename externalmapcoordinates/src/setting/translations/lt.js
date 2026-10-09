@@ -13,7 +13,13 @@ System.register([], function (e) {
         uiButtonVisibility: "Mygtuko matomumas",
         uiHelp: "Pagalba",
         uiShowHelpGuide: "Rodyti pagalbos vadovą",
-        uiShowTheQuestionMarkButtonThat: "Rodyti klausimų žymėjimo mygtuką, kuris atveria valdikliui skirtą pagalbos vadovą"
+        uiShowTheQuestionMarkButtonThat: "Rodyti klausimų žymėjimo mygtuką, kuris atveria valdikliui skirtą pagalbos vadovą",
+        showPictometryButton: "Rodyti piktometrijos mygtuką",
+        showGoogleStreetViewButton: "Rodyti Google gatvės peržiūros mygtuką",
+        showGoogleMaps3dButton: "Rodyti \"Google\" žemėlapių 3D mygtuką",
+        showBingSatelliteButton: "Rodyti Bing Satellite mygtuką",
+        showBingStreetsideButton: "Rodyti Bing Streetside mygtuką",
+        showCopyCoordinatesButton: "Rodyti aplanko koordinates"
       })
     }
   }

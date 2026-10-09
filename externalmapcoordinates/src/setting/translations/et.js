@@ -13,7 +13,13 @@ System.register([], function (e) {
         uiButtonVisibility: "Nuppude nähtavus",
         uiHelp: "Abi",
         uiShowHelpGuide: "Abijuhendi näitamine",
-        uiShowTheQuestionMarkButtonThat: "Küsimusemärgi nupu näitamine, mis avab vidina abi juhendi"
+        uiShowTheQuestionMarkButtonThat: "Küsimusemärgi nupu näitamine, mis avab vidina abi juhendi",
+        showPictometryButton: "Piktomeetri nupu näitamine",
+        showGoogleStreetViewButton: "Google Street View nupu näitamine",
+        showGoogleMaps3dButton: "Google Maps 3D nupu näitamine",
+        showBingSatelliteButton: "Bingi satelliidinupu näitamine",
+        showBingStreetsideButton: "Bing Streetside' i nupu näitamine",
+        showCopyCoordinatesButton: "Kopeeri koordinaatide nupp"
       })
     }
   }

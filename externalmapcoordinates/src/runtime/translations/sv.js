@@ -106,8 +106,8 @@ System.register([], function (e) {
         helpTips1: "Tryck på Esc för att rensa stiftet och börja om.",
         helpTips2: "Klicka på en ny plats när som helst. Pinnen och koordinaterna flyttar till den nya platsen.",
         helpTips3: "Pinnen försvinner när du stänger widgeten. Kopiera koordinaterna först om du behöver behålla dem.",
-        unknownError: "unknown error",
-        unserializableError: "unserializable error"
+        unknownError: "Okänd fel",
+        unserializableError: "oserialiserbart fel"
       })
     }
   }

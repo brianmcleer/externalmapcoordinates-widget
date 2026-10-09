@@ -106,8 +106,8 @@ System.register([], function (e) {
         helpTips1: "Πατήστε Esc για να καθαρίσετε την καρφίτσα και να ξεκινήσετε από την αρχή.",
         helpTips2: "Κάντε κλικ σε ένα νέο σημείο ανά πάσα στιγμή. Η καρφίτσα και οι συντεταγμένες κινούνται στο νέο σημείο.",
         helpTips3: "Η καρφίτσα εξαφανίζεται όταν κλείνεις το widget. Αντίγραψε τις συντεταγμένες πρώτα αν χρειαστεί να τις κρατήσεις.",
-        unknownError: "unknown error",
-        unserializableError: "unserializable error"
+        unknownError: "άγνωστο σφάλμα",
+        unserializableError: "σφάλμα μη ανιχνεύσιμο"
       })
     }
   }

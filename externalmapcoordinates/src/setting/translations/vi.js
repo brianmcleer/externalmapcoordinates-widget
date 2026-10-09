@@ -13,7 +13,13 @@ System.register([], function (e) {
         uiButtonVisibility: "Khả năng nhìn của nút",
         uiHelp: "Trợ giúp",
         uiShowHelpGuide: "Hiện hướng dẫn trợ giúp",
-        uiShowTheQuestionMarkButtonThat: "Hiển thị nút đánh dấu câu hỏi để mở hướng dẫn trợ giúp ô điều khiển"
+        uiShowTheQuestionMarkButtonThat: "Hiển thị nút đánh dấu câu hỏi để mở hướng dẫn trợ giúp ô điều khiển",
+        showPictometryButton: "Hiện nút hình ảnh",
+        showGoogleStreetViewButton: "Hiện nút xem trên đường Google",
+        showGoogleMaps3dButton: "Hiện nút sơ đồ 3D của Google",
+        showBingSatelliteButton: "Hiện nút vệ tinh Bing",
+        showBingStreetsideButton: "Hiện nút lề đường Bing",
+        showCopyCoordinatesButton: "Hiện nút Sao chép"
       })
     }
   }

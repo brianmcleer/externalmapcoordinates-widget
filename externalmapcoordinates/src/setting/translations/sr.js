@@ -13,7 +13,13 @@ System.register([], function (e) {
         uiButtonVisibility: "Button Visibility",
         uiHelp: "Pomoć",
         uiShowHelpGuide: "Show help guide",
-        uiShowTheQuestionMarkButtonThat: "Show the question-mark button that opens the widget help guide"
+        uiShowTheQuestionMarkButtonThat: "Show the question-mark button that opens the widget help guide",
+        showPictometryButton: "Show Pictometry Button",
+        showGoogleStreetViewButton: "Show Google Street View Button",
+        showGoogleMaps3dButton: "Show Google Maps 3D Button",
+        showBingSatelliteButton: "Show Bing Satellite Button",
+        showBingStreetsideButton: "Show Bing Streetside Button",
+        showCopyCoordinatesButton: "Show Copy Coordinates Button"
       })
     }
   }

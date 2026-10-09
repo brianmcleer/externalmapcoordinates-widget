@@ -13,7 +13,13 @@ System.register([], function (e) {
         uiButtonVisibility: "Кнопка Visibility",
         uiHelp: "Довідка",
         uiShowHelpGuide: "Показати посібник",
-        uiShowTheQuestionMarkButtonThat: "Показати натис-mark, який відкриває посібник з підтримки віджету"
+        uiShowTheQuestionMarkButtonThat: "Показати натис-mark, який відкриває посібник з підтримки віджету",
+        showPictometryButton: "Показати піктометрію кнопки",
+        showGoogleStreetViewButton: "Показати кнопку Google Street View",
+        showGoogleMaps3dButton: "Показати карти Google 3D кнопки",
+        showBingSatelliteButton: "Показати Bing Супутникові кнопки",
+        showBingStreetsideButton: "Показати Bing Streetside Кнопка",
+        showCopyCoordinatesButton: "Показати Копіювати координати кнопки"
       })
     }
   }

@@ -106,8 +106,8 @@ System.register([], function (e) {
         helpTips1: "Nyomja meg Esc-et, hogy tisztítsa meg a pin és kezdődik újra.",
         helpTips2: "Kattintson egy új helyre bármikor. A pin és a koordináták az új helyre mennek.",
         helpTips3: "A pin eltűnik, amikor bezárja a widget. Másold át a koordinátákat, ha meg kell tartanod.",
-        unknownError: "unknown error",
-        unserializableError: "unserializable error"
+        unknownError: "ismeretlen hiba",
+        unserializableError: "nem sorozható hiba"
       })
     }
   }

@@ -13,7 +13,13 @@ System.register([], function (e) {
         uiButtonVisibility: "ボタンの可視性",
         uiHelp: "ヘルプ",
         uiShowHelpGuide: "ヘルプガイドを表示",
-        uiShowTheQuestionMarkButtonThat: "ウィジェットヘルプガイドを開く質問のボタンを表示する"
+        uiShowTheQuestionMarkButtonThat: "ウィジェットヘルプガイドを開く質問のボタンを表示する",
+        showPictometryButton: "Pictometryボタンを表示する",
+        showGoogleStreetViewButton: "Googleストリートビューボタンを表示する",
+        showGoogleMaps3dButton: "Googleマップ3Dボタンを表示する",
+        showBingSatelliteButton: "Bingサテライトボタンを表示する",
+        showBingStreetsideButton: "Bing Streetsideボタンを表示する",
+        showCopyCoordinatesButton: "コピー座標ボタンを表示する"
       })
     }
   }

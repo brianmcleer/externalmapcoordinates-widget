@@ -106,8 +106,8 @@ System.register([], function (e) {
         helpTips1: "핀을 지우고 시작하려면 Esc를 누르십시오.",
         helpTips2: "언제든지 새로운 자리를 클릭하십시오. 핀과 좌표는 새로운 자리로 이동합니다.",
         helpTips3: "핀은 위젯을 닫을 때 사라집니다. 먼저 좌표를 복사하면 유지해야 합니다.",
-        unknownError: "unknown error",
-        unserializableError: "unserializable error"
+        unknownError: "알 수없는 오류",
+        unserializableError: "unserializable 오류"
       })
     }
   }

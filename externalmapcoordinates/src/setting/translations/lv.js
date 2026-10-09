@@ -13,7 +13,13 @@ System.register([], function (e) {
         uiButtonVisibility: "Pogu redzamība",
         uiHelp: "Palīdzība",
         uiShowHelpGuide: "Rādīt palīdzības ceļvedi",
-        uiShowTheQuestionMarkButtonThat: "Rādīt jautājumu zīmes pogu, kas atver logdaļu palīdzības rokasgrāmatu"
+        uiShowTheQuestionMarkButtonThat: "Rādīt jautājumu zīmes pogu, kas atver logdaļu palīdzības rokasgrāmatu",
+        showPictometryButton: "Rādīt piktometrijas Pogu",
+        showGoogleStreetViewButton: "Rādīt Google ielu skatu Pogu",
+        showGoogleMaps3dButton: "Rādīt Google kartes 3D Pogas",
+        showBingSatelliteButton: "Rādīt Bing satelītu Pogu",
+        showBingStreetsideButton: "Rādīt pogas Bing Streetside",
+        showCopyCoordinatesButton: "Rādīt kopēšanas koordinātu pogu"
       })
     }
   }

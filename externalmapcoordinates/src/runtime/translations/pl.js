@@ -106,8 +106,8 @@ System.register([], function (e) {
         helpTips1: "Naciśnij przycisk Esc, aby oczyścić zawleczkę i zacząć od nowa.",
         helpTips2: "Kliknij nowe miejsce w każdej chwili. Zawleczka i współrzędne przenoszą się do nowego miejsca.",
         helpTips3: "Zawleczka znika po zamknięciu widżetu. Kopiuj współrzędne, jeśli chcesz je zatrzymać.",
-        unknownError: "unknown error",
-        unserializableError: "unserializable error"
+        unknownError: "nieznany błąd",
+        unserializableError: "błąd niezserializowalny"
       })
     }
   }

@@ -13,7 +13,13 @@ System.register([], function (e) {
         uiButtonVisibility: "Widoczność przycisku",
         uiHelp: "Pomoc",
         uiShowHelpGuide: "Pokaż przewodnik pomocy",
-        uiShowTheQuestionMarkButtonThat: "Pokaż przycisk question- mark, który otwiera przewodnik pomocy widget"
+        uiShowTheQuestionMarkButtonThat: "Pokaż przycisk question- mark, który otwiera przewodnik pomocy widget",
+        showPictometryButton: "Pokaż przycisk Piktometria",
+        showGoogleStreetViewButton: "Pokaż przycisk Google Street View",
+        showGoogleMaps3dButton: "Pokaż Google Maps 3D przycisk",
+        showBingSatelliteButton: "Pokaż przycisk Bing Satellite",
+        showBingStreetsideButton: "Pokaż przycisk na ulicy Bing",
+        showCopyCoordinatesButton: "Pokaż przycisk Kopiuj współrzędne"
       })
     }
   }

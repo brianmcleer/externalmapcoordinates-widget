@@ -106,8 +106,8 @@ System.register([], function (e) {
         helpTips1: "Nospiediet Esc, lai attīrītu tapu un sāktu no jauna.",
         helpTips2: "Uzklikšķiniet uz jauna vietas jebkurā laikā. Pin un koordinātas pāriet uz jauno vietu.",
         helpTips3: "Pin pazūd, kad jūs aizvērt widget. Kopēt koordinātas vispirms, ja jums nepieciešams, lai saglabātu tos.",
-        unknownError: "unknown error",
-        unserializableError: "unserializable error"
+        unknownError: "nezināma kļūda",
+        unserializableError: "nepārspējama kļūda"
       })
     }
   }

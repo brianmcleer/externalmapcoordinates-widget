@@ -13,7 +13,13 @@ System.register([], function (e) {
         uiButtonVisibility: "Knop zichtbaar",
         uiHelp: "Hulp",
         uiShowHelpGuide: "Hulplijn tonen",
-        uiShowTheQuestionMarkButtonThat: "De knop met het vraagteken tonen die de hulplijn widget opent"
+        uiShowTheQuestionMarkButtonThat: "De knop met het vraagteken tonen die de hulplijn widget opent",
+        showPictometryButton: "Pictometrieknop tonen",
+        showGoogleStreetViewButton: "Google Street View-knop tonen",
+        showGoogleMaps3dButton: "Google Maps 3D-knop tonen",
+        showBingSatelliteButton: "Bing-satellietknop tonen",
+        showBingStreetsideButton: "Bing Streetside-knop tonen",
+        showCopyCoordinatesButton: "Coördinatenknop tonen"
       })
     }
   }

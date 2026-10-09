@@ -106,8 +106,8 @@ System.register([], function (e) {
         helpTips1: "Tryk på Esc for at rydde stiften og starte forfra.",
         helpTips2: "Klik på et nyt sted til enhver tid. Pinden og koordinaterne flytter til det nye sted.",
         helpTips3: "Stiften forsvinder, når du lukker kontrollen. Kopiér koordinaterne først, hvis du skal beholde dem.",
-        unknownError: "unknown error",
-        unserializableError: "unserializable error"
+        unknownError: "ukendt fejl",
+        unserializableError: "userialiserbar fejl"
       })
     }
   }

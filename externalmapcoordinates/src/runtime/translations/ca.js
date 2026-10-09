@@ -106,8 +106,8 @@ System.register([], function (e) {
         helpTips1: "Premeu Esc per netejar el pin i començar de nou.",
         helpTips2: "Feu clic sobre un nou lloc en qualsevol moment. El pin i les coordenades es mouen al nou lloc.",
         helpTips3: "El pin desapareix quan tanqueu l' estri. Copia primer les coordenades si les has de mantenir.",
-        unknownError: "unknown error",
-        unserializableError: "unserializable error"
+        unknownError: "error desconegut",
+        unserializableError: "Error no llegible"
       })
     }
   }

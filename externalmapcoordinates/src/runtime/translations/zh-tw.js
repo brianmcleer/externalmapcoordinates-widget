@@ -106,8 +106,8 @@ System.register([], function (e) {
         helpTips1: "按 Esc 以清除彈針並重新開始 。",
         helpTips2: "隨時點擊新位置 。 指针和座標移到新位置.",
         helpTips3: "當你關閉元件時 指针就消失了 如果需要先抄送座標.",
-        unknownError: "unknown error",
-        unserializableError: "unserializable error"
+        unknownError: "未知的錯誤",
+        unserializableError: "不串連的錯誤"
       })
     }
   }

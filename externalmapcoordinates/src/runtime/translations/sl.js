@@ -106,8 +106,8 @@ System.register([], function (e) {
         helpTips1: "Pritisni Esc, da očistiš zatič in začneš znova.",
         helpTips2: "Klikni na novo mesto kadarkoli. Zaponka in koordinate se premaknejo na novo mesto.",
         helpTips3: "Priponka izgine, ko zaprete gradnik. Kopiraj koordinate, če jih moraš obdržati.",
-        unknownError: "unknown error",
-        unserializableError: "unserializable error"
+        unknownError: "neznana napaka",
+        unserializableError: "Neizvedljiva napaka"
       })
     }
   }

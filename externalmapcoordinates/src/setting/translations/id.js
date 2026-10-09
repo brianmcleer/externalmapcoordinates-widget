@@ -13,7 +13,13 @@ System.register([], function (e) {
         uiButtonVisibility: "Visibilitas Tombol",
         uiHelp: "Bantuan",
         uiShowHelpGuide: "Tampilkan panduan bantuan",
-        uiShowTheQuestionMarkButtonThat: "Tampilkan tombol tanya-tandai yang membuka panduan bantuan widget"
+        uiShowTheQuestionMarkButtonThat: "Tampilkan tombol tanya-tandai yang membuka panduan bantuan widget",
+        showPictometryButton: "Tampilkan Tombol Fotometri",
+        showGoogleStreetViewButton: "Tampilkan Tombol Tampilan Jalan Google",
+        showGoogleMaps3dButton: "Tampilkan Tombol 3D Peta Google",
+        showBingSatelliteButton: "Tampilkan Tombol Satelit Bing",
+        showBingStreetsideButton: "Tampilkan Tombol Sisi Jalanan Bing",
+        showCopyCoordinatesButton: "Tampilkan Tombol Koordinat Salinan"
       })
     }
   }

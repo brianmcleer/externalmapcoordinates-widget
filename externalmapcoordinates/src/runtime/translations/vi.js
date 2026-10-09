@@ -106,8 +106,8 @@ System.register([], function (e) {
         helpTips1: "Nhấn Esc để làm sạch chốt và bắt đầu lại.",
         helpTips2: "Nhấn một điểm mới bất cứ lúc nào. Cái chốt và tọa độ chuyển sang vị trí mới.",
         helpTips3: "Cái chốt biến mất khi bạn đóng ô điều khiển. Sao chép tọa độ trước nếu cần giữ chúng.",
-        unknownError: "unknown error",
-        unserializableError: "unserializable error"
+        unknownError: "lỗi không rõ",
+        unserializableError: "Lỗi không thể gửi đi được"
       })
     }
   }

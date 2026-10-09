@@ -13,7 +13,13 @@ System.register([], function (e) {
         uiButtonVisibility: "Button Visibility",
         uiHelp: "עזרה",
         uiShowHelpGuide: "מדריך עזרה",
-        uiShowTheQuestionMarkButtonThat: "הצג את לחצן סימן שאלה פותח את מדריך העזרה widget"
+        uiShowTheQuestionMarkButtonThat: "הצג את לחצן סימן שאלה פותח את מדריך העזרה widget",
+        showPictometryButton: "תגית: Pictometry Button",
+        showGoogleStreetViewButton: "Google Street View Button",
+        showGoogleMaps3dButton: "Google Maps 3D Button",
+        showBingSatelliteButton: "תגית: Bing Satellite Button",
+        showBingStreetsideButton: "בסביבה הקרובה של Bing Streetside Button",
+        showCopyCoordinatesButton: "תגית: copy Coתואמים Button"
       })
     }
   }

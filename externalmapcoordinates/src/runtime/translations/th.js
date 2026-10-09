@@ -106,8 +106,8 @@ System.register([], function (e) {
         helpTips1: "กดเอสอีสเพื่อล้างเข็มและเริ่มต้นอีกครั้ง.",
         helpTips2: "คลิกจุดใหม่เมื่อไหร่ก็ได้ เข็มและพิกัดย้ายไปยังจุดใหม่.",
         helpTips3: "หมุดจะหายไปเมื่อคุณปิดวิดเจ็ต คัดลอกพิกัดก่อนถ้าต้องเก็บไว้.",
-        unknownError: "unknown error",
-        unserializableError: "unserializable error"
+        unknownError: "ข้อผิดพลาดไม่ทราบสาเหตุ",
+        unserializableError: "ข้อผิดพลาดที่ไม่สามารถตรวจสอบได้"
       })
     }
   }

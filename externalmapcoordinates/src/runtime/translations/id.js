@@ -106,8 +106,8 @@ System.register([], function (e) {
         helpTips1: "Tekan Esc untuk membersihkan pin dan mulai dari awal.",
         helpTips2: "Klik tempat baru setiap saat. Pin dan koordinat bergerak ke tempat baru.",
         helpTips3: "Pin menghilang ketika Anda menutup widget. Salin koordinat pertama jika Anda perlu untuk menjaga mereka.",
-        unknownError: "unknown error",
-        unserializableError: "unserializable error"
+        unknownError: "galat tak dikenal",
+        unserializableError: "kesalahan tidak serialisasi"
       })
     }
   }

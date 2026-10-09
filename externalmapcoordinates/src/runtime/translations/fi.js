@@ -106,8 +106,8 @@ System.register([], function (e) {
         helpTips1: "Paina Esc puhdistaa pin ja aloittaa alusta.",
         helpTips2: "Klikkaa uusi paikka milloin tahansa. Pin ja koordinaatit siirtyvät uuteen paikkaan.",
         helpTips3: "Neula katoaa, kun suljet widget. Kopioi ensin koordinaatit, jos haluat pitää ne.",
-        unknownError: "unknown error",
-        unserializableError: "unserializable error"
+        unknownError: "tuntematon virhe",
+        unserializableError: "epätavallinen virhe"
       })
     }
   }

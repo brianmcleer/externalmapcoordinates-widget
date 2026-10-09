@@ -106,8 +106,8 @@ System.register([], function (e) {
         helpTips1: "Vajutage Esc-le, et puhastada pin ja alustada uuesti.",
         helpTips2: "Klõpsa igal ajal uuele kohale. Tihvt ja koordinaadid liiguvad uude kohta.",
         helpTips3: "Nööpnõel kaob, kui vidin suletakse. Kopeeri koordinaadid kõigepealt, kui neid on vaja hoida.",
-        unknownError: "unknown error",
-        unserializableError: "unserializable error"
+        unknownError: "tundmatu viga",
+        unserializableError: "seeriaviisiline viga"
       })
     }
   }

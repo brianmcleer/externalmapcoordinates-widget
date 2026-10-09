@@ -106,8 +106,8 @@ System.register([], function (e) {
         helpTips1: "Press Esc pimi temizlemek ve baştan başlamak için.",
         helpTips2: "Herhangi bir zamanda yeni bir noktaya tıklayın. pin ve koordinatlar yeni noktaya taşınır.",
         helpTips3: "Pin, widget'ı kapatırken kaybolur. Onları tutmanız için önce koordinatları kopyalayın.",
-        unknownError: "unknown error",
-        unserializableError: "unserializable error"
+        unknownError: "Bilinmeyen hata",
+        unserializableError: "Başarısız olmayan hata"
       })
     }
   }

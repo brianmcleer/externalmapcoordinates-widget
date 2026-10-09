@@ -106,8 +106,8 @@ System.register([], function (e) {
         helpTips1: "לחץ על Esc כדי לנקות את הסימון ולהתחיל מחדש.",
         helpTips2: "לחץ על נקודה חדשה בכל עת. הסיכות ואת הקואורדינטות נעות למקום החדש.",
         helpTips3: "הסימון נעלם כשאתם סוגרים את הווידג'ט. העתק את הקואורדינט הראשון אם אתה צריך לשמור אותם.",
-        unknownError: "unknown error",
-        unserializableError: "unserializable error"
+        unknownError: "טעות לא ידועה",
+        unserializableError: "טעות בלתי אפשרית"
       })
     }
   }

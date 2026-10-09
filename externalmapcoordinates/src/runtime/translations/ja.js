@@ -106,8 +106,8 @@ System.register([], function (e) {
         helpTips1: "Escを押してピンをクリアして起動します。",
         helpTips2: "いつでも新しいスポットをクリックします。 ピンと座標は新しいスポットに移動します。",
         helpTips3: "ウィジェットを閉じるとピンが消えます。 それらを保存する必要がある場合は、最初に座標をコピーします。",
-        unknownError: "unknown error",
-        unserializableError: "unserializable error"
+        unknownError: "未知のエラー",
+        unserializableError: "unserializable エラー"
       })
     }
   }

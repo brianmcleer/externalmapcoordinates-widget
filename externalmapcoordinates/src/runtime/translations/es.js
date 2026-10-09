@@ -106,8 +106,8 @@ System.register([], function (e) {
         helpTips1: "Pulse Esc para limpiar el pin y empezar de nuevo.",
         helpTips2: "Haga clic en un nuevo lugar en cualquier momento. El pin y las coordenadas se mueven al nuevo lugar.",
         helpTips3: "El pin desaparece cuando cierras el widget. Copie las coordenadas primero si necesita mantenerlas.",
-        unknownError: "unknown error",
-        unserializableError: "unserializable error"
+        unknownError: "error desconocido",
+        unserializableError: "error unserializable"
       })
     }
   }

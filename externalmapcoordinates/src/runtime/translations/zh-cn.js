@@ -106,8 +106,8 @@ System.register([], function (e) {
         helpTips1: "按 Esc 以清除钉子并重新开始.",
         helpTips2: "随时点击新位置 。 针头和坐标移动到新位置.",
         helpTips3: "当你关闭部件时 针就会消失 需要保存时先复制坐标.",
-        unknownError: "unknown error",
-        unserializableError: "unserializable error"
+        unknownError: "未知错误",
+        unserializableError: "无序错误"
       })
     }
   }

@@ -106,8 +106,8 @@ System.register([], function (e) {
         helpTips1: "Натисніть Esc для очищення шпильки і запустіть.",
         helpTips2: "Натисніть нове місце в будь-який час. Пиріг і координати переходять на нове місце.",
         helpTips3: "При закритті віджету зникне шпилька. Скопіюйте координати, перш за все, якщо потрібно їх зберегти.",
-        unknownError: "unknown error",
-        unserializableError: "unserializable error"
+        unknownError: "Невідома помилка",
+        unserializableError: "несеріалізована помилка"
       })
     }
   }

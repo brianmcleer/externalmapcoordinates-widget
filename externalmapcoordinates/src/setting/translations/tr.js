@@ -13,7 +13,13 @@ System.register([], function (e) {
         uiButtonVisibility: "Düğme Viability",
         uiHelp: "Yardım",
         uiShowHelpGuide: "Show help guide",
-        uiShowTheQuestionMarkButtonThat: "Widget'ı açan soru işaret düğmesine göster"
+        uiShowTheQuestionMarkButtonThat: "Widget'ı açan soru işaret düğmesine göster",
+        showPictometryButton: "Show Pictometry Düğme",
+        showGoogleStreetViewButton: "Google Street View Düğmesini Göster",
+        showGoogleMaps3dButton: "Google Maps 3D Düğme Göster",
+        showBingSatelliteButton: "Show Bing Uydu Düğmesini Göster",
+        showBingStreetsideButton: "Show Bing Streetside Düğme",
+        showCopyCoordinatesButton: "Show Copy koordinates Düğme"
       })
     }
   }

@@ -13,7 +13,13 @@ System.register([], function (e) {
         uiButtonVisibility: "버튼 가시성",
         uiHelp: "도움말",
         uiShowHelpGuide: "공지사항",
-        uiShowTheQuestionMarkButtonThat: "위젯 도움말 가이드를 열 수있는 질문 표시 버튼"
+        uiShowTheQuestionMarkButtonThat: "위젯 도움말 가이드를 열 수있는 질문 표시 버튼",
+        showPictometryButton: "Pictometry 버튼 표시",
+        showGoogleStreetViewButton: "Google 스트리트 뷰 버튼 표시",
+        showGoogleMaps3dButton: "Google지도 3D 버튼 표시",
+        showBingSatelliteButton: "Bing 위성 버튼 표시",
+        showBingStreetsideButton: "Bing Streetside 버튼 표시",
+        showCopyCoordinatesButton: "표시 복사 좌표 버튼"
       })
     }
   }

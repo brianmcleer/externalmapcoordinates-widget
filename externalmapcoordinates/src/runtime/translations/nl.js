@@ -106,8 +106,8 @@ System.register([], function (e) {
         helpTips1: "Druk op Esc om de pin te verwijderen en opnieuw te beginnen.",
         helpTips2: "Klik op een nieuwe plek op elk gewenst moment. De pin en de coördinaten gaan naar de nieuwe plek.",
         helpTips3: "De speld verdwijnt als je het widget sluit. Kopieer eerst de coördinaten als je ze nodig hebt.",
-        unknownError: "unknown error",
-        unserializableError: "unserializable error"
+        unknownError: "onbekende fout",
+        unserializableError: "onuitwisbare fout"
       })
     }
   }

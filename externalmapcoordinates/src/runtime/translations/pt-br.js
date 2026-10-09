@@ -106,8 +106,8 @@ System.register([], function (e) {
         helpTips1: "Pressione Esc para limpar o pino e começar de novo.",
         helpTips2: "Clique em um novo lugar a qualquer momento. O pino e as coordenadas vão para o novo local.",
         helpTips3: "O pino desaparece quando você fecha o widget. Copie as coordenadas primeiro se precisar mantê-las.",
-        unknownError: "unknown error",
-        unserializableError: "unserializable error"
+        unknownError: "Erro desconhecido",
+        unserializableError: "Erro inserializável"
       })
     }
   }

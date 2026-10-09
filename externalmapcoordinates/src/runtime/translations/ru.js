@@ -106,8 +106,8 @@ System.register([], function (e) {
         helpTips1: "Нажмите Esc, чтобы очистить штифт и начать все сначала.",
         helpTips2: "Нажмите на новое место в любое время. Штырь и координаты перемещаются на новое место.",
         helpTips3: "Пин исчезает, когда вы закрываете виджет. Сначала скопируйте координаты, если вам нужно их сохранить.",
-        unknownError: "unknown error",
-        unserializableError: "unserializable error"
+        unknownError: "Неизвестная ошибка",
+        unserializableError: "несериализируемая ошибка"
       })
     }
   }

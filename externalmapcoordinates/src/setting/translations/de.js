@@ -13,7 +13,13 @@ System.register([], function (e) {
         uiButtonVisibility: "Knopf Sichtbarkeit",
         uiHelp: "Hilfe",
         uiShowHelpGuide: "Show Help Guide",
-        uiShowTheQuestionMarkButtonThat: "Zeigen Sie die Fragezeichentaste an, die das Widget-Hilfehandbuch öffnet"
+        uiShowTheQuestionMarkButtonThat: "Zeigen Sie die Fragezeichentaste an, die das Widget-Hilfehandbuch öffnet",
+        showPictometryButton: "Piktometrie-Taste anzeigen",
+        showGoogleStreetViewButton: "Google Street View Button anzeigen",
+        showGoogleMaps3dButton: "Google Maps 3D Taste anzeigen",
+        showBingSatelliteButton: "Bing Satellite Button anzeigen",
+        showBingStreetsideButton: "Bing Streetside Button anzeigen",
+        showCopyCoordinatesButton: "Taste Kopierkoordinaten anzeigen"
       })
     }
   }

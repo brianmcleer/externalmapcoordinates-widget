@@ -13,7 +13,13 @@ System.register([], function (e) {
         uiButtonVisibility: "A gomb láthatósága",
         uiHelp: "Súgó",
         uiShowHelpGuide: "Segítőútmutató megjelenítése",
-        uiShowTheQuestionMarkButtonThat: "Megjeleníti a kérdőjel gombot, amely megnyitja a widget súgó útmutatót"
+        uiShowTheQuestionMarkButtonThat: "Megjeleníti a kérdőjel gombot, amely megnyitja a widget súgó útmutatót",
+        showPictometryButton: "A piktometriai gomb megjelenítése",
+        showGoogleStreetViewButton: "Google Street View gomb megjelenítése",
+        showGoogleMaps3dButton: "Google Térkép 3D gomb megjelenítése",
+        showBingSatelliteButton: "Bing szatellit gomb megjelenítése",
+        showBingStreetsideButton: "Bing Streetside gomb megjelenítése",
+        showCopyCoordinatesButton: "A másolás koordinátáinak megjelenítése"
       })
     }
   }

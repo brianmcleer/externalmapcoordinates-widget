@@ -8,6 +8,7 @@ import {
 import { Switch, TextInput, Label } from "jimu-ui";
 import type { Config, IMConfig } from "../config";
 import __i18nDefaults from './translations/default'
+import { __setIntl } from './i18n-t'
 let __i18nIntl: any = null
 /** Module translator: app language via the widget intl, English from default.ts, {name} values filled. */
 const __t = (id: string, values?: { [key: string]: any }): string => {
@@ -69,6 +70,7 @@ class Setting extends React.PureComponent<SettingProps, Record<string, never>> {
     };
 
     render() {
+    __setIntl((this.props as any).intl)
     __i18nIntl = (this.props as any).intl
         const { config } = this.props;
 
@@ -88,8 +90,8 @@ class Setting extends React.PureComponent<SettingProps, Record<string, never>> {
                 </SettingSection>
 
                 <SettingSection title={__t("settings")}>
-                    {this.renderToggle('Show Zoom', 'showZoom')}
-                    {this.renderToggle('Show Scale', 'showScale')}
+                    {this.renderToggle(__t("showZoom"), 'showZoom')}
+                    {this.renderToggle(__t("showScale"), 'showScale')}
                 </SettingSection>
 
                 <SettingSection title={__t("uiPictometryConfiguration")}>
@@ -112,12 +114,12 @@ class Setting extends React.PureComponent<SettingProps, Record<string, never>> {
                 </SettingSection>
 
                 <SettingSection title={__t("uiButtonVisibility")}>
-                    {this.renderToggle('Show Pictometry Button', 'showPictometry', true)}
-                    {this.renderToggle('Show Google Street View Button', 'showGoogleStreetView', true)}
-                    {this.renderToggle('Show Google Maps 3D Button', 'showGoogleMaps3D', true)}
-                    {this.renderToggle('Show Bing Satellite Button', 'showBingSatellite', true)}
-                    {this.renderToggle('Show Bing Streetside Button', 'showBingStreetside', true)}
-                    {this.renderToggle('Show Copy Coordinates Button', 'showCopyButton', true)}
+                    {this.renderToggle(__t("showPictometryButton"), 'showPictometry', true)}
+                    {this.renderToggle(__t("showGoogleStreetViewButton"), 'showGoogleStreetView', true)}
+                    {this.renderToggle(__t("showGoogleMaps3dButton"), 'showGoogleMaps3D', true)}
+                    {this.renderToggle(__t("showBingSatelliteButton"), 'showBingSatellite', true)}
+                    {this.renderToggle(__t("showBingStreetsideButton"), 'showBingStreetside', true)}
+                    {this.renderToggle(__t("showCopyCoordinatesButton"), 'showCopyButton', true)}
                 </SettingSection>
                 <SettingSection title={__t("uiHelp")}>
                   <SettingRow tag='label' label={__t("uiShowHelpGuide")}>

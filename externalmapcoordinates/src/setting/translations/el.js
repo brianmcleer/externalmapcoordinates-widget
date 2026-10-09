@@ -13,7 +13,13 @@ System.register([], function (e) {
         uiButtonVisibility: "Ορατότητα κουμπιού",
         uiHelp: "Βοήθεια",
         uiShowHelpGuide: "Εμφάνιση οδηγού βοήθειας",
-        uiShowTheQuestionMarkButtonThat: "Εμφάνιση του κουμπιού ερωτηματολογίου που ανοίγει τον οδηγό βοήθειας widget"
+        uiShowTheQuestionMarkButtonThat: "Εμφάνιση του κουμπιού ερωτηματολογίου που ανοίγει τον οδηγό βοήθειας widget",
+        showPictometryButton: "Εμφάνιση κουμπιού εικονομετρίας",
+        showGoogleStreetViewButton: "Εμφάνιση κουμπιού προβολής οδών Google",
+        showGoogleMaps3dButton: "Εμφάνιση χαρτών 3D Google",
+        showBingSatelliteButton: "Εμφάνιση κουμπιού δορυφόρου Bing",
+        showBingStreetsideButton: "Εμφάνιση κουμπιού Bing Streetside",
+        showCopyCoordinatesButton: "Εμφάνιση κουμπιού συντεταγμένων αντιγραφής"
       })
     }
   }

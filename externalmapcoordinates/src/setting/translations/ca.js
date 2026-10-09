@@ -13,7 +13,13 @@ System.register([], function (e) {
         uiButtonVisibility: "Visibilitat del botó",
         uiHelp: "Ajuda",
         uiShowHelpGuide: "Mostra la guia d' ajuda",
-        uiShowTheQuestionMarkButtonThat: "Mostra el botó Pregunta- marca que obre la guia d' ajuda de l' estri"
+        uiShowTheQuestionMarkButtonThat: "Mostra el botó Pregunta- marca que obre la guia d' ajuda de l' estri",
+        showPictometryButton: "Mostra el botó Pictometria",
+        showGoogleStreetViewButton: "Mostra el botó de vista de Google Street",
+        showGoogleMaps3dButton: "Mostra el botó Google Maps 3D",
+        showBingSatelliteButton: "Mostra el botó de satèl· lit Bing",
+        showBingStreetsideButton: "Mostra el botó Bing Streetside",
+        showCopyCoordinatesButton: "Mostra el botó de còpia de coordenades"
       })
     }
   }

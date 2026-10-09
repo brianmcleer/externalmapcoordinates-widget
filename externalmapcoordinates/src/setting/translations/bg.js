@@ -13,7 +13,13 @@ System.register([], function (e) {
         uiButtonVisibility: "Видимост на бутоните",
         uiHelp: "Помощ",
         uiShowHelpGuide: "Показване на ръководство за помощ",
-        uiShowTheQuestionMarkButtonThat: "Показване на бутона въпрос-марка, която отваря джаджа помощ ръководство"
+        uiShowTheQuestionMarkButtonThat: "Показване на бутона въпрос-марка, която отваря джаджа помощ ръководство",
+        showPictometryButton: "Показване на бутон за пиктометрия",
+        showGoogleStreetViewButton: "Показване на бутон на Google Street",
+        showGoogleMaps3dButton: "Показване на Google карти 3D бутон",
+        showBingSatelliteButton: "Показване на сателитен бутон Bing",
+        showBingStreetsideButton: "Показване на бутон Bing Streetside",
+        showCopyCoordinatesButton: "Показване на координатите"
       })
     }
   }

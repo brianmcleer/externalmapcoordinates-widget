@@ -13,7 +13,13 @@ System.register([], function (e) {
         uiButtonVisibility: "Vidljivost gumbov",
         uiHelp: "Pomoč",
         uiShowHelpGuide: "Prikaži vodnik za pomoč",
-        uiShowTheQuestionMarkButtonThat: "Prikaži gumb z vprašanji, ki odpre widget pomoč vodnik"
+        uiShowTheQuestionMarkButtonThat: "Prikaži gumb z vprašanji, ki odpre widget pomoč vodnik",
+        showPictometryButton: "Prikaži gumb za piktometrijo",
+        showGoogleStreetViewButton: "Prikaži gumb Google Street View",
+        showGoogleMaps3dButton: "Prikaži gumb Google Maps 3D",
+        showBingSatelliteButton: "Prikaži satelitski gumb Bing",
+        showBingStreetsideButton: "Prikaži gumb Bing Streetside",
+        showCopyCoordinatesButton: "Prikaži gumb Kopiraj koordinate"
       })
     }
   }

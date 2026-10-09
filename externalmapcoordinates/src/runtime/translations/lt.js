@@ -106,8 +106,8 @@ System.register([], function (e) {
         helpTips1: "Paspauskite Esc išvalyti pin ir pradėti iš naujo.",
         helpTips2: "Spustelėkite naują vietą bet kuriuo metu. Kaištis ir koordinatės juda į naują vietą.",
         helpTips3: "Kaištis dingsta, kai uždarote valdiklį. Pirmiausia nukopijuokite koordinates, jei reikia jas pasilikti.",
-        unknownError: "unknown error",
-        unserializableError: "unserializable error"
+        unknownError: "nežinoma klaida",
+        unserializableError: "nenustatoma klaida"
       })
     }
   }

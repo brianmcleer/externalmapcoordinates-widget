@@ -106,8 +106,8 @@ System.register([], function (e) {
         helpTips1: "اضغط على (إكس) لتخليص الدبابيس وتبدأ من جديد.",
         helpTips2: "اضغط بقعة جديدة في أي وقت الدبابيس والإحداثيات تتحركان إلى البقعة الجديدة.",
         helpTips3: "الدبوس يختفي عندما تغلق البارودج عُلِمْ الإحداثياتَ أولاً إذا تَحتاجُ لإبقائهم.",
-        unknownError: "unknown error",
-        unserializableError: "unserializable error"
+        unknownError: "خطأ مجهول",
+        unserializableError: "خطأ غير معقول"
       })
     }
   }

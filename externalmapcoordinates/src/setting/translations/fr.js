@@ -13,7 +13,13 @@ System.register([], function (e) {
         uiButtonVisibility: "Visibilité du bouton",
         uiHelp: "Aide",
         uiShowHelpGuide: "Afficher le guide d'aide",
-        uiShowTheQuestionMarkButtonThat: "Afficher le bouton question-marque qui ouvre le guide d'aide du widget"
+        uiShowTheQuestionMarkButtonThat: "Afficher le bouton question-marque qui ouvre le guide d'aide du widget",
+        showPictometryButton: "Afficher le bouton de pictométrie",
+        showGoogleStreetViewButton: "Afficher le bouton Google Street View",
+        showGoogleMaps3dButton: "Afficher Google Maps Bouton 3D",
+        showBingSatelliteButton: "Afficher le bouton Bing Satellite",
+        showBingStreetsideButton: "Afficher le bouton Bing Streetside",
+        showCopyCoordinatesButton: "Afficher les coordonnées de copie Bouton"
       })
     }
   }

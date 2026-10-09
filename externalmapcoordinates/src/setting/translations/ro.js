@@ -13,7 +13,13 @@ System.register([], function (e) {
         uiButtonVisibility: "Vizibilitate buton",
         uiHelp: "Ajutor",
         uiShowHelpGuide: "Arată ghidul de ajutor",
-        uiShowTheQuestionMarkButtonThat: "Arată butonul semn de întrebare care deschide ghidul de ajutor widget"
+        uiShowTheQuestionMarkButtonThat: "Arată butonul semn de întrebare care deschide ghidul de ajutor widget",
+        showPictometryButton: "Arată butonul de pictometrie",
+        showGoogleStreetViewButton: "Arată butonul Google Street View",
+        showGoogleMaps3dButton: "Arată harta Google butonul 3D",
+        showBingSatelliteButton: "Arată butonul din satelit Bing",
+        showBingStreetsideButton: "Arată butonul Bing Streetside",
+        showCopyCoordinatesButton: "Arată coordonatele de copiere buton"
       })
     }
   }

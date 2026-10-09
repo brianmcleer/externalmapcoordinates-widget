@@ -106,8 +106,8 @@ System.register([], function (e) {
         helpTips1: "Apăsați Esc pentru a șterge PIN-ul și începe peste.",
         helpTips2: "Faceţi clic pe un nou loc în orice moment. PIN-ul și coordonatele muta la noul loc.",
         helpTips3: "PIN-ul dispare atunci când închideți widget-ul. Copiază coordonatele mai întâi dacă trebuie să le păstrezi.",
-        unknownError: "unknown error",
-        unserializableError: "unserializable error"
+        unknownError: "Eroare necunoscută",
+        unserializableError: "eroare inoperabilă"
       })
     }
   }

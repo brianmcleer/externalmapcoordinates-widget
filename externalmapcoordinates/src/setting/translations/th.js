@@ -13,7 +13,13 @@ System.register([], function (e) {
         uiButtonVisibility: "ความเปรียบต่างของปุ่ม",
         uiHelp: "ตัวช่วย",
         uiShowHelpGuide: "แสดงคําแนะนํา",
-        uiShowTheQuestionMarkButtonThat: "แสดงปุ่ม เครื่องหมายคําถามที่เปิดวิดเจ็ตคําแนะนํา"
+        uiShowTheQuestionMarkButtonThat: "แสดงปุ่ม เครื่องหมายคําถามที่เปิดวิดเจ็ตคําแนะนํา",
+        showPictometryButton: "แสดงปุ่มทาสี",
+        showGoogleStreetViewButton: "แสดงปุ่มมุมมองของ Google ถนน",
+        showGoogleMaps3dButton: "แสดงปุ่มบนกูเกิ้ล 3 มิติ",
+        showBingSatelliteButton: "แสดงปุ่มบนดาวเทียม",
+        showBingStreetsideButton: "แสดงปุ่ม Bing Streetside",
+        showCopyCoordinatesButton: "แสดงปุ่มพิกัดคัดลอก"
       })
     }
   }

@@ -106,8 +106,8 @@ System.register([], function (e) {
         helpTips1: "Натиснете Esc, за да изчистите иглата и да започнете отначало.",
         helpTips2: "Щракнете върху ново място по всяко време. ПИН-ът и координатите отиват на новото място.",
         helpTips3: "ПИН-ът изчезва, когато затвориш джаджата. Първо копирайте координатите, ако искате да ги задържите.",
-        unknownError: "unknown error",
-        unserializableError: "unserializable error"
+        unknownError: "неизвестна грешка",
+        unserializableError: "несериозна грешка"
       })
     }
   }

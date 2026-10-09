@@ -13,7 +13,13 @@ System.register([], function (e) {
         uiButtonVisibility: "Button Visibility",
         uiHelp: "المساعدة",
         uiShowHelpGuide: "دليل المساعدة",
-        uiShowTheQuestionMarkButtonThat: "اظهر زر التساؤل الذي يفتح المرشد"
+        uiShowTheQuestionMarkButtonThat: "اظهر زر التساؤل الذي يفتح المرشد",
+        showPictometryButton: "نري \"بوتون\"",
+        showGoogleStreetViewButton: "Show Google Street View Button",
+        showGoogleMaps3dButton: "Show Google Maps 3D Button",
+        showBingSatelliteButton: "ساتل Bing Button",
+        showBingStreetsideButton: "عرض شارع \"بينج\"",
+        showCopyCoordinatesButton: "(أظهروا منسقي (بوتون"
       })
     }
   }

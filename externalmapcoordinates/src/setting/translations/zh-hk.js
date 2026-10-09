@@ -13,7 +13,13 @@ System.register([], function (e) {
         uiButtonVisibility: "按鍵可见度",
         uiHelp: "說明",
         uiShowHelpGuide: "顯示說明指南",
-        uiShowTheQuestionMarkButtonThat: "顯示開啟元件說明指導的問題標鍵"
+        uiShowTheQuestionMarkButtonThat: "顯示開啟元件說明指導的問題標鍵",
+        showPictometryButton: "顯示比對鍵",
+        showGoogleStreetViewButton: "顯示谷歌街景按鈕",
+        showGoogleMaps3dButton: "顯示谷歌地圖 3D 按鈕",
+        showBingSatelliteButton: "顯示 Bing 衛星按鈕",
+        showBingStreetsideButton: "顯示炳街按鈕",
+        showCopyCoordinatesButton: "顯示复制座標按鈕"
       })
     }
   }

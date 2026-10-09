@@ -106,8 +106,8 @@ System.register([], function (e) {
         helpTips1: "Appuyez sur Esc pour dégager l'épingle et recommencer.",
         helpTips2: "Cliquez sur un nouvel endroit à tout moment. La broche et les coordonnées se déplacent vers le nouvel endroit.",
         helpTips3: "La broche disparaît quand vous fermez le widget. Copiez d'abord les coordonnées si vous devez les garder.",
-        unknownError: "unknown error",
-        unserializableError: "unserializable error"
+        unknownError: "erreur inconnue",
+        unserializableError: "Erreur non sérialisable"
       })
     }
   }

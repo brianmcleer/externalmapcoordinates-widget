@@ -13,7 +13,13 @@ System.register([], function (e) {
         uiButtonVisibility: "Napin näkyvyys",
         uiHelp: "Ohje",
         uiShowHelpGuide: "Näytä ohje",
-        uiShowTheQuestionMarkButtonThat: "Näytä kysymys-merkki-painike, joka avaa widget ohjeen"
+        uiShowTheQuestionMarkButtonThat: "Näytä kysymys-merkki-painike, joka avaa widget ohjeen",
+        showPictometryButton: "Näytä piktometrin painike",
+        showGoogleStreetViewButton: "Näytä Google Street - painike",
+        showGoogleMaps3dButton: "Näytä Google Maps 3D- painike",
+        showBingSatelliteButton: "Näytä Bing Satelliittinappi",
+        showBingStreetsideButton: "Näytä Bing Streetin painike",
+        showCopyCoordinatesButton: "Näytä kopioinnin koordinaatit"
       })
     }
   }

@@ -106,8 +106,8 @@ System.register([], function (e) {
         helpTips1: "Stiskněte Esc pro vyčištění špendlíku a začít znovu.",
         helpTips2: "Klikněte na nové místo kdykoliv. Kolík a souřadnice se přesunou na nové místo.",
         helpTips3: "Když zavřete widget, špendlík zmizí. Zkopírujte souřadnice, pokud si je potřebujete nechat.",
-        unknownError: "unknown error",
-        unserializableError: "unserializable error"
+        unknownError: "neznámá chyba",
+        unserializableError: "neserializovatelná chyba"
       })
     }
   }

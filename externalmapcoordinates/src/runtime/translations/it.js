@@ -106,8 +106,8 @@ System.register([], function (e) {
         helpTips1: "Premere Esc per cancellare il perno e ricominciare.",
         helpTips2: "Fare clic su un nuovo posto in qualsiasi momento. Il perno e le coordinate si spostano al nuovo posto.",
         helpTips3: "Il perno scompare quando si chiude il widget. Copia le coordinate prima se devi tenerle.",
-        unknownError: "unknown error",
-        unserializableError: "unserializable error"
+        unknownError: "errore sconosciuto",
+        unserializableError: "errore non serializzabile"
       })
     }
   }
