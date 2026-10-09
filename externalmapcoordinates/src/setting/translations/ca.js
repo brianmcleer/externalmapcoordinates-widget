@@ -5,8 +5,15 @@ System.register([], function (e) {
       e({
         selectMapWidget: "Seleccioneu un widget de mapa",
         settings: "Configuració",
-        showScale: "Show Scale",
-        showZoom: "Show Zoom"
+        showScale: "Mostra l' escala",
+        showZoom: "Mostra el zoom",
+        uiPictometryConfiguration: "Configuració de Pictometria",
+        uiPictometryBaseUrl: "URL base de Pictometria",
+        uiEnterTheFullUrlIncludingAspx: "Introduïu l' URL complet incloent- hi el fitxer. aspx",
+        uiButtonVisibility: "Visibilitat del botó",
+        uiHelp: "Ajuda",
+        uiShowHelpGuide: "Mostra la guia d' ajuda",
+        uiShowTheQuestionMarkButtonThat: "Mostra el botó Pregunta- marca que obre la guia d' ajuda de l' estri"
       })
     }
   }

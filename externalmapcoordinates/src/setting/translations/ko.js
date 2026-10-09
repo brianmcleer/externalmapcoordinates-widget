@@ -5,8 +5,15 @@ System.register([], function (e) {
       e({
         selectMapWidget: "맵 위젯 선택",
         settings: "설정",
-        showScale: "Show Scale",
-        showZoom: "Show Zoom"
+        showScale: "쇼 가늠자",
+        showZoom: "쇼 Zoom",
+        uiPictometryConfiguration: "Pictometry 구성",
+        uiPictometryBaseUrl: "Pictometry 기본 URL",
+        uiEnterTheFullUrlIncludingAspx: ".aspx 파일을 포함한 전체 URL을 입력하십시오",
+        uiButtonVisibility: "버튼 가시성",
+        uiHelp: "도움말",
+        uiShowHelpGuide: "공지사항",
+        uiShowTheQuestionMarkButtonThat: "위젯 도움말 가이드를 열 수있는 질문 표시 버튼"
       })
     }
   }

@@ -5,8 +5,15 @@ System.register([], function (e) {
       e({
         selectMapWidget: "Vali kaardividin",
         settings: "Seaded",
-        showScale: "Show Scale",
-        showZoom: "Show Zoom"
+        showScale: "Skaala näitamine",
+        showZoom: "Näita suurendust",
+        uiPictometryConfiguration: "Piktomeetria seadistamine",
+        uiPictometryBaseUrl: "Piktomeetria baasi URL",
+        uiEnterTheFullUrlIncludingAspx: "Sisesta täielik URL, sealhulgas .aspx- fail",
+        uiButtonVisibility: "Nuppude nähtavus",
+        uiHelp: "Abi",
+        uiShowHelpGuide: "Abijuhendi näitamine",
+        uiShowTheQuestionMarkButtonThat: "Küsimusemärgi nupu näitamine, mis avab vidina abi juhendi"
       })
     }
   }

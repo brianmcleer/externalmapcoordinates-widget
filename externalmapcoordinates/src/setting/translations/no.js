@@ -5,8 +5,15 @@ System.register([], function (e) {
       e({
         selectMapWidget: "Velg kartminiprogram",
         settings: "Innstillinger",
-        showScale: "Show Scale",
-        showZoom: "Show Zoom"
+        showScale: "Vis skala",
+        showZoom: "Vis zoom",
+        uiPictometryConfiguration: "Konfigurasjon av piktometri",
+        uiPictometryBaseUrl: "Pictometry Base URL",
+        uiEnterTheFullUrlIncludingAspx: "Skriv inn hele URL inkludert .aspx-fil",
+        uiButtonVisibility: "Synlighet av knapp",
+        uiHelp: "Hjelp",
+        uiShowHelpGuide: "Vis hjelpguide",
+        uiShowTheQuestionMarkButtonThat: "Vis spørsmålsmerkeknappen som åpner widget-hjelpeguiden"
       })
     }
   }

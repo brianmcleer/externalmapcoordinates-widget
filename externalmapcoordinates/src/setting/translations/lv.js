@@ -5,8 +5,15 @@ System.register([], function (e) {
       e({
         selectMapWidget: "Atlasīt kartes logrīku",
         settings: "Iestatījumi",
-        showScale: "Show Scale",
-        showZoom: "Show Zoom"
+        showScale: "Rādīt mērogojumu",
+        showZoom: "Rādīt izmēru",
+        uiPictometryConfiguration: "Piktometrijas konfigurācija",
+        uiPictometryBaseUrl: "Piktometrijas bāzes URL",
+        uiEnterTheFullUrlIncludingAspx: "Ievadiet pilnu URL, ieskaitot .aspx failu",
+        uiButtonVisibility: "Pogu redzamība",
+        uiHelp: "Palīdzība",
+        uiShowHelpGuide: "Rādīt palīdzības ceļvedi",
+        uiShowTheQuestionMarkButtonThat: "Rādīt jautājumu zīmes pogu, kas atver logdaļu palīdzības rokasgrāmatu"
       })
     }
   }

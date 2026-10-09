@@ -5,8 +5,15 @@ System.register([], function (e) {
       e({
         selectMapWidget: "Izberi pripomoček karte",
         settings: "Nastavitve",
-        showScale: "Show Scale",
-        showZoom: "Show Zoom"
+        showScale: "Prikaži merilo",
+        showZoom: "Prikaži povečavo",
+        uiPictometryConfiguration: "Nastavitev piktometrije",
+        uiPictometryBaseUrl: "URL osnove za piktometrijo",
+        uiEnterTheFullUrlIncludingAspx: "Vnesite celoten URL, vključno z datoteko .aspx",
+        uiButtonVisibility: "Vidljivost gumbov",
+        uiHelp: "Pomoč",
+        uiShowHelpGuide: "Prikaži vodnik za pomoč",
+        uiShowTheQuestionMarkButtonThat: "Prikaži gumb z vprašanji, ki odpre widget pomoč vodnik"
       })
     }
   }

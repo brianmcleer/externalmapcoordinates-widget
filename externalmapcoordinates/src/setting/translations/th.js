@@ -5,8 +5,15 @@ System.register([], function (e) {
       e({
         selectMapWidget: "เลือกวิดเจ็ตแผนที่",
         settings: "การตั้งค่า",
-        showScale: "Show Scale",
-        showZoom: "Show Zoom"
+        showScale: "แสดงขนาด",
+        showZoom: "แสดงย่อ/ ขยาย",
+        uiPictometryConfiguration: "การปรับแต่งรูปภาพ",
+        uiPictometryBaseUrl: "ที่อยู่ URL ฐาน Pictomothe",
+        uiEnterTheFullUrlIncludingAspx: "ป้อนที่อยู่ URL แบบเต็ม รวมถึงแฟ้ม .aspx",
+        uiButtonVisibility: "ความเปรียบต่างของปุ่ม",
+        uiHelp: "ตัวช่วย",
+        uiShowHelpGuide: "แสดงคําแนะนํา",
+        uiShowTheQuestionMarkButtonThat: "แสดงปุ่ม เครื่องหมายคําถามที่เปิดวิดเจ็ตคําแนะนํา"
       })
     }
   }

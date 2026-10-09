@@ -5,8 +5,15 @@ System.register([], function (e) {
       e({
         selectMapWidget: "Chọn tiện ích bản đồ",
         settings: "Thiết lập",
-        showScale: "Show Scale",
-        showZoom: "Show Zoom"
+        showScale: "Hiện tỷ lệ",
+        showZoom: "Hiện cỡ ảnh",
+        uiPictometryConfiguration: "Cấu hình Hình Hình học",
+        uiPictometryBaseUrl: "URL cơ số hình người",
+        uiEnterTheFullUrlIncludingAspx: "Nhập địa chỉ URL đầy đủ bao gồm tập tin .aspx",
+        uiButtonVisibility: "Khả năng nhìn của nút",
+        uiHelp: "Trợ giúp",
+        uiShowHelpGuide: "Hiện hướng dẫn trợ giúp",
+        uiShowTheQuestionMarkButtonThat: "Hiển thị nút đánh dấu câu hỏi để mở hướng dẫn trợ giúp ô điều khiển"
       })
     }
   }

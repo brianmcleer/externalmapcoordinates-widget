@@ -5,8 +5,15 @@ System.register([], function (e) {
       e({
         selectMapWidget: "Pasirinkti žemėlapio valdiklį",
         settings: "Nustatymai",
-        showScale: "Show Scale",
-        showZoom: "Show Zoom"
+        showScale: "Rodyti skalę",
+        showZoom: "Rodyti mastelį",
+        uiPictometryConfiguration: "Piktometrijos konfigūracija",
+        uiPictometryBaseUrl: "Piktometrijos pagrindinis URL",
+        uiEnterTheFullUrlIncludingAspx: "Įveskite visą URL, įskaitant .aspx failą",
+        uiButtonVisibility: "Mygtuko matomumas",
+        uiHelp: "Pagalba",
+        uiShowHelpGuide: "Rodyti pagalbos vadovą",
+        uiShowTheQuestionMarkButtonThat: "Rodyti klausimų žymėjimo mygtuką, kuris atveria valdikliui skirtą pagalbos vadovą"
       })
     }
   }

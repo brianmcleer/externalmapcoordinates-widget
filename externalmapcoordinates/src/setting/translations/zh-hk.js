@@ -5,8 +5,15 @@ System.register([], function (e) {
       e({
         selectMapWidget: "選擇地圖 widget",
         settings: "設定",
-        showScale: "Show Scale",
-        showZoom: "Show Zoom"
+        showScale: "顯示比例",
+        showZoom: "顯示縮放",
+        uiPictometryConfiguration: "位元設定",
+        uiPictometryBaseUrl: "相片基址",
+        uiEnterTheFullUrlIncludingAspx: "輸入包括.aspx 檔案在内的完整網址",
+        uiButtonVisibility: "按鍵可见度",
+        uiHelp: "說明",
+        uiShowHelpGuide: "顯示說明指南",
+        uiShowTheQuestionMarkButtonThat: "顯示開啟元件說明指導的問題標鍵"
       })
     }
   }

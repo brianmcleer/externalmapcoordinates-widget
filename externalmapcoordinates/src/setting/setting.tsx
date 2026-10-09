@@ -7,6 +7,17 @@ import {
 } from "jimu-ui/advanced/setting-components";
 import { Switch, TextInput, Label } from "jimu-ui";
 import type { Config, IMConfig } from "../config";
+import __i18nDefaults from './translations/default'
+let __i18nIntl: any = null
+/** Module translator: app language via the widget intl, English from default.ts, {name} values filled. */
+const __t = (id: string, values?: { [key: string]: any }): string => {
+  const msg: string = (__i18nDefaults as any)[id] ?? id
+  if (__i18nIntl && typeof __i18nIntl.formatMessage === 'function') {
+    try { return __i18nIntl.formatMessage({ id, defaultMessage: msg }, values) } catch (e) { }
+  }
+  return msg.replace(/\{(\w+)\}/g, (m: string, k: string) => (values && values[k] != null ? String(values[k]) : m))
+}
+
 
 type SettingProps = AllWidgetSettingProps<IMConfig> & {
     id: string;
@@ -58,6 +69,7 @@ class Setting extends React.PureComponent<SettingProps, Record<string, never>> {
     };
 
     render() {
+    __i18nIntl = (this.props as any).intl
         const { config } = this.props;
 
         return (
@@ -65,7 +77,7 @@ class Setting extends React.PureComponent<SettingProps, Record<string, never>> {
 
                 <SettingSection
                     className="map-selector-section"
-                    title="Select Map Widget"
+                    title={__t("selectMapWidget")}
                 >
                     <SettingRow>
                         <MapWidgetSelector
@@ -75,19 +87,19 @@ class Setting extends React.PureComponent<SettingProps, Record<string, never>> {
                     </SettingRow>
                 </SettingSection>
 
-                <SettingSection title="Settings">
+                <SettingSection title={__t("settings")}>
                     {this.renderToggle('Show Zoom', 'showZoom')}
                     {this.renderToggle('Show Scale', 'showScale')}
                 </SettingSection>
 
-                <SettingSection title="Pictometry Configuration">
+                <SettingSection title={__t("uiPictometryConfiguration")}>
                     <SettingRow>
                         <div style={{ width: '100%' }}>
                             <Label style={{ display: 'block', marginBottom: '4px' }}>
-                                Pictometry Base URL
+                                {__t("uiPictometryBaseUrl")}
                             </Label>
                             <div style={{ fontSize: '12px', color: '#6a6c6e', marginBottom: '8px', wordBreak: 'break-all' }}>
-                                Enter the full URL including .aspx file
+                                {__t("uiEnterTheFullUrlIncludingAspx")}
                             </div>
                             <TextInput
                                 className="w-100"
@@ -99,7 +111,7 @@ class Setting extends React.PureComponent<SettingProps, Record<string, never>> {
                     </SettingRow>
                 </SettingSection>
 
-                <SettingSection title="Button Visibility">
+                <SettingSection title={__t("uiButtonVisibility")}>
                     {this.renderToggle('Show Pictometry Button', 'showPictometry', true)}
                     {this.renderToggle('Show Google Street View Button', 'showGoogleStreetView', true)}
                     {this.renderToggle('Show Google Maps 3D Button', 'showGoogleMaps3D', true)}
@@ -107,12 +119,12 @@ class Setting extends React.PureComponent<SettingProps, Record<string, never>> {
                     {this.renderToggle('Show Bing Streetside Button', 'showBingStreetside', true)}
                     {this.renderToggle('Show Copy Coordinates Button', 'showCopyButton', true)}
                 </SettingSection>
-                <SettingSection title='Help'>
-                  <SettingRow tag='label' label='Show help guide'>
+                <SettingSection title={__t("uiHelp")}>
+                  <SettingRow tag='label' label={__t("uiShowHelpGuide")}>
                     <Switch
                       checked={this.props.config?.showHelp !== false}
                       onChange={(evt) => { this.props.onSettingChange({ id: this.props.id, config: (this.props.config as any).set('showHelp', evt.target.checked) }) }}
-                      aria-label='Show the question-mark button that opens the widget help guide'
+                      aria-label={__t("uiShowTheQuestionMarkButtonThat")}
                     />
                   </SettingRow>
                 </SettingSection>

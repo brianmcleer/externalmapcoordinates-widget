@@ -5,8 +5,15 @@ System.register([], function (e) {
       e({
         selectMapWidget: "Kaartwidget selecteren",
         settings: "Instellingen",
-        showScale: "Show Scale",
-        showZoom: "Show Zoom"
+        showScale: "Schaal tonen",
+        showZoom: "Zoomen",
+        uiPictometryConfiguration: "Pictometrieconfiguratie",
+        uiPictometryBaseUrl: "Pictometrie basis-URL",
+        uiEnterTheFullUrlIncludingAspx: "Voer de volledige URL in inclusief .aspx-bestand",
+        uiButtonVisibility: "Knop zichtbaar",
+        uiHelp: "Hulp",
+        uiShowHelpGuide: "Hulplijn tonen",
+        uiShowTheQuestionMarkButtonThat: "De knop met het vraagteken tonen die de hulplijn widget opent"
       })
     }
   }

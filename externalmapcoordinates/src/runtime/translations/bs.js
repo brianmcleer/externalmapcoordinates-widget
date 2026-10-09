@@ -105,7 +105,9 @@ System.register([], function (e) {
         helpTipsTitle: "Good to know",
         helpTips1: "Press Esc to clear the pin and start over.",
         helpTips2: "Click a new spot at any time. The pin and the coordinates move to the new spot.",
-        helpTips3: "The pin disappears when you close the widget. Copy the coordinates first if you need to keep them."
+        helpTips3: "The pin disappears when you close the widget. Copy the coordinates first if you need to keep them.",
+        unknownError: "unknown error",
+        unserializableError: "unserializable error"
       })
     }
   }

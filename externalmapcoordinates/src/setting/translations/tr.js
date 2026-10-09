@@ -6,7 +6,14 @@ System.register([], function (e) {
         selectMapWidget: "Harita aracı seç",
         settings: "Ayarlar",
         showScale: "Show Scale",
-        showZoom: "Show Zoom"
+        showZoom: "Zoom Show",
+        uiPictometryConfiguration: "Pictometry Build",
+        uiPictometryBaseUrl: "Pictometry Base URL",
+        uiEnterTheFullUrlIncludingAspx: ".aspx dosyası dahil tüm URL girin",
+        uiButtonVisibility: "Düğme Viability",
+        uiHelp: "Yardım",
+        uiShowHelpGuide: "Show help guide",
+        uiShowTheQuestionMarkButtonThat: "Widget'ı açan soru işaret düğmesine göster"
       })
     }
   }

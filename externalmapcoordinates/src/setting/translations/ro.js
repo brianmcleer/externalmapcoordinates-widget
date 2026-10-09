@@ -5,8 +5,15 @@ System.register([], function (e) {
       e({
         selectMapWidget: "Selectare widget de hartă",
         settings: "Setări",
-        showScale: "Show Scale",
-        showZoom: "Show Zoom"
+        showScale: "Afișează scala",
+        showZoom: "Arată zoom",
+        uiPictometryConfiguration: "Configurare pictometrie",
+        uiPictometryBaseUrl: "Name",
+        uiEnterTheFullUrlIncludingAspx: "Introduceți URL- ul complet, inclusiv fișierul .aspx",
+        uiButtonVisibility: "Vizibilitate buton",
+        uiHelp: "Ajutor",
+        uiShowHelpGuide: "Arată ghidul de ajutor",
+        uiShowTheQuestionMarkButtonThat: "Arată butonul semn de întrebare care deschide ghidul de ajutor widget"
       })
     }
   }

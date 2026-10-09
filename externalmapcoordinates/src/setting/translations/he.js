@@ -6,7 +6,14 @@ System.register([], function (e) {
         selectMapWidget: "בחר ווידג'ט מפה",
         settings: "הגדרות",
         showScale: "Show Scale",
-        showZoom: "Show Zoom"
+        showZoom: "הצג ZOOS",
+        uiPictometryConfiguration: "המונחים: Pictometry Configuration",
+        uiPictometryBaseUrl: "בסיס פיקניק",
+        uiEnterTheFullUrlIncludingAspx: "היכנס ל-URL המלא כולל קובץ .aspx",
+        uiButtonVisibility: "Button Visibility",
+        uiHelp: "עזרה",
+        uiShowHelpGuide: "מדריך עזרה",
+        uiShowTheQuestionMarkButtonThat: "הצג את לחצן סימן שאלה פותח את מדריך העזרה widget"
       })
     }
   }

@@ -5,8 +5,15 @@ System.register([], function (e) {
       e({
         selectMapWidget: "Избиране на изпълним модул за карта",
         settings: "Настройки",
-        showScale: "Show Scale",
-        showZoom: "Show Zoom"
+        showScale: "Показване на скалата",
+        showZoom: "Показване на увеличение",
+        uiPictometryConfiguration: "Настройване на пиктометрията",
+        uiPictometryBaseUrl: "Адрес на пиктометрията",
+        uiEnterTheFullUrlIncludingAspx: "Въведете пълния адрес, включително .aspx файл",
+        uiButtonVisibility: "Видимост на бутоните",
+        uiHelp: "Помощ",
+        uiShowHelpGuide: "Показване на ръководство за помощ",
+        uiShowTheQuestionMarkButtonThat: "Показване на бутона въпрос-марка, която отваря джаджа помощ ръководство"
       })
     }
   }

@@ -5,8 +5,15 @@ System.register([], function (e) {
       e({
         selectMapWidget: "Виберіть віджет карти",
         settings: "Налаштування",
-        showScale: "Show Scale",
-        showZoom: "Show Zoom"
+        showScale: "Показати масштаб",
+        showZoom: "Показати Zoom",
+        uiPictometryConfiguration: "Налаштування піктометрії",
+        uiPictometryBaseUrl: "Pictometry Базовий URL",
+        uiEnterTheFullUrlIncludingAspx: "Введіть повну URL-адресу, включаючи файл .aspx",
+        uiButtonVisibility: "Кнопка Visibility",
+        uiHelp: "Довідка",
+        uiShowHelpGuide: "Показати посібник",
+        uiShowTheQuestionMarkButtonThat: "Показати натис-mark, який відкриває посібник з підтримки віджету"
       })
     }
   }

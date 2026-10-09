@@ -5,8 +5,15 @@ System.register([], function (e) {
       e({
         selectMapWidget: "Térképwidget kiválasztása",
         settings: "Beállítások",
-        showScale: "Show Scale",
-        showZoom: "Show Zoom"
+        showScale: "Méret megjelenítése",
+        showZoom: "Nagyítás megjelenítése",
+        uiPictometryConfiguration: "Piktometriai beállítás",
+        uiPictometryBaseUrl: "Piktometriai alapURL",
+        uiEnterTheFullUrlIncludingAspx: "Adja meg a teljes URL-t, beleértve a .aspx fájlt",
+        uiButtonVisibility: "A gomb láthatósága",
+        uiHelp: "Súgó",
+        uiShowHelpGuide: "Segítőútmutató megjelenítése",
+        uiShowTheQuestionMarkButtonThat: "Megjeleníti a kérdőjel gombot, amely megnyitja a widget súgó útmutatót"
       })
     }
   }

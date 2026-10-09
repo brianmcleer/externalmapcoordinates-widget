@@ -5,8 +5,15 @@ System.register([], function (e) {
       e({
         selectMapWidget: "选择地图微件",
         settings: "设置",
-        showScale: "Show Scale",
-        showZoom: "Show Zoom"
+        showScale: "显示缩放",
+        showZoom: "显示缩放",
+        uiPictometryConfiguration: "几何配置",
+        uiPictometryBaseUrl: "图形基址",
+        uiEnterTheFullUrlIncludingAspx: "输入包括.aspx文件在内的完整 URL",
+        uiButtonVisibility: "按钮可见度",
+        uiHelp: "帮助",
+        uiShowHelpGuide: "显示帮助指南",
+        uiShowTheQuestionMarkButtonThat: "显示打开部件帮助指南的问题标记按钮"
       })
     }
   }

@@ -8,12 +8,23 @@ import { CalciteIcon } from 'calcite-components'
 import '../index.css'
 
 import defaultMessages from './translations/default'
+let __dmIntl: any = null
+/** defaultMessages, but each string comes from the app language when the widget intl has it. */
+const __dm: any = new Proxy(defaultMessages as any, {
+  get: (tgt: any, k: any) => {
+    const v = tgt[k]
+    if (typeof k !== 'string' || typeof v !== 'string') return v
+    const m = __dmIntl && __dmIntl.messages ? __dmIntl.messages[k] : undefined
+    return typeof m === 'string' ? m : v
+  }
+})
 import { beacon } from '../shared/beacon'
 import type { BeaconHandle } from '../shared/beacon'
 import HelpPopup from './components/HelpPopup'
 import FirstRunHint from './components/FirstRunHint'
 import { buildHelpSections } from './helpSections'
 import type { HelpFeatures } from './helpSections'
+import { __setIntl } from './i18n-t'
 
 // Webpack supplies require at runtime for static assets. This local declaration
 // keeps the browser bundle unchanged without pulling Node.js types into the widget.
@@ -285,13 +296,13 @@ class Widget extends React.PureComponent<WidgetProps, IState> {
             showZoom: !!config.showZoom,
             showScale: !!config.showScale,
             labels: {
-                pictometry: defaultMessages.pictometryImagery,
-                googleStreetView: defaultMessages.googleStreetView,
-                googleMaps3D: defaultMessages.googleMaps3D,
-                bingSatellite: defaultMessages.bingSatelliteMaps,
-                bingStreetside: defaultMessages.bingStreetside,
-                copy: defaultMessages.copyLatLon,
-                copied: defaultMessages.copied
+                pictometry: __dm.pictometryImagery,
+                googleStreetView: __dm.googleStreetView,
+                googleMaps3D: __dm.googleMaps3D,
+                bingSatellite: __dm.bingSatelliteMaps,
+                bingStreetside: __dm.bingStreetside,
+                copy: __dm.copyLatLon,
+                copied: __dm.copied
             }
         }
     }
@@ -691,7 +702,7 @@ class Widget extends React.PureComponent<WidgetProps, IState> {
             this.currentPinGraphic = pin
 
             this.announceForScreenReader(
-                defaultMessages.srPinPlaced
+                __dm.srPinPlaced
                     .replace('{lat}', point.y.toFixed(4))
                     .replace('{lon}', point.x.toFixed(4))
             )
@@ -739,7 +750,7 @@ class Widget extends React.PureComponent<WidgetProps, IState> {
         if (!projectedPoint) {
             const wkid = (spatialReference as any)?.wkid ?? (spatialReference as any)?.latestWkid ?? 'unknown'
             this.announceForScreenReader(
-                defaultMessages.srUnsupportedSr.replace('{wkid}', String(wkid))
+                __dm.srUnsupportedSr.replace('{wkid}', String(wkid))
             )
             return
         }
@@ -791,7 +802,7 @@ class Widget extends React.PureComponent<WidgetProps, IState> {
         const value = `${this.state.latitude}, ${this.state.longitude}`
         navigator.clipboard.writeText(value)
             .then(() => {
-                this.announceForScreenReader(defaultMessages.srCopied)
+                this.announceForScreenReader(__dm.srCopied)
                 this.safeSetState({ coordinatesCopied: true })
                 setTimeout(() => { this.safeSetState({ coordinatesCopied: false }) }, 3000)
             })
@@ -840,6 +851,8 @@ class Widget extends React.PureComponent<WidgetProps, IState> {
 
     // ── Render ───────────────────────────────────────────────────────────────────
     render() {
+    __setIntl((this.props as any).intl)
+    __dmIntl = (this.props as any).intl
         const useMapWidget = this.props.useMapWidgetIds?.[0]
         const { config, theme, id: widgetId } = this.props
         const { clicked, coordinatesCopied, mapViewReady, latitude, longitude, zoom, scale, helpOpen, showFirstRunHint } = this.state
@@ -849,7 +862,7 @@ class Widget extends React.PureComponent<WidgetProps, IState> {
                 <WidgetPlaceholder
                     icon={squareCrossIcon}
                     autoFlip={true}
-                    message={defaultMessages.pleaseSelectMap}
+                    message={__dm.pleaseSelectMap}
                     widgetId={widgetId}
                 />
             )
@@ -882,13 +895,13 @@ class Widget extends React.PureComponent<WidgetProps, IState> {
 
         // Coordinate / scale / zoom section.
         const coordSections: React.ReactNode[] = [
-            <span key="coords" aria-live="polite">{`${defaultMessages.latLon}: ${latitude}, ${longitude}`}</span>
+            <span key="coords" aria-live="polite">{`${__dm.latLon}: ${latitude}, ${longitude}`}</span>
         ]
         if (config.showZoom) {
-            coordSections.push(<span key="zoom" aria-live="polite">{`${defaultMessages.zoom} ${zoom}`}</span>)
+            coordSections.push(<span key="zoom" aria-live="polite">{`${__dm.zoom} ${zoom}`}</span>)
         }
         if (config.showScale) {
-            coordSections.push(<span key="scale" aria-live="polite">{`${defaultMessages.scale} 1:${scale}`}</span>)
+            coordSections.push(<span key="scale" aria-live="polite">{`${__dm.scale} 1:${scale}`}</span>)
         }
         const coordLine = coordSections.reduce<React.ReactNode[]>((acc, curr, i) =>
             acc.length === 0 ? [curr] : [...acc, ' | ', curr], [])
@@ -929,7 +942,7 @@ class Widget extends React.PureComponent<WidgetProps, IState> {
                 aria-labelledby={titleId}
                 role="region"
             >
-                <h2 id={titleId} style={srOnly}>{defaultMessages.ariaWidgetTitle}</h2>
+                <h2 id={titleId} style={srOnly}>{__dm.ariaWidgetTitle}</h2>
 
                 <JimuMapViewComponent
                     useMapWidgetId={useMapWidget}
@@ -958,55 +971,55 @@ class Widget extends React.PureComponent<WidgetProps, IState> {
 
                 <div style={containerStyle}>
                     <p id={instructionsId} role="alert" aria-live="polite" style={{ fontFamily }}>
-                        {defaultMessages.clickInstruction}
+                        {__dm.clickInstruction}
                     </p>
 
                     <p aria-live="polite" style={{ fontFamily }}>
-                        {mapViewReady ? coordLine : defaultMessages.latLonWillBeHere}
+                        {mapViewReady ? coordLine : __dm.latLonWillBeHere}
                     </p>
 
-                    <div style={btnGroupStyle} role="toolbar" aria-label={defaultMessages.ariaToolbar}>
+                    <div style={btnGroupStyle} role="toolbar" aria-label={__dm.ariaToolbar}>
                         {config.showPictometry !== false && config.pictometryBaseUrl && linkButton(
-                            defaultMessages.pictometryImagery,
+                            __dm.pictometryImagery,
                             this.state.Pictometry3dUrl,
-                            defaultMessages.ariaPictometry,
-                            defaultMessages.tooltipPictometry,
+                            __dm.ariaPictometry,
+                            __dm.tooltipPictometry,
                             this.pictometryBtnRef,
                             'btn-pictometry'
                         )}
 
                         {config.showGoogleStreetView !== false && linkButton(
-                            defaultMessages.googleStreetView,
+                            __dm.googleStreetView,
                             this.state.GoogleStreetViewUrl,
-                            defaultMessages.ariaGoogleStreetView,
-                            defaultMessages.tooltipGoogleStreetView,
+                            __dm.ariaGoogleStreetView,
+                            __dm.tooltipGoogleStreetView,
                             this.streetViewBtnRef,
                             'btn-streetview'
                         )}
 
                         {config.showGoogleMaps3D !== false && linkButton(
-                            defaultMessages.googleMaps3D,
+                            __dm.googleMaps3D,
                             this.state.GoogleMaps3DUrl,
-                            defaultMessages.ariaGoogleMaps3D,
-                            defaultMessages.tooltipGoogleMaps3D,
+                            __dm.ariaGoogleMaps3D,
+                            __dm.tooltipGoogleMaps3D,
                             this.googleMapsBtnRef,
                             'btn-googlemaps3d'
                         )}
 
                         {config.showBingSatellite !== false && linkButton(
-                            defaultMessages.bingSatelliteMaps,
+                            __dm.bingSatelliteMaps,
                             this.state.BingSatelliteUrl,
-                            defaultMessages.ariaBingSatellite,
-                            defaultMessages.tooltipBingSatellite,
+                            __dm.ariaBingSatellite,
+                            __dm.tooltipBingSatellite,
                             this.bingSatelliteBtnRef,
                             'btn-bingsat'
                         )}
 
                         {config.showBingStreetside !== false && linkButton(
-                            defaultMessages.bingStreetside,
+                            __dm.bingStreetside,
                             this.state.BingStreetsideUrl,
-                            defaultMessages.ariaBingStreetside,
-                            defaultMessages.tooltipBingStreetside,
+                            __dm.ariaBingStreetside,
+                            __dm.tooltipBingStreetside,
                             this.bingStreetsideBtnRef,
                             'btn-streetside'
                         )}
@@ -1014,7 +1027,7 @@ class Widget extends React.PureComponent<WidgetProps, IState> {
                         {config.showCopyButton !== false && (
                             <Tooltip
                                 key="btn-copy"
-                                title={coordinatesCopied ? defaultMessages.tooltipCopied : defaultMessages.tooltipCopy}
+                                title={coordinatesCopied ? __dm.tooltipCopied : __dm.tooltipCopy}
                             >
                                 <span style={{ display: 'inline-block', width: '100%' }}>
                                     <Button
@@ -1023,10 +1036,10 @@ class Widget extends React.PureComponent<WidgetProps, IState> {
                                         css={btnStyle}
                                         disabled={!clicked}
                                         aria-disabled={!clicked ? true : undefined}
-                                        aria-label={defaultMessages.ariaCopy}
+                                        aria-label={__dm.ariaCopy}
                                         ref={this.copyBtnRef}
                                     >
-                                        {coordinatesCopied ? defaultMessages.copied : defaultMessages.copyLatLon}
+                                        {coordinatesCopied ? __dm.copied : __dm.copyLatLon}
                                     </Button>
                                 </span>
                             </Tooltip>
@@ -1034,24 +1047,24 @@ class Widget extends React.PureComponent<WidgetProps, IState> {
 
                         <Tooltip
                             key="textbox"
-                            title={clicked ? defaultMessages.tooltipTextBoxAfterClick : defaultMessages.tooltipTextBoxBeforeClick}
+                            title={clicked ? __dm.tooltipTextBoxAfterClick : __dm.tooltipTextBoxBeforeClick}
                         >
                             <TextInput
                                 id={textBoxId}
                                 value={clicked ? `${latitude}, ${longitude}` : ''}
                                 readOnly
                                 css={textBoxStyle}
-                                placeholder={clicked ? '' : defaultMessages.textBoxPlaceholder}
-                                aria-label={defaultMessages.ariaTextBox}
+                                placeholder={clicked ? '' : __dm.textBoxPlaceholder}
+                                aria-label={__dm.ariaTextBox}
                                 ref={this.textInputRef}
                             />
                         </Tooltip>
 
                         <p aria-hidden={true} style={{ fontFamily }}>
-                            {defaultMessages.copyHint}
+                            {__dm.copyHint}
                         </p>
                         <p style={srOnly}>
-                            {defaultMessages.copyHintSrOnly}
+                            {__dm.copyHintSrOnly}
                         </p>
                     </div>
                 </div>

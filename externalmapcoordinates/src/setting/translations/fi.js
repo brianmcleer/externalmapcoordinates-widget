@@ -5,8 +5,15 @@ System.register([], function (e) {
       e({
         selectMapWidget: "Valitse kartan pienoisohjelma",
         settings: "Asetukset",
-        showScale: "Show Scale",
-        showZoom: "Show Zoom"
+        showScale: "Näytä vaaka",
+        showZoom: "Näytä suurennos",
+        uiPictometryConfiguration: "Piktometrian asetukset",
+        uiPictometryBaseUrl: "Piktometrian perusverkko- osoite",
+        uiEnterTheFullUrlIncludingAspx: "Anna koko URL-osoite, mukaan lukien .aspx-tiedosto",
+        uiButtonVisibility: "Napin näkyvyys",
+        uiHelp: "Ohje",
+        uiShowHelpGuide: "Näytä ohje",
+        uiShowTheQuestionMarkButtonThat: "Näytä kysymys-merkki-painike, joka avaa widget ohjeen"
       })
     }
   }

@@ -5,8 +5,15 @@ System.register([], function (e) {
       e({
         selectMapWidget: "Выбрать виджет карты",
         settings: "Настройки",
-        showScale: "Show Scale",
-        showZoom: "Show Zoom"
+        showScale: "Шкала шоу",
+        showZoom: "Показать Zoom",
+        uiPictometryConfiguration: "Конфигурация пиктометрии",
+        uiPictometryBaseUrl: "Пиктометрическая база URL",
+        uiEnterTheFullUrlIncludingAspx: "Введите полный URL, включая файл .aspx",
+        uiButtonVisibility: "Кнопочная видимость",
+        uiHelp: "Справка",
+        uiShowHelpGuide: "Показать справочник",
+        uiShowTheQuestionMarkButtonThat: "Покажите кнопку вопрос-марка, которая открывает руководство по помощи виджета"
       })
     }
   }

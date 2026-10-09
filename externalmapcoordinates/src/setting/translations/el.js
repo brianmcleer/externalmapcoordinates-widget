@@ -5,8 +5,15 @@ System.register([], function (e) {
       e({
         selectMapWidget: "Επιλογή widget χάρτη",
         settings: "Ρυθμίσεις",
-        showScale: "Show Scale",
-        showZoom: "Show Zoom"
+        showScale: "Εμφάνιση κλίμακας",
+        showZoom: "Εμφάνιση εστίασης",
+        uiPictometryConfiguration: "Configuration εικονομετρίας",
+        uiPictometryBaseUrl: "Βασικό URL εικονομετρίας",
+        uiEnterTheFullUrlIncludingAspx: "Εισάγετε το πλήρες URL συμπεριλαμβανομένου του αρχείου .aspx",
+        uiButtonVisibility: "Ορατότητα κουμπιού",
+        uiHelp: "Βοήθεια",
+        uiShowHelpGuide: "Εμφάνιση οδηγού βοήθειας",
+        uiShowTheQuestionMarkButtonThat: "Εμφάνιση του κουμπιού ερωτηματολογίου που ανοίγει τον οδηγό βοήθειας widget"
       })
     }
   }

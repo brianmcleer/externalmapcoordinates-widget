@@ -5,8 +5,15 @@ System.register([], function (e) {
       e({
         selectMapWidget: "マップ ウィジェットの選択",
         settings: "設定",
-        showScale: "Show Scale",
-        showZoom: "Show Zoom"
+        showScale: "ショースケール",
+        showZoom: "ズームショー",
+        uiPictometryConfiguration: "ピクトメトリー構成",
+        uiPictometryBaseUrl: "ピクトメトリーベースURL",
+        uiEnterTheFullUrlIncludingAspx: ".aspxファイルを含むフルURLを入力してください",
+        uiButtonVisibility: "ボタンの可視性",
+        uiHelp: "ヘルプ",
+        uiShowHelpGuide: "ヘルプガイドを表示",
+        uiShowTheQuestionMarkButtonThat: "ウィジェットヘルプガイドを開く質問のボタンを表示する"
       })
     }
   }

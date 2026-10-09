@@ -5,8 +5,15 @@ System.register([], function (e) {
       e({
         selectMapWidget: "Pilih widget peta",
         settings: "Pengaturan",
-        showScale: "Show Scale",
-        showZoom: "Show Zoom"
+        showScale: "Tampilkan Skala",
+        showZoom: "Tampilkan pembesaran",
+        uiPictometryConfiguration: "Konfigurasi Pictometri",
+        uiPictometryBaseUrl: "URL Basis Pictometri",
+        uiEnterTheFullUrlIncludingAspx: "Masukkan URL lengkap termasuk berkas .aspx",
+        uiButtonVisibility: "Visibilitas Tombol",
+        uiHelp: "Bantuan",
+        uiShowHelpGuide: "Tampilkan panduan bantuan",
+        uiShowTheQuestionMarkButtonThat: "Tampilkan tombol tanya-tandai yang membuka panduan bantuan widget"
       })
     }
   }

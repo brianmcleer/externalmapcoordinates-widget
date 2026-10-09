@@ -5,8 +5,15 @@ System.register([], function (e) {
       e({
         selectMapWidget: "Selecionar widget de mapa",
         settings: "Definições",
-        showScale: "Show Scale",
-        showZoom: "Show Zoom"
+        showScale: "Mostrar a Escala",
+        showZoom: "Mostrar Ampliação",
+        uiPictometryConfiguration: "Configuração da Pictometria",
+        uiPictometryBaseUrl: "URL base de pictometria",
+        uiEnterTheFullUrlIncludingAspx: "Digite o URL completo incluindo arquivo .aspx",
+        uiButtonVisibility: "Visibilidade do Botão",
+        uiHelp: "Ajuda",
+        uiShowHelpGuide: "Mostrar guia de ajuda",
+        uiShowTheQuestionMarkButtonThat: "Mostrar o botão de marca de perguntas que abre o guia de ajuda do elemento"
       })
     }
   }

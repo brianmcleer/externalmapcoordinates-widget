@@ -6,7 +6,14 @@ System.register([], function (e) {
         selectMapWidget: "Izaberite vidžet za mapu",
         settings: "Podešavanja",
         showScale: "Show Scale",
-        showZoom: "Show Zoom"
+        showZoom: "Show Zoom",
+        uiPictometryConfiguration: "Pictometry Configuration",
+        uiPictometryBaseUrl: "Pictometry Base URL",
+        uiEnterTheFullUrlIncludingAspx: "Enter the full URL including .aspx file",
+        uiButtonVisibility: "Button Visibility",
+        uiHelp: "Pomoć",
+        uiShowHelpGuide: "Show help guide",
+        uiShowTheQuestionMarkButtonThat: "Show the question-mark button that opens the widget help guide"
       })
     }
   }

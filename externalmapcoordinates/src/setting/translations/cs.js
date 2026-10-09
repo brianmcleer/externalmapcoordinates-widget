@@ -5,8 +5,15 @@ System.register([], function (e) {
       e({
         selectMapWidget: "Vybrat widget mapy",
         settings: "Nastavení",
-        showScale: "Show Scale",
-        showZoom: "Show Zoom"
+        showScale: "Zobrazit měřítko",
+        showZoom: "Zobrazit zoom",
+        uiPictometryConfiguration: "Nastavení piktometrie",
+        uiPictometryBaseUrl: "Name",
+        uiEnterTheFullUrlIncludingAspx: "Zadejte plnou URL včetně .aspx souboru",
+        uiButtonVisibility: "Viditelnost tlačítka",
+        uiHelp: "Nápověda",
+        uiShowHelpGuide: "Zobrazit nápovědu",
+        uiShowTheQuestionMarkButtonThat: "Zobrazit tlačítko question- mark, které otevře nápovědu widget"
       })
     }
   }

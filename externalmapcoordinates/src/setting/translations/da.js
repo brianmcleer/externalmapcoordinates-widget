@@ -5,8 +5,15 @@ System.register([], function (e) {
       e({
         selectMapWidget: "Vælg kort-widget",
         settings: "Indstillinger",
-        showScale: "Show Scale",
-        showZoom: "Show Zoom"
+        showScale: "Vis skala",
+        showZoom: "Vis zoom",
+        uiPictometryConfiguration: "Indstilling af piktometri",
+        uiPictometryBaseUrl: "Name",
+        uiEnterTheFullUrlIncludingAspx: "Indtast den fulde URL inklusive .aspx-fil",
+        uiButtonVisibility: "Knap sigtbarhed",
+        uiHelp: "Hjælp",
+        uiShowHelpGuide: "Vis hjælpeguide",
+        uiShowTheQuestionMarkButtonThat: "Vis spørgsmåls- markerings- knappen der åbner kontrolhjælpevejledningen"
       })
     }
   }

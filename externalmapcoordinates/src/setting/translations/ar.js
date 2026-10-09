@@ -5,8 +5,15 @@ System.register([], function (e) {
       e({
         selectMapWidget: "تحديد عنصر واجهة مستخدم الخريطة",
         settings: "الإعدادات",
-        showScale: "Show Scale",
-        showZoom: "Show Zoom"
+        showScale: "Scale Show",
+        showZoom: "Show Zoom",
+        uiPictometryConfiguration: "Pictometry Configuration",
+        uiPictometryBaseUrl: "قاعدة القياس",
+        uiEnterTheFullUrlIncludingAspx: "أدخل الملف الكامل",
+        uiButtonVisibility: "Button Visibility",
+        uiHelp: "المساعدة",
+        uiShowHelpGuide: "دليل المساعدة",
+        uiShowTheQuestionMarkButtonThat: "اظهر زر التساؤل الذي يفتح المرشد"
       })
     }
   }
