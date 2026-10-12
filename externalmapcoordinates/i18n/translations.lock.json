@@ -239,18 +239,504 @@
           }
         },
         "bs": {
-          "file": "e5a1591400f3",
+          "file": "b734bd2bb17d",
           "counts": {
             "esri": 7,
             "esri-check": 0,
             "community": 0,
             "manual": 0,
             "existing": 0,
-            "machine": 0,
+            "machine": 97,
             "stale": 0,
-            "missing": 98
+            "missing": 1
           },
-          "entries": {}
+          "entries": {
+            "_widgetLabel": {
+              "t": "Vanjske mape",
+              "src": "machine",
+              "h": "517142103b82"
+            },
+            "latLon": {
+              "t": "Lat/Lon",
+              "src": "machine",
+              "h": "f6c7c2300b60"
+            },
+            "latLonWillBeHere": {
+              "t": "Lat/Dug (Ništa - molim lebdi ili kliknite na mapu.)",
+              "src": "machine",
+              "h": "07d7949e8423"
+            },
+            "clickInstruction": {
+              "t": "Kliknite na lokaciju interesa na karti i izaberite dugme ispod.",
+              "src": "machine",
+              "h": "901e89da9ed9"
+            },
+            "copyHint": {
+              "t": "Koristi ctrl+c ili desni klik za kopiranje u clipboard.",
+              "src": "machine",
+              "h": "b072d4a8edd7"
+            },
+            "copyHintSrOnly": {
+              "t": "Koristite dugme Kopiraj lat/lon iznad ili pritisnite Control+C za kopiranje koordinata.",
+              "src": "machine",
+              "h": "64b9c5b701fb"
+            },
+            "pictometryImagery": {
+              "t": "Piktometrija Slike",
+              "src": "machine",
+              "h": "5aa80f5fef68"
+            },
+            "googleStreetView": {
+              "t": "Google Street Pogled",
+              "src": "machine",
+              "h": "d91b87742dfb"
+            },
+            "googleMaps3D": {
+              "t": "Google Maps 3D",
+              "src": "machine",
+              "h": "5d2e23dd2023"
+            },
+            "bingSatelliteMaps": {
+              "t": "Bing satelitske mape",
+              "src": "machine",
+              "h": "99a7f24e6708"
+            },
+            "bingStreetside": {
+              "t": "Bing Streetside",
+              "src": "machine",
+              "h": "f3d2289c27c0"
+            },
+            "copyLatLon": {
+              "t": "Kopiraj lat/Lon",
+              "src": "machine",
+              "h": "78aa878c24b3"
+            },
+            "copied": {
+              "t": "Kopirano!",
+              "src": "machine",
+              "h": "b7c3ca0ee379"
+            },
+            "tooltipPictometry": {
+              "t": "Pogledaj slike iz zraka iz Piktometrije (otvara se u novom prozoru)",
+              "src": "machine",
+              "h": "05bffead8a1a"
+            },
+            "tooltipGoogleStreetView": {
+              "t": "Pogledaj lokaciju u Google Street Pogledu (otvara se u novom prozoru)",
+              "src": "machine",
+              "h": "1d7053e53848"
+            },
+            "tooltipGoogleMaps3D": {
+              "t": "Pogledaj lokaciju u Google maps 3D (otvara se u novom prozoru)",
+              "src": "machine",
+              "h": "cbd42dda340d"
+            },
+            "tooltipBingSatellite": {
+              "t": "Pogledaj lokaciju u Bing satelitskim mapama (otvara se u novom prozoru)",
+              "src": "machine",
+              "h": "2f8219c015b1"
+            },
+            "tooltipBingStreetside": {
+              "t": "Pogledaj lokaciju u Bing Streetside-u (otvara se u novom prozoru)",
+              "src": "machine",
+              "h": "8c608bbb61e6"
+            },
+            "tooltipCopy": {
+              "t": "Kopiraj koordinate u clipboard",
+              "src": "machine",
+              "h": "267956d3b83d"
+            },
+            "tooltipCopied": {
+              "t": "Koordinate kopirane!",
+              "src": "machine",
+              "h": "4146eb34128a"
+            },
+            "tooltipTextBoxBeforeClick": {
+              "t": "Kliknite na mapu da dobijete koordinate",
+              "src": "machine",
+              "h": "0d3825a9e04e"
+            },
+            "tooltipTextBoxAfterClick": {
+              "t": "Koordinate za izabranu lokaciju",
+              "src": "machine",
+              "h": "fe1d4bf39450"
+            },
+            "ariaPictometry": {
+              "t": "Pogledaj lokaciju u slikama piktometrije (otvara se u novom prozoru)",
+              "src": "machine",
+              "h": "06439521a084"
+            },
+            "ariaGoogleStreetView": {
+              "t": "Pogledaj lokaciju u Google Street Pogledu (otvara se u novom prozoru)",
+              "src": "machine",
+              "h": "1d7053e53848"
+            },
+            "ariaGoogleMaps3D": {
+              "t": "Pogledaj lokaciju u Google maps 3D (otvara se u novom prozoru)",
+              "src": "machine",
+              "h": "cbd42dda340d"
+            },
+            "ariaBingSatellite": {
+              "t": "Pogledaj lokaciju u Bing satelitskim mapama (otvara se u novom prozoru)",
+              "src": "machine",
+              "h": "2f8219c015b1"
+            },
+            "ariaBingStreetside": {
+              "t": "Pogledaj lokaciju u Bing Streetside-u (otvara se u novom prozoru)",
+              "src": "machine",
+              "h": "8c608bbb61e6"
+            },
+            "ariaCopy": {
+              "t": "Kopiraj koordinate u clipboard",
+              "src": "machine",
+              "h": "267956d3b83d"
+            },
+            "ariaTextBox": {
+              "t": "Širina i dužina koordinata",
+              "src": "machine",
+              "h": "3dfae0723c1e"
+            },
+            "ariaWidgetTitle": {
+              "t": "Koordinate i slike",
+              "src": "machine",
+              "h": "704887804a17"
+            },
+            "ariaToolbar": {
+              "t": "Odrednice ispisa",
+              "src": "machine",
+              "h": "af57e784f813"
+            },
+            "textBoxPlaceholder": {
+              "t": "Kliknite na mapu da postavite koordinate",
+              "src": "machine",
+              "h": "c5fedd482074"
+            },
+            "srPinPlaced": {
+              "t": "Pin postavljen na geografskoj širini {lat}, geografska širina {lon}",
+              "src": "machine",
+              "h": "6052606cef26"
+            },
+            "srCopied": {
+              "t": "Koordinate kopirane u clipboard",
+              "src": "machine",
+              "h": "9201f5c65f25"
+            },
+            "srUnsupportedSr": {
+              "t": "Ova mapa koristi prostornu referencu {wkid} koju grafički element ne može pretvoriti. Molim koristite Web Mercator ili WGS84 baznu mapu.",
+              "src": "machine",
+              "h": "3e253d64fbae"
+            },
+            "pleaseSelectMap": {
+              "t": "Molim izaberite mapu.",
+              "src": "machine",
+              "h": "7f1f0b5369d2"
+            },
+            "showZoom": {
+              "t": "Pokaži uvećanje",
+              "src": "machine",
+              "h": "b6f899a6570e"
+            },
+            "showScale": {
+              "t": "Pokaži skalu",
+              "src": "machine",
+              "h": "58392de2b866"
+            },
+            "buttonVisibilityLabel": {
+              "t": "Vidljivost dugmadi",
+              "src": "machine",
+              "h": "addb04433332"
+            },
+            "showPictometry": {
+              "t": "Dugmad za piktometriju",
+              "src": "machine",
+              "h": "d458064a249b"
+            },
+            "showGoogleStreetView": {
+              "t": "Dugmad za pogled na Google Street",
+              "src": "machine",
+              "h": "ae6200e41a96"
+            },
+            "showGoogleMaps3D": {
+              "t": "Pokaži Google mape 3D dugme",
+              "src": "machine",
+              "h": "79e775e7fb7d"
+            },
+            "showBingSatellite": {
+              "t": "Dugmad sa satelitom u Bingu",
+              "src": "machine",
+              "h": "373a4d5273d5"
+            },
+            "showBingStreetside": {
+              "t": "Dugmad za Bing Streetside",
+              "src": "machine",
+              "h": "c4976dfd97c2"
+            },
+            "showCopyButton": {
+              "t": "Dugmad za _kopiranje",
+              "src": "machine",
+              "h": "640e9c88dfa0"
+            },
+            "pictometryConfiguration": {
+              "t": "Podešavanje mrežnog proxy-a",
+              "src": "machine",
+              "h": "0c3caf2c13b3"
+            },
+            "pictometryBaseUrl": {
+              "t": "URL baze piktometrije",
+              "src": "machine",
+              "h": "16ce2bdbaf72"
+            },
+            "pictometryUrlHint": {
+              "t": "Unesite puni URL uključujući .aspx datoteku",
+              "src": "machine",
+              "h": "7987a58307b8"
+            },
+            "pictometryUrlPlaceholder": {
+              "t": "https://www.your-server.com/piktometrija/viewer.aspx",
+              "src": "machine",
+              "h": "c91568667515"
+            },
+            "helpIntro": {
+              "t": "Pronađite geografsku širinu i geografsku dužinu bilo kojeg mjesta na mapi, a onda skočite na vanjsku sliku tog mjesta.",
+              "src": "machine",
+              "h": "b38da414bc18"
+            },
+            "helpSearchPlaceholder": {
+              "t": "Pretraži vodič (pokušajkopija ilipin",
+              "src": "machine",
+              "h": "1bc21efc096d"
+            },
+            "helpNoMatches": {
+              "t": "Ništa u vodiču ne odgovara toj riječi.",
+              "src": "machine",
+              "h": "3fe179f75330"
+            },
+            "firstRunTitle": {
+              "t": "Novi ovdje?",
+              "src": "machine",
+              "h": "b81f2e17e001"
+            },
+            "firstRunBody": {
+              "t": "Kliknite na mjesto na karti, pročitajte njegove koordinate na vrhu, a zatim odaberite dugme da vidite to mjesto u drugom servisu.",
+              "src": "machine",
+              "h": "231c25d78507"
+            },
+            "firstRunHelpLink": {
+              "t": "Otvori vodič.",
+              "src": "machine",
+              "h": "2447dd6134ea"
+            },
+            "firstRunDismiss": {
+              "t": "Otpust",
+              "src": "machine",
+              "h": "70afe9eff3f2"
+            },
+            "helpStartTitle": {
+              "t": "Počnite ovdje: tri koraka",
+              "src": "machine",
+              "h": "789320b4831d"
+            },
+            "helpStart1": {
+              "t": "Kliknite na mjesto na karti koje želite pogledati. Označuje ga narančasta igla.",
+              "src": "machine",
+              "h": "666353535c1e"
+            },
+            "helpStart2": {
+              "t": "Pročitajte geografsku širinu i dužinu na vrhu grafičkog elementa. Ažuriraju se svaki put kada kliknete.",
+              "src": "machine",
+              "h": "9cfc9bd5e945"
+            },
+            "helpStart3": {
+              "t": "Kliknite na jedno od dugmadi ispod koordinata{example}. Vanjske usluge otvorene u novoj kartici preglednika.",
+              "src": "machine",
+              "h": "f6419911e426"
+            },
+            "helpStart3NoButtons": {
+              "t": "Koordinate se također pojavljuju u donjem polju. Kliknite u njemu i pritisnite Ctrl+C da biste ih kopirali.",
+              "src": "machine",
+              "h": "e70b5a1bdd45"
+            },
+            "helpStartExampleTwo": {
+              "t": ", kao što su {a} ili {b}",
+              "src": "machine",
+              "h": "2e4b40fed9a1"
+            },
+            "helpReadTitle": {
+              "t": "Čitam brojeve",
+              "src": "machine",
+              "h": "113dbfdcbab8"
+            },
+            "helpRead1": {
+              "t": "Širina dolazi prvo, zatim geografska dužina, oba u decimalnim stepenima sa osam decimalnih mjesta.",
+              "src": "machine",
+              "h": "856a51a51e3e"
+            },
+            "helpRead2": {
+              "t": "Negativna geografska dužina znači zapadno od Greenwicha, a negativna širina znači južno od ekvatora.",
+              "src": "machine",
+              "h": "0fcf66f04859"
+            },
+            "helpReadZoom": {
+              "t": "Zumiranje je nivo uvećanja mape. Veći broj znači da je mapa uvećana bliže.",
+              "src": "machine",
+              "h": "9620d28d8eca"
+            },
+            "helpReadScale": {
+              "t": "Skala je napisana kao 1 do broja, na primjer 1:2400. Manji broj znači da je mapa uvećana bliže.",
+              "src": "machine",
+              "h": "756a7157b174"
+            },
+            "helpReadLive": {
+              "t": "Zumiraj i mjerilo prati kartu. Oni se mijenjaju dok zumiraš unutra ili van, čak i prije nego klikneš.",
+              "src": "machine",
+              "h": "a1f371500ec0"
+            },
+            "helpRead3": {
+              "t": "Brojevi opisuju mjesto na koje ste kliknuli, a ne centar karte.",
+              "src": "machine",
+              "h": "3cdc1021d8e5"
+            },
+            "helpLinksTitle": {
+              "t": "Dugmad, jedan po jedan.",
+              "src": "machine",
+              "h": "e3e3b4976bc9"
+            },
+            "helpLinksIntro": {
+              "t": "Svako dugme otvara priklješteno mjesto na drugoj web stranici: {links}.",
+              "src": "machine",
+              "h": "bcc4c6da82d8"
+            },
+            "helpLinkPictometry": {
+              "t": "{name}: fotografije iz zraka snimljene pod uglom, tako da se mogu vidjeti strane zgrada.",
+              "src": "machine",
+              "h": "bbaaf8c01d4c"
+            },
+            "helpLinkGoogleStreetView": {
+              "t": "{name}: fotografije snimljene sa ulice, kao da si ti stajao tamo.",
+              "src": "machine",
+              "h": "d881316ccfa3"
+            },
+            "helpLinkGoogleMaps3D": {
+              "t": "{name}: satelitski pogled nagnut tako zgrade i prikaz terena u 3D.",
+              "src": "machine",
+              "h": "a5d1aea4cfe3"
+            },
+            "helpLinkBingSatellite": {
+              "t": "{name}: ravno-dolje satelitski pogled iz Microsoft Binga.",
+              "src": "machine",
+              "h": "2db4e43cedd8"
+            },
+            "helpLinkBingStreetside": {
+              "t": "{name}: Microsoftove ulične fotografije, slične Street Viewu.",
+              "src": "machine",
+              "h": "531a2c2e4a4b"
+            },
+            "helpLinksGrey": {
+              "t": "Dugmad su siva dok ne kliknete na mapu. Jednom kada se igla postavi poplavi i može se kliknuti.",
+              "src": "machine",
+              "h": "7c486a622903"
+            },
+            "helpLinksNewTab": {
+              "t": "Svako dugme otvara novu karticu preglednika, tako da ova karta ostaje gdje je. Zatvori karticu da se vrati.",
+              "src": "machine",
+              "h": "7656c7dc8287"
+            },
+            "helpCopyTitle": {
+              "t": "Kopiram koordinate",
+              "src": "machine",
+              "h": "8aba3dc99e15"
+            },
+            "helpCopyButton": {
+              "t": "Kliknite {copy} da kopirate koordinate. Dugme kaže {copied} za trenutak za potvrdu.",
+              "src": "machine",
+              "h": "77c15924fb8f"
+            },
+            "helpCopyBox": {
+              "t": "Kliknite na dugme ispod dugmadi i pritisnite Ctrl+C da kopirate šta je u njemu.",
+              "src": "machine",
+              "h": "bd47276ffc72"
+            },
+            "helpCopyFormat": {
+              "t": "Kopirani tekst izgleda kao 39.06388889, -108.55083333, spreman za zalijepiti u pretinac za pretraživanje ili e-mail.",
+              "src": "machine",
+              "h": "b8edf72a47b8"
+            },
+            "helpTroubleTitle": {
+              "t": "Ako nešto nije u redu",
+              "src": "machine",
+              "h": "6f7fec3ff1e0"
+            },
+            "helpTroubleGrey": {
+              "t": "Dugmad ostaju siva: niste još kliknuli na mapu. Kliknite prvo na mjesto na karti.",
+              "src": "machine",
+              "h": "aa535aab42eb"
+            },
+            "helpTroubleNoPin": {
+              "t": "Ništa se ne događa kada kliknete na mapu: grafički element nije spojen na mapu. Pitajte onoga ko je napravio ovu aplikaciju da provjeri postavke mape.",
+              "src": "machine",
+              "h": "74c90d6a293e"
+            },
+            "helpTroubleSpatialReference": {
+              "t": "Poruka kaže da se prostorna referenca mape ne može pretvoriti: ovaj grafički element čita Web Mercator, WGS84, UTM i Colorado State Plane mape. Pitajte ko je izgradio ovu aplikaciju o koordinatnom sistemu mape.",
+              "src": "machine",
+              "h": "501dcc946da2"
+            },
+            "helpTroubleNoImagery": {
+              "t": "Dugme otvara stranicu bez slike: ta web stranica nema slike za to mjesto. Pokušajte mjesto u blizini, ili neko drugo dugme.",
+              "src": "machine",
+              "h": "f4e008f23628"
+            },
+            "helpTroublePictometryLogin": {
+              "t": "Piktometrija traži od vas da se prijavite: Preglednik piktometrija treba vlastiti račun. Pitajte onoga ko je napravio ovu aplikaciju ako biste je trebali imati.",
+              "src": "machine",
+              "h": "563ead7cea50"
+            },
+            "helpTroubleCopy": {
+              "t": "{copy} ne čini ništa: vaš preglednik je blokirao pristup clipboardu. Umjesto toga, kliknite u okvir ispod dugmadi i pritisnite Ctrl+C.",
+              "src": "machine",
+              "h": "dfb6bd84b35f"
+            },
+            "helpTroublePopups": {
+              "t": "Popupovi na mapi su se prestali pojavljivati: oni su pauzirani dok je ovaj grafički element otvoren tako da vaš klik stavlja iglu umjesto toga. Zatvori grafički element da bi ih vratio.",
+              "src": "machine",
+              "h": "7d0160407041"
+            },
+            "helpTroubleContact": {
+              "t": "Još uvijek zapeo? Kontaktirajte GIS Diviziju i spomenite ime Vanjske mape Koordinate i ovu aplikaciju.",
+              "src": "machine",
+              "h": "9069227b7c19"
+            },
+            "helpTipsTitle": {
+              "t": "Dobro je znati.",
+              "src": "machine",
+              "h": "79fc372dc790"
+            },
+            "helpTips1": {
+              "t": "Pritisni Esca da očisti iglu i počne ispočetka.",
+              "src": "machine",
+              "h": "eeaada4d3975"
+            },
+            "helpTips2": {
+              "t": "Klikni na novo mjesto bilo kada. Igla i koordinate se premještaju na novo mjesto.",
+              "src": "machine",
+              "h": "c019b9aa12b7"
+            },
+            "helpTips3": {
+              "t": "Značka nestaje pri zatvaranju grafičkog elementa. Kopirajte prvo koordinate ako ih trebate zadržati.",
+              "src": "machine",
+              "h": "363282b25bfc"
+            },
+            "unknownError": {
+              "t": "nepoznata greška",
+              "src": "machine",
+              "h": "af6321ca7a8b"
+            },
+            "unserializableError": {
+              "t": "Neserijalizacijska greška",
+              "src": "machine",
+              "h": "76e73551597a"
+            }
+          }
         },
         "ca": {
           "file": "f2c47f7e0605",
@@ -622,18 +1108,509 @@
           }
         },
         "hr": {
-          "file": "e5a1591400f3",
+          "file": "37c4f066ef30",
           "counts": {
             "esri": 7,
             "esri-check": 0,
             "community": 0,
             "manual": 0,
             "existing": 0,
-            "machine": 0,
+            "machine": 98,
             "stale": 0,
-            "missing": 98
+            "missing": 0
           },
-          "entries": {}
+          "entries": {
+            "_widgetLabel": {
+              "t": "Koordinate vanjske karte",
+              "src": "machine",
+              "h": "517142103b82"
+            },
+            "latLon": {
+              "t": "Lat/Lon",
+              "src": "machine",
+              "h": "f6c7c2300b60"
+            },
+            "latLonWillBeHere": {
+              "t": "Lat/Duga (Ništa - molimo lebdite ili kliknite na kartu.)",
+              "src": "machine",
+              "h": "07d7949e8423"
+            },
+            "clickInstruction": {
+              "t": "Kliknite na lokaciju interesa na karti, a zatim odaberite gumb ispod.",
+              "src": "machine",
+              "h": "901e89da9ed9"
+            },
+            "copyHint": {
+              "t": "Koristi ctrl+c ili desni klik za kopiranje u međuspremnik.",
+              "src": "machine",
+              "h": "b072d4a8edd7"
+            },
+            "copyHintSrOnly": {
+              "t": "Koristite kopijski gumb lat/lon iznad ili pritisnite Control+C za kopiranje koordinata.",
+              "src": "machine",
+              "h": "64b9c5b701fb"
+            },
+            "pictometryImagery": {
+              "t": "Piktometrija Slike",
+              "src": "machine",
+              "h": "5aa80f5fef68"
+            },
+            "googleStreetView": {
+              "t": "Google pogled na ulicu",
+              "src": "machine",
+              "h": "d91b87742dfb"
+            },
+            "googleMaps3D": {
+              "t": "Google mape 3D",
+              "src": "machine",
+              "h": "5d2e23dd2023"
+            },
+            "bingSatelliteMaps": {
+              "t": "Bing satelitske mape",
+              "src": "machine",
+              "h": "99a7f24e6708"
+            },
+            "bingStreetside": {
+              "t": "Bing Streetside",
+              "src": "machine",
+              "h": "f3d2289c27c0"
+            },
+            "copyLatLon": {
+              "t": "Kopiraj lat/Lon",
+              "src": "machine",
+              "h": "78aa878c24b3"
+            },
+            "copied": {
+              "t": "Kopirano!",
+              "src": "machine",
+              "h": "b7c3ca0ee379"
+            },
+            "tooltipPictometry": {
+              "t": "Pogledaj slike iz zraka iz Piktometrije (otvara se u novom prozoru)",
+              "src": "machine",
+              "h": "05bffead8a1a"
+            },
+            "tooltipGoogleStreetView": {
+              "t": "Pogledaj lokaciju u Google Street View (otvara se u novom prozoru)",
+              "src": "machine",
+              "h": "1d7053e53848"
+            },
+            "tooltipGoogleMaps3D": {
+              "t": "Pogledaj lokaciju u Google Maps 3D (otvara se u novom prozoru)",
+              "src": "machine",
+              "h": "cbd42dda340d"
+            },
+            "tooltipBingSatellite": {
+              "t": "Pogledaj lokaciju u Bingu Satelitske mape (otvara se u novom prozoru)",
+              "src": "machine",
+              "h": "2f8219c015b1"
+            },
+            "tooltipBingStreetside": {
+              "t": "Pogledaj lokaciju u Bing Streetside (otvara se u novom prozoru)",
+              "src": "machine",
+              "h": "8c608bbb61e6"
+            },
+            "tooltipCopy": {
+              "t": "Kopiraj koordinate u odlagalište",
+              "src": "machine",
+              "h": "267956d3b83d"
+            },
+            "tooltipCopied": {
+              "t": "Koordinate kopirane!",
+              "src": "machine",
+              "h": "4146eb34128a"
+            },
+            "tooltipTextBoxBeforeClick": {
+              "t": "Kliknite na mapu da biste dobili koordinate",
+              "src": "machine",
+              "h": "0d3825a9e04e"
+            },
+            "tooltipTextBoxAfterClick": {
+              "t": "Koordinate za odabranu lokaciju",
+              "src": "machine",
+              "h": "fe1d4bf39450"
+            },
+            "ariaPictometry": {
+              "t": "Pogledaj lokaciju u slikama Piktometrije (otvara se u novom prozoru)",
+              "src": "machine",
+              "h": "06439521a084"
+            },
+            "ariaGoogleStreetView": {
+              "t": "Pogledaj lokaciju u Google Street View (otvara se u novom prozoru)",
+              "src": "machine",
+              "h": "1d7053e53848"
+            },
+            "ariaGoogleMaps3D": {
+              "t": "Pogledaj lokaciju u Google Maps 3D (otvara se u novom prozoru)",
+              "src": "machine",
+              "h": "cbd42dda340d"
+            },
+            "ariaBingSatellite": {
+              "t": "Pogledaj lokaciju u Bingu Satelitske mape (otvara se u novom prozoru)",
+              "src": "machine",
+              "h": "2f8219c015b1"
+            },
+            "ariaBingStreetside": {
+              "t": "Pogledaj lokaciju u Bing Streetside (otvara se u novom prozoru)",
+              "src": "machine",
+              "h": "8c608bbb61e6"
+            },
+            "ariaCopy": {
+              "t": "Kopiraj koordinate u odlagalište",
+              "src": "machine",
+              "h": "267956d3b83d"
+            },
+            "ariaTextBox": {
+              "t": "Koordinate geografske širine i geografske dužine",
+              "src": "machine",
+              "h": "3dfae0723c1e"
+            },
+            "ariaWidgetTitle": {
+              "t": "Karta Koordinate i slike veze",
+              "src": "machine",
+              "h": "704887804a17"
+            },
+            "ariaToolbar": {
+              "t": "Odrednice ispisa",
+              "src": "machine",
+              "h": "af57e784f813"
+            },
+            "textBoxPlaceholder": {
+              "t": "Kliknite na mapu da postavite koordinate",
+              "src": "machine",
+              "h": "c5fedd482074"
+            },
+            "srPinPlaced": {
+              "t": "Širina postavljena na zemljopisnu širinu {lat}, zemljopisna širina {lon}",
+              "src": "machine",
+              "h": "6052606cef26"
+            },
+            "srCopied": {
+              "t": "Koordinate kopirane u međuspremnik",
+              "src": "machine",
+              "h": "9201f5c65f25"
+            },
+            "srUnsupportedSr": {
+              "t": "Ova karta koristi prostornu referencu {wkid} koju widget ne može pretvoriti. Molim koristite Web Mercator ili WGS84 baznu mapu.",
+              "src": "machine",
+              "h": "3e253d64fbae"
+            },
+            "pleaseSelectMap": {
+              "t": "Odaberite mapu.",
+              "src": "machine",
+              "h": "7f1f0b5369d2"
+            },
+            "showZoom": {
+              "t": "Pokaži uvećanje",
+              "src": "machine",
+              "h": "b6f899a6570e"
+            },
+            "showScale": {
+              "t": "Prikaži skalu",
+              "src": "machine",
+              "h": "58392de2b866"
+            },
+            "buttonVisibilityLabel": {
+              "t": "Vidljivost gumba",
+              "src": "machine",
+              "h": "addb04433332"
+            },
+            "showPictometry": {
+              "t": "Prikaži tipku za piktometriju",
+              "src": "machine",
+              "h": "d458064a249b"
+            },
+            "showGoogleStreetView": {
+              "t": "Prikaži gumb Google Street View",
+              "src": "machine",
+              "h": "ae6200e41a96"
+            },
+            "showGoogleMaps3D": {
+              "t": "Prikaži Google mape 3D gumb",
+              "src": "machine",
+              "h": "79e775e7fb7d"
+            },
+            "showBingSatellite": {
+              "t": "Prikaži gumb Bing satelita",
+              "src": "machine",
+              "h": "373a4d5273d5"
+            },
+            "showBingStreetside": {
+              "t": "Prikaži Bing Streetside gumb",
+              "src": "machine",
+              "h": "c4976dfd97c2"
+            },
+            "showCopyButton": {
+              "t": "Prikaži gumb za koordinate Kopiraja",
+              "src": "machine",
+              "h": "640e9c88dfa0"
+            },
+            "pictometryConfiguration": {
+              "t": "Podešavanje piktometrija",
+              "src": "machine",
+              "h": "0c3caf2c13b3"
+            },
+            "pictometryBaseUrl": {
+              "t": "URL baze piktometrija",
+              "src": "machine",
+              "h": "16ce2bdbaf72"
+            },
+            "pictometryUrlHint": {
+              "t": "Unesite puni URL uključujući .aspx datoteku",
+              "src": "machine",
+              "h": "7987a58307b8"
+            },
+            "pictometryUrlPlaceholder": {
+              "t": "https://www.your-server.com/piktometrija/gledatelj.aspx",
+              "src": "machine",
+              "h": "c91568667515"
+            },
+            "helpIntro": {
+              "t": "Pronađite geografsku širinu i geografsku dužinu bilo kojeg mjesta na karti, a zatim skočite na vanjsku sliku tog mjesta.",
+              "src": "machine",
+              "h": "b38da414bc18"
+            },
+            "helpSearchPlaceholder": {
+              "t": "Pretraži vodič (pokušajte kopirati ilipin",
+              "src": "machine",
+              "h": "1bc21efc096d"
+            },
+            "helpNoMatches": {
+              "t": "Ništa u vodiču ne odgovara toj riječi. Pokušajte drugi, ili otvorite dijelove iznad.",
+              "src": "machine",
+              "h": "3fe179f75330"
+            },
+            "firstRunTitle": {
+              "t": "Novi ovdje?",
+              "src": "machine",
+              "h": "b81f2e17e001"
+            },
+            "firstRunBody": {
+              "t": "Kliknite na mjesto na karti, pročitajte njegove koordinate na vrhu, a zatim odaberite gumb da vidite to mjesto u drugoj karti servisa.",
+              "src": "machine",
+              "h": "231c25d78507"
+            },
+            "firstRunHelpLink": {
+              "t": "Otvori vodič.",
+              "src": "machine",
+              "h": "2447dd6134ea"
+            },
+            "firstRunDismiss": {
+              "t": "Otpust",
+              "src": "machine",
+              "h": "70afe9eff3f2"
+            },
+            "helpStartTitle": {
+              "t": "Počnite ovdje: tri koraka",
+              "src": "machine",
+              "h": "789320b4831d"
+            },
+            "helpStart1": {
+              "t": "Kliknite na mjesto na karti želite pogledati. Narančasta igla ga označava.",
+              "src": "machine",
+              "h": "666353535c1e"
+            },
+            "helpStart2": {
+              "t": "Pročitajte zemljopisnu širinu i zemljopisnu dužinu na vrhu widgeta. Oni ažuriraju svaki put kad kliknete.",
+              "src": "machine",
+              "h": "9cfc9bd5e945"
+            },
+            "helpStart3": {
+              "t": "Kliknite jedan od gumba ispod koordinata{example}. Vanjske usluge otvorene u novoj kartici preglednika.",
+              "src": "machine",
+              "h": "f6419911e426"
+            },
+            "helpStart3NoButtons": {
+              "t": "Koordinate se također pojavljuju u donjoj kutiji. Kliknite u nju i pritisnite Ctrl+C da biste ih kopirali.",
+              "src": "machine",
+              "h": "e70b5a1bdd45"
+            },
+            "helpStartExampleOne": {
+              "t": ", kao što su {a}",
+              "src": "machine",
+              "h": "ecd240f2ba41"
+            },
+            "helpStartExampleTwo": {
+              "t": ", kao što su {a} ili {b}",
+              "src": "machine",
+              "h": "2e4b40fed9a1"
+            },
+            "helpReadTitle": {
+              "t": "Čitanje brojeva",
+              "src": "machine",
+              "h": "113dbfdcbab8"
+            },
+            "helpRead1": {
+              "t": "Širina dolazi prvo, zatim geografska dužina, oba u decimalnim stupnjevima s osam decimalnih mjesta.",
+              "src": "machine",
+              "h": "856a51a51e3e"
+            },
+            "helpRead2": {
+              "t": "Negativna dužina znači zapadno od Greenwicha. Negativna širina znači južno od ekvatora.",
+              "src": "machine",
+              "h": "0fcf66f04859"
+            },
+            "helpReadZoom": {
+              "t": "Zumiranje je nivo uvećanja mape. Veći broj znači da je mapa uvećana bliže.",
+              "src": "machine",
+              "h": "9620d28d8eca"
+            },
+            "helpReadScale": {
+              "t": "Skala je napisana kao 1 na broj, na primjer 1:2400. Manji broj znači da je karta uvećana bliže.",
+              "src": "machine",
+              "h": "756a7157b174"
+            },
+            "helpReadLive": {
+              "t": "Zumiraj i mjerilo prati kartu. Oni se mijenjaju dok zumiraš unutra ili van, čak i prije nego klikneš.",
+              "src": "machine",
+              "h": "a1f371500ec0"
+            },
+            "helpRead3": {
+              "t": "Brojevi opisuju mjesto na koje ste kliknuli, a ne središte karte.",
+              "src": "machine",
+              "h": "3cdc1021d8e5"
+            },
+            "helpLinksTitle": {
+              "t": "Gumbi, jedan po jedan.",
+              "src": "machine",
+              "h": "e3e3b4976bc9"
+            },
+            "helpLinksIntro": {
+              "t": "Svaki gumb otvara priklješteno mjesto na drugoj web stranici: {links}.",
+              "src": "machine",
+              "h": "bcc4c6da82d8"
+            },
+            "helpLinkPictometry": {
+              "t": "{name}: zračne fotografije snimljene pod kutom, tako da možete vidjeti strane zgrada. Koristi piktometrija vašeg organizacije gledatelja.",
+              "src": "machine",
+              "h": "bbaaf8c01d4c"
+            },
+            "helpLinkGoogleStreetView": {
+              "t": "{name}: fotografije snimljene s ulice, kao da stojite tamo.",
+              "src": "machine",
+              "h": "d881316ccfa3"
+            },
+            "helpLinkGoogleMaps3D": {
+              "t": "{name}: satelitski pogled nagnut tako zgrade i teren pokazuju u 3D.",
+              "src": "machine",
+              "h": "a5d1aea4cfe3"
+            },
+            "helpLinkBingSatellite": {
+              "t": "{name}: ravno-dolje satelitski pogled iz Microsoft Binga.",
+              "src": "machine",
+              "h": "2db4e43cedd8"
+            },
+            "helpLinkBingStreetside": {
+              "t": "{name}: Microsoftove ulične fotografije, slične Street Viewu.",
+              "src": "machine",
+              "h": "531a2c2e4a4b"
+            },
+            "helpLinksGrey": {
+              "t": "Gumbovi su sivi dok ne kliknete na kartu. Nakon što je igla je postavljena oni poplave i može se kliknuti.",
+              "src": "machine",
+              "h": "7c486a622903"
+            },
+            "helpLinksNewTab": {
+              "t": "Svaki gumb otvara novu karticu preglednika, tako da ova karta ostaje gdje je. Zatvori karticu da se vrati.",
+              "src": "machine",
+              "h": "7656c7dc8287"
+            },
+            "helpCopyTitle": {
+              "t": "Kopiranje koordinata",
+              "src": "machine",
+              "h": "8aba3dc99e15"
+            },
+            "helpCopyButton": {
+              "t": "Kliknite {copy} za kopiranje koordinata. Tipka kaže {copied} za trenutak za potvrdu.",
+              "src": "machine",
+              "h": "77c15924fb8f"
+            },
+            "helpCopyBox": {
+              "t": "Kliknite u kutiji ispod gumba i pritisnite Ctrl+C da kopirate što je u njoj.",
+              "src": "machine",
+              "h": "bd47276ffc72"
+            },
+            "helpCopyFormat": {
+              "t": "Kopirani tekst izgleda kao 39.06388889, -108.55083333, spreman za zalijepiti u pretinac za pretraživanje ili e-mail.",
+              "src": "machine",
+              "h": "b8edf72a47b8"
+            },
+            "helpTroubleTitle": {
+              "t": "Ako nešto izgleda loše",
+              "src": "machine",
+              "h": "6f7fec3ff1e0"
+            },
+            "helpTroubleGrey": {
+              "t": "Tipke ostaju sive: još niste kliknuli na kartu. Kliknite prvo na mjesto na karti.",
+              "src": "machine",
+              "h": "aa535aab42eb"
+            },
+            "helpTroubleNoPin": {
+              "t": "Ništa se ne događa kada kliknete na mapu: widget nije spojen na kartu. Pitajte onoga tko je napravio ovu aplikaciju da provjeri postavke karte.",
+              "src": "machine",
+              "h": "74c90d6a293e"
+            },
+            "helpTroubleSpatialReference": {
+              "t": "Poruka kaže da se prostorna referenca karte ne može pretvoriti: ovaj widget čita Web Mercator, WGS84, UTM i Colorado State Plane karte. Pitajte onoga tko je izgradio ovu aplikaciju o koordinatnom sustavu karte.",
+              "src": "machine",
+              "h": "501dcc946da2"
+            },
+            "helpTroubleNoImagery": {
+              "t": "Gumb otvara stranicu bez slike: ta web stranica nema slike za to mjesto. Pokušajte mjesto u blizini, ili drugi gumb.",
+              "src": "machine",
+              "h": "f4e008f23628"
+            },
+            "helpTroublePictometryLogin": {
+              "t": "Piktometrija traži od vas da se prijavite: Preglednik Piktometrija treba vlastiti račun. Pitajte onoga tko je izgradio ovu aplikaciju ako biste je trebali imati.",
+              "src": "machine",
+              "h": "563ead7cea50"
+            },
+            "helpTroubleCopy": {
+              "t": "{copy} ne čini ništa: preglednik je blokirao pristup međuspremniku. Umjesto toga, kliknite u okvir ispod tipki i pritisnite Ctrl+C.",
+              "src": "machine",
+              "h": "dfb6bd84b35f"
+            },
+            "helpTroublePopups": {
+              "t": "Mapa popup-ova je prestala da se pojavljuje: oni su pauzirani dok je ovaj widget otvoren tako da vaš klik umjesto toga stavlja iglu. Zatvorite widget kako biste ih vratili.",
+              "src": "machine",
+              "h": "7d0160407041"
+            },
+            "helpTroubleContact": {
+              "t": "Još uvijek zaglavi? Kontaktirajte GIS Division i spomenuti vanjske karte Koordinate ime i ovu aplikaciju.",
+              "src": "machine",
+              "h": "9069227b7c19"
+            },
+            "helpTipsTitle": {
+              "t": "Dobro je znati.",
+              "src": "machine",
+              "h": "79fc372dc790"
+            },
+            "helpTips1": {
+              "t": "Pritisnite Esc očistiti iglu i početi ispočetka.",
+              "src": "machine",
+              "h": "eeaada4d3975"
+            },
+            "helpTips2": {
+              "t": "Kliknite na novo mjesto u bilo kojem trenutku. Igla i koordinate premjestiti na novo mjesto.",
+              "src": "machine",
+              "h": "c019b9aa12b7"
+            },
+            "helpTips3": {
+              "t": "Pin nestaje kada zatvorite widget. Prvo kopirajte koordinate ako ih trebate zadržati.",
+              "src": "machine",
+              "h": "363282b25bfc"
+            },
+            "unknownError": {
+              "t": "nepoznata greška",
+              "src": "machine",
+              "h": "af6321ca7a8b"
+            },
+            "unserializableError": {
+              "t": "Neserijalizacijska greška",
+              "src": "machine",
+              "h": "76e73551597a"
+            }
+          }
         },
         "hu": {
           "file": "5ddf0732c3dc",
@@ -1161,18 +2138,509 @@
           }
         },
         "sr": {
-          "file": "a9915eee60ec",
+          "file": "f7fbce38c6e5",
           "counts": {
             "esri": 7,
             "esri-check": 0,
             "community": 0,
             "manual": 0,
             "existing": 0,
-            "machine": 0,
+            "machine": 98,
             "stale": 0,
-            "missing": 98
+            "missing": 0
           },
-          "entries": {}
+          "entries": {
+            "_widgetLabel": {
+              "t": "Спољашња мапа КоординатеGenericName",
+              "src": "machine",
+              "h": "517142103b82"
+            },
+            "latLon": {
+              "t": "Lat/Lon",
+              "src": "machine",
+              "h": "f6c7c2300b60"
+            },
+            "latLonWillBeHere": {
+              "t": "Lat/Dug (Ništa - molim vas lebdite ili kliknite na mapu.)",
+              "src": "machine",
+              "h": "07d7949e8423"
+            },
+            "clickInstruction": {
+              "t": "Kliknite na lokaciju interesa na mapi i izaberite dugme ispod.",
+              "src": "machine",
+              "h": "901e89da9ed9"
+            },
+            "copyHint": {
+              "t": "Koristi ctrl+c ili desni klik za kopiranje u clipboard.",
+              "src": "machine",
+              "h": "b072d4a8edd7"
+            },
+            "copyHintSrOnly": {
+              "t": "Koristite kopijski Lat/Lon dugme iznad ili pritisnite Control+C da kopirate koordinate.",
+              "src": "machine",
+              "h": "64b9c5b701fb"
+            },
+            "pictometryImagery": {
+              "t": "Piktometrija Slike",
+              "src": "machine",
+              "h": "5aa80f5fef68"
+            },
+            "googleStreetView": {
+              "t": "Google Street View",
+              "src": "machine",
+              "h": "d91b87742dfb"
+            },
+            "googleMaps3D": {
+              "t": "Google Maps 3D",
+              "src": "machine",
+              "h": "5d2e23dd2023"
+            },
+            "bingSatelliteMaps": {
+              "t": "Bing Satellite Maps",
+              "src": "machine",
+              "h": "99a7f24e6708"
+            },
+            "bingStreetside": {
+              "t": "Bing Streetside",
+              "src": "machine",
+              "h": "f3d2289c27c0"
+            },
+            "copyLatLon": {
+              "t": "Копирај лат/лон",
+              "src": "machine",
+              "h": "78aa878c24b3"
+            },
+            "copied": {
+              "t": "Kopirano!",
+              "src": "machine",
+              "h": "b7c3ca0ee379"
+            },
+            "tooltipPictometry": {
+              "t": "Pregled slika iz vazduha iz Piktometrije (otvara se u novom prozoru)",
+              "src": "machine",
+              "h": "05bffead8a1a"
+            },
+            "tooltipGoogleStreetView": {
+              "t": "Pogledaj lokaciju u Google Street View-u (otvara se u novom prozoru)",
+              "src": "machine",
+              "h": "1d7053e53848"
+            },
+            "tooltipGoogleMaps3D": {
+              "t": "Prikaži lokaciju u Google maps 3D (otvara se u novom prozoru)",
+              "src": "machine",
+              "h": "cbd42dda340d"
+            },
+            "tooltipBingSatellite": {
+              "t": "Погледајте локацију у ~@ ¦Бинг¦Bing¦Satellite Mapsu¦ (otvara se u novom prozoru)",
+              "src": "machine",
+              "h": "2f8219c015b1"
+            },
+            "tooltipBingStreetside": {
+              "t": "Погледајте локацију у улици Бинг (отвара се у новом прозору)",
+              "src": "machine",
+              "h": "8c608bbb61e6"
+            },
+            "tooltipCopy": {
+              "t": "Kopiraj koordinate u clipboard",
+              "src": "machine",
+              "h": "267956d3b83d"
+            },
+            "tooltipCopied": {
+              "t": "Koordinate kopirane!",
+              "src": "machine",
+              "h": "4146eb34128a"
+            },
+            "tooltipTextBoxBeforeClick": {
+              "t": "Kliknite na mapu da biste dobili koordinate",
+              "src": "machine",
+              "h": "0d3825a9e04e"
+            },
+            "tooltipTextBoxAfterClick": {
+              "t": "Koordinate za odabranu lokaciju",
+              "src": "machine",
+              "h": "fe1d4bf39450"
+            },
+            "ariaPictometry": {
+              "t": "Погледајте локацију у сликама Пиктометрије (отвора се у новом прозору)",
+              "src": "machine",
+              "h": "06439521a084"
+            },
+            "ariaGoogleStreetView": {
+              "t": "Pogledaj lokaciju u Google Street View-u (otvara se u novom prozoru)",
+              "src": "machine",
+              "h": "1d7053e53848"
+            },
+            "ariaGoogleMaps3D": {
+              "t": "Prikaži lokaciju u Google maps 3D (otvara se u novom prozoru)",
+              "src": "machine",
+              "h": "cbd42dda340d"
+            },
+            "ariaBingSatellite": {
+              "t": "Погледајте локацију у ~@ ¦Бинг¦Bing¦Satellite Mapsu¦ (otvara se u novom prozoru)",
+              "src": "machine",
+              "h": "2f8219c015b1"
+            },
+            "ariaBingStreetside": {
+              "t": "Погледајте локацију у улици Бинг (отвара се у новом прозору)",
+              "src": "machine",
+              "h": "8c608bbb61e6"
+            },
+            "ariaCopy": {
+              "t": "Kopiraj koordinate u clipboard",
+              "src": "machine",
+              "h": "267956d3b83d"
+            },
+            "ariaTextBox": {
+              "t": "Koordinate geografske širine i dužine",
+              "src": "machine",
+              "h": "3dfae0723c1e"
+            },
+            "ariaWidgetTitle": {
+              "t": "Мапа Координате и слике везе",
+              "src": "machine",
+              "h": "704887804a17"
+            },
+            "ariaToolbar": {
+              "t": "Odrednice lokacije",
+              "src": "machine",
+              "h": "af57e784f813"
+            },
+            "textBoxPlaceholder": {
+              "t": "Klikni na mapu da postaviš koordinate",
+              "src": "machine",
+              "h": "c5fedd482074"
+            },
+            "srPinPlaced": {
+              "t": "Pin postavljen na geografsku širinu {lat}, geografska dužina {lon}",
+              "src": "machine",
+              "h": "6052606cef26"
+            },
+            "srCopied": {
+              "t": "Koordinate kopirane u clipboard",
+              "src": "machine",
+              "h": "9201f5c65f25"
+            },
+            "srUnsupportedSr": {
+              "t": "Ova mapa koristi prostornu referencu {wkid} koju grafički element ne može da konvertuje. Molim koristite Web Mercator ili WGS84 baznu mapu.",
+              "src": "machine",
+              "h": "3e253d64fbae"
+            },
+            "pleaseSelectMap": {
+              "t": "Molim vas izaberite mapu.",
+              "src": "machine",
+              "h": "7f1f0b5369d2"
+            },
+            "showZoom": {
+              "t": "Прикажи увеличањеQShortcut",
+              "src": "machine",
+              "h": "b6f899a6570e"
+            },
+            "showScale": {
+              "t": "Прикажи размеруQShortcut",
+              "src": "machine",
+              "h": "58392de2b866"
+            },
+            "buttonVisibilityLabel": {
+              "t": "Dugme Vidljivost",
+              "src": "machine",
+              "h": "addb04433332"
+            },
+            "showPictometry": {
+              "t": "Прикажи дугме за пиктометријуQShortcut",
+              "src": "machine",
+              "h": "d458064a249b"
+            },
+            "showGoogleStreetView": {
+              "t": "Прикажи дугме за приказ улица Гугл",
+              "src": "machine",
+              "h": "ae6200e41a96"
+            },
+            "showGoogleMaps3D": {
+              "t": "Прикажи Гугл мапе 3D дугме",
+              "src": "machine",
+              "h": "79e775e7fb7d"
+            },
+            "showBingSatellite": {
+              "t": "Прикажи дугме ~@ ¦Бинг¦Bing¦ satellitea¦",
+              "src": "machine",
+              "h": "373a4d5273d5"
+            },
+            "showBingStreetside": {
+              "t": "Прикажи дугме Bing Streetside",
+              "src": "machine",
+              "h": "c4976dfd97c2"
+            },
+            "showCopyButton": {
+              "t": "Прикажи копирано дугме Координате@ action: inmenu",
+              "src": "machine",
+              "h": "640e9c88dfa0"
+            },
+            "pictometryConfiguration": {
+              "t": "Подешавање пиктометријеComment",
+              "src": "machine",
+              "h": "0c3caf2c13b3"
+            },
+            "pictometryBaseUrl": {
+              "t": "УРЛ базе пиктометријеName",
+              "src": "machine",
+              "h": "16ce2bdbaf72"
+            },
+            "pictometryUrlHint": {
+              "t": "Унесите пун УРЛ укључујући .aspx фајл",
+              "src": "machine",
+              "h": "7987a58307b8"
+            },
+            "pictometryUrlPlaceholder": {
+              "t": "https://www.your-server.com/piktometrija/viewer.aspx",
+              "src": "machine",
+              "h": "c91568667515"
+            },
+            "helpIntro": {
+              "t": "Naðite geografsku širinu i dužinu bilo kog mesta na mapi, a onda skoèite na spoljnu sliku tog mesta.",
+              "src": "machine",
+              "h": "b38da414bc18"
+            },
+            "helpSearchPlaceholder": {
+              "t": "Pretraži vodiè (probajkopija ilipin",
+              "src": "machine",
+              "h": "1bc21efc096d"
+            },
+            "helpNoMatches": {
+              "t": "Ništa u vodièu ne odgovara toj reèi.",
+              "src": "machine",
+              "h": "3fe179f75330"
+            },
+            "firstRunTitle": {
+              "t": "Novi ovde?",
+              "src": "machine",
+              "h": "b81f2e17e001"
+            },
+            "firstRunBody": {
+              "t": "Kliknite na mesto na mapi, proèitajte njegove koordinate na vrhu, a onda izaberite dugme da vidite to mesto u drugom servisu za mape.",
+              "src": "machine",
+              "h": "231c25d78507"
+            },
+            "firstRunHelpLink": {
+              "t": "Otvori vodiè.",
+              "src": "machine",
+              "h": "2447dd6134ea"
+            },
+            "firstRunDismiss": {
+              "t": "Otpust.",
+              "src": "machine",
+              "h": "70afe9eff3f2"
+            },
+            "helpStartTitle": {
+              "t": "Poènite ovde: tri koraka.",
+              "src": "machine",
+              "h": "789320b4831d"
+            },
+            "helpStart1": {
+              "t": "Klikni na mesto na mapi koje želiš da pogledaš.",
+              "src": "machine",
+              "h": "666353535c1e"
+            },
+            "helpStart2": {
+              "t": "Proèitajte geografsku širinu i dužinu na vrhu grafičkog elementa. Oni se ažuriraju svaki put kada kliknete.",
+              "src": "machine",
+              "h": "9cfc9bd5e945"
+            },
+            "helpStart3": {
+              "t": "Klikni na jedno od dugmadi ispod koordinata{example}. Vanjski servisi otvaraju se u novoj kartici pretraživača.",
+              "src": "machine",
+              "h": "f6419911e426"
+            },
+            "helpStart3NoButtons": {
+              "t": "Koordinate se takođe pojavljuju u donjoj kutiji. Klikni u nju i pritisni Ctrl+C da ih kopiraš.",
+              "src": "machine",
+              "h": "e70b5a1bdd45"
+            },
+            "helpStartExampleOne": {
+              "t": ", kao što je {a}",
+              "src": "machine",
+              "h": "ecd240f2ba41"
+            },
+            "helpStartExampleTwo": {
+              "t": ", kao što su {a} ili {b}",
+              "src": "machine",
+              "h": "2e4b40fed9a1"
+            },
+            "helpReadTitle": {
+              "t": "Èitam brojeve.",
+              "src": "machine",
+              "h": "113dbfdcbab8"
+            },
+            "helpRead1": {
+              "t": "Širina je na prvom mestu, zatim na geografskoj dužini, oba u decimalnim stepenima sa osam decimalnih mesta.",
+              "src": "machine",
+              "h": "856a51a51e3e"
+            },
+            "helpRead2": {
+              "t": "Negativna dužina znaèi zapadno od Grinièa, a negativna širina znaèi južno od ekvatora.",
+              "src": "machine",
+              "h": "0fcf66f04859"
+            },
+            "helpReadZoom": {
+              "t": "Zoom je nivo uvećanja mape, a veæi broj znači da je mapa uvećana bliže.",
+              "src": "machine",
+              "h": "9620d28d8eca"
+            },
+            "helpReadScale": {
+              "t": "Skala je napisana kao 1 do broja, na primer 1:2400. Manji broj znači da je mapa uvećana bliže.",
+              "src": "machine",
+              "h": "756a7157b174"
+            },
+            "helpReadLive": {
+              "t": "Oni se menjaju dok zumirate ili izlazite, èak i pre nego što kliknete.",
+              "src": "machine",
+              "h": "a1f371500ec0"
+            },
+            "helpRead3": {
+              "t": "Brojevi opisuju mesto na koje ste kliknuli, a ne centar mape.",
+              "src": "machine",
+              "h": "3cdc1021d8e5"
+            },
+            "helpLinksTitle": {
+              "t": "Dugmad, jedan po jedan.",
+              "src": "machine",
+              "h": "e3e3b4976bc9"
+            },
+            "helpLinksIntro": {
+              "t": "Svako dugme otvara priklješteno mesto na drugom sajtu: {links}.",
+              "src": "machine",
+              "h": "bcc4c6da82d8"
+            },
+            "helpLinkPictometry": {
+              "t": "{name}: fotografije iz vazduha snimljene pod uglom, tako da možete da vidite strane zgrada. Koristi piktometriju vaše organizacije.",
+              "src": "machine",
+              "h": "bbaaf8c01d4c"
+            },
+            "helpLinkGoogleStreetView": {
+              "t": "{name}: fotografije snimljene sa ulice, kao da stojite tamo.",
+              "src": "machine",
+              "h": "d881316ccfa3"
+            },
+            "helpLinkGoogleMaps3D": {
+              "t": "{name}: satelitski pogled nagnut tako zgrade i prikaz terena u 3D.",
+              "src": "machine",
+              "h": "a5d1aea4cfe3"
+            },
+            "helpLinkBingSatellite": {
+              "t": "{name}: pravo-dole satelitski pogled iz Majkrosoft Binga.",
+              "src": "machine",
+              "h": "2db4e43cedd8"
+            },
+            "helpLinkBingStreetside": {
+              "t": "{name}: Majkrosoftove ulične fotografije, slične Strit View-u.",
+              "src": "machine",
+              "h": "531a2c2e4a4b"
+            },
+            "helpLinksGrey": {
+              "t": "Dugmad su siva dok ne kliknete na mapu.",
+              "src": "machine",
+              "h": "7c486a622903"
+            },
+            "helpLinksNewTab": {
+              "t": "Svako dugme otvara novu karticu pretraživača, tako da ova mapa ostaje tamo gde jeste. Zatvorite karticu da se vratite.",
+              "src": "machine",
+              "h": "7656c7dc8287"
+            },
+            "helpCopyTitle": {
+              "t": "Kopiram koordinate.",
+              "src": "machine",
+              "h": "8aba3dc99e15"
+            },
+            "helpCopyButton": {
+              "t": "Klikni {copy} da kopiraš koordinate. Dugme kaže {copied} za trenutak da potvrdimo.",
+              "src": "machine",
+              "h": "77c15924fb8f"
+            },
+            "helpCopyBox": {
+              "t": "Klikni u kutiju ispod dugmadi i pritisni Ctrl+C da kopiraš šta je u njoj.",
+              "src": "machine",
+              "h": "bd47276ffc72"
+            },
+            "helpCopyFormat": {
+              "t": "Kopirani tekst izgleda kao 39.06388889, -108.55083333, spreman da zalepi u pretinac ili e-mail.",
+              "src": "machine",
+              "h": "b8edf72a47b8"
+            },
+            "helpTroubleTitle": {
+              "t": "Ako nešto nije u redu",
+              "src": "machine",
+              "h": "6f7fec3ff1e0"
+            },
+            "helpTroubleGrey": {
+              "t": "Dugmad ostaju siva: još niste kliknuli na mapu. Kliknite prvo na mesto na mapi.",
+              "src": "machine",
+              "h": "aa535aab42eb"
+            },
+            "helpTroubleNoPin": {
+              "t": "Ništa se ne dešava kada kliknete na mapu: grafički element nije povezan sa mapom. Pitajte ko je napravio ovu aplikaciju da proveri postavke mape.",
+              "src": "machine",
+              "h": "74c90d6a293e"
+            },
+            "helpTroubleSpatialReference": {
+              "t": "Poruka kaže da prostorna referenca mape ne može biti konvertovana: ovaj grafički element čita Web Mercator, WGS84, UTM i Colorado State Plane maps. Pitajte ko je napravio ovu aplikaciju o koordinatnom sistemu mape.",
+              "src": "machine",
+              "h": "501dcc946da2"
+            },
+            "helpTroubleNoImagery": {
+              "t": "Dugme otvara stranicu bez slike: taj vebsajt nema slike za to mesto. Probajte mesto u blizini, ili neko drugo dugme.",
+              "src": "machine",
+              "h": "f4e008f23628"
+            },
+            "helpTroublePictometryLogin": {
+              "t": "Piktometrija traži od vas da se prijavite: Pregledniku Piktometrija je potreban sopstveni račun. Pitajte ko je napravio ovu aplikaciju da li bi je vi trebali imati.",
+              "src": "machine",
+              "h": "563ead7cea50"
+            },
+            "helpTroubleCopy": {
+              "t": "{copy} ne čini ništa: vaš pretraživač blokirao pristup clipboard-u. Klikni u okvir ispod dugmadi i pritisni Ctrl+C umesto toga.",
+              "src": "machine",
+              "h": "dfb6bd84b35f"
+            },
+            "helpTroublePopups": {
+              "t": "Mapa je prestala da se pojavljuje: oni su pauzirani dok je ovaj grafički element otvoren tako da vaš klik stavlja iglu umesto toga. Zatvorite grafički element da ih vratite.",
+              "src": "machine",
+              "h": "7d0160407041"
+            },
+            "helpTroubleContact": {
+              "t": "Kontaktirajte GIS diviziju i pomenite spoljnu mapu Koordinate i ovu aplikaciju.",
+              "src": "machine",
+              "h": "9069227b7c19"
+            },
+            "helpTipsTitle": {
+              "t": "Dobro je znati.",
+              "src": "machine",
+              "h": "79fc372dc790"
+            },
+            "helpTips1": {
+              "t": "Pritisni Esca da oèisti iglu i poène ispoèetka.",
+              "src": "machine",
+              "h": "eeaada4d3975"
+            },
+            "helpTips2": {
+              "t": "Klikni na novo mesto u bilo kom trenutku, igla i koordinate se pomeraju na novo mesto.",
+              "src": "machine",
+              "h": "c019b9aa12b7"
+            },
+            "helpTips3": {
+              "t": "Igla nestaje kada zatvorite vidžet. Kopirajte koordinate prvo ako želite da ih zadržite.",
+              "src": "machine",
+              "h": "363282b25bfc"
+            },
+            "unknownError": {
+              "t": "nepoznata greška",
+              "src": "machine",
+              "h": "af6321ca7a8b"
+            },
+            "unserializableError": {
+              "t": "Neserijalizacijska greška",
+              "src": "machine",
+              "h": "76e73551597a"
+            }
+          }
         },
         "sv": {
           "file": "ba56dbe17094",
@@ -1518,18 +2986,89 @@
           "entries": {}
         },
         "bs": {
-          "file": "2450180900a2",
+          "file": "6e086fb4dca5",
           "counts": {
             "esri": 3,
             "esri-check": 0,
             "community": 0,
             "manual": 0,
             "existing": 0,
-            "machine": 0,
+            "machine": 14,
             "stale": 0,
-            "missing": 14
+            "missing": 0
           },
-          "entries": {}
+          "entries": {
+            "showScale": {
+              "t": "Pokaži skalu",
+              "src": "machine",
+              "h": "58392de2b866"
+            },
+            "showZoom": {
+              "t": "Pokaži uvećanje",
+              "src": "machine",
+              "h": "b6f899a6570e"
+            },
+            "uiPictometryConfiguration": {
+              "t": "Podešavanje mrežnog proxy-a",
+              "src": "machine",
+              "h": "0c3caf2c13b3"
+            },
+            "uiPictometryBaseUrl": {
+              "t": "URL baze piktometrije",
+              "src": "machine",
+              "h": "16ce2bdbaf72"
+            },
+            "uiEnterTheFullUrlIncludingAspx": {
+              "t": "Unesite puni URL uključujući .aspx datoteku",
+              "src": "machine",
+              "h": "7987a58307b8"
+            },
+            "uiButtonVisibility": {
+              "t": "Vidljivost dugmadi",
+              "src": "machine",
+              "h": "addb04433332"
+            },
+            "uiShowHelpGuide": {
+              "t": "Pokaži vodič za pomoć",
+              "src": "machine",
+              "h": "03e9f0b81336"
+            },
+            "uiShowTheQuestionMarkButtonThat": {
+              "t": "Pokaži dugme sa znakom pitanja koje otvara vodič za pomoć grafičkog elementa",
+              "src": "machine",
+              "h": "62c4e81a84ca"
+            },
+            "showPictometryButton": {
+              "t": "Dugmad za piktometriju",
+              "src": "machine",
+              "h": "d458064a249b"
+            },
+            "showGoogleStreetViewButton": {
+              "t": "Dugmad za pogled na Google Street",
+              "src": "machine",
+              "h": "ae6200e41a96"
+            },
+            "showGoogleMaps3dButton": {
+              "t": "Pokaži Google mape 3D dugme",
+              "src": "machine",
+              "h": "79e775e7fb7d"
+            },
+            "showBingSatelliteButton": {
+              "t": "Dugmad sa satelitom u Bingu",
+              "src": "machine",
+              "h": "373a4d5273d5"
+            },
+            "showBingStreetsideButton": {
+              "t": "Dugmad za Bing Streetside",
+              "src": "machine",
+              "h": "c4976dfd97c2"
+            },
+            "showCopyCoordinatesButton": {
+              "t": "Dugmad za _kopiranje",
+              "src": "machine",
+              "h": "640e9c88dfa0"
+            }
+          }
         },
         "ca": {
           "file": "02123e44548b",
@@ -1694,18 +3233,89 @@
           }
         },
         "hr": {
-          "file": "2450180900a2",
+          "file": "03d7b2b0e86d",
           "counts": {
             "esri": 3,
             "esri-check": 0,
             "community": 0,
             "manual": 0,
             "existing": 0,
-            "machine": 0,
+            "machine": 14,
             "stale": 0,
-            "missing": 14
+            "missing": 0
           },
-          "entries": {}
+          "entries": {
+            "showScale": {
+              "t": "Prikaži skalu",
+              "src": "machine",
+              "h": "58392de2b866"
+            },
+            "showZoom": {
+              "t": "Pokaži uvećanje",
+              "src": "machine",
+              "h": "b6f899a6570e"
+            },
+            "uiPictometryConfiguration": {
+              "t": "Podešavanje piktometrija",
+              "src": "machine",
+              "h": "0c3caf2c13b3"
+            },
+            "uiPictometryBaseUrl": {
+              "t": "URL baze piktometrija",
+              "src": "machine",
+              "h": "16ce2bdbaf72"
+            },
+            "uiEnterTheFullUrlIncludingAspx": {
+              "t": "Unesite puni URL uključujući .aspx datoteku",
+              "src": "machine",
+              "h": "7987a58307b8"
+            },
+            "uiButtonVisibility": {
+              "t": "Vidljivost gumba",
+              "src": "machine",
+              "h": "addb04433332"
+            },
+            "uiShowHelpGuide": {
+              "t": "Prikaži vodič pomoći",
+              "src": "machine",
+              "h": "03e9f0b81336"
+            },
+            "uiShowTheQuestionMarkButtonThat": {
+              "t": "Prikaži gumb s upitnikom koji otvara vodič za pomoć widgetu",
+              "src": "machine",
+              "h": "62c4e81a84ca"
+            },
+            "showPictometryButton": {
+              "t": "Prikaži tipku za piktometriju",
+              "src": "machine",
+              "h": "d458064a249b"
+            },
+            "showGoogleStreetViewButton": {
+              "t": "Prikaži gumb Google Street View",
+              "src": "machine",
+              "h": "ae6200e41a96"
+            },
+            "showGoogleMaps3dButton": {
+              "t": "Prikaži Google mape 3D gumb",
+              "src": "machine",
+              "h": "79e775e7fb7d"
+            },
+            "showBingSatelliteButton": {
+              "t": "Prikaži gumb Bing satelita",
+              "src": "machine",
+              "h": "373a4d5273d5"
+            },
+            "showBingStreetsideButton": {
+              "t": "Prikaži Bing Streetside gumb",
+              "src": "machine",
+              "h": "c4976dfd97c2"
+            },
+            "showCopyCoordinatesButton": {
+              "t": "Prikaži gumb za koordinate Kopiraja",
+              "src": "machine",
+              "h": "640e9c88dfa0"
+            }
+          }
         },
         "hu": {
           "file": "995e59fd4296",
@@ -1944,18 +3554,89 @@
           "entries": {}
         },
         "sr": {
-          "file": "1e80079eea75",
+          "file": "5ea2e871f04a",
           "counts": {
             "esri": 3,
             "esri-check": 0,
             "community": 0,
             "manual": 0,
             "existing": 0,
-            "machine": 0,
+            "machine": 14,
             "stale": 0,
-            "missing": 14
+            "missing": 0
           },
-          "entries": {}
+          "entries": {
+            "showScale": {
+              "t": "Прикажи размеруQShortcut",
+              "src": "machine",
+              "h": "58392de2b866"
+            },
+            "showZoom": {
+              "t": "Прикажи увеличањеQShortcut",
+              "src": "machine",
+              "h": "b6f899a6570e"
+            },
+            "uiPictometryConfiguration": {
+              "t": "Подешавање пиктометријеComment",
+              "src": "machine",
+              "h": "0c3caf2c13b3"
+            },
+            "uiPictometryBaseUrl": {
+              "t": "УРЛ базе пиктометријеName",
+              "src": "machine",
+              "h": "16ce2bdbaf72"
+            },
+            "uiEnterTheFullUrlIncludingAspx": {
+              "t": "Унесите пун УРЛ укључујући .aspx фајл",
+              "src": "machine",
+              "h": "7987a58307b8"
+            },
+            "uiButtonVisibility": {
+              "t": "Dugme Vidljivost",
+              "src": "machine",
+              "h": "addb04433332"
+            },
+            "uiShowHelpGuide": {
+              "t": "Pokaži vodič za pomoć",
+              "src": "machine",
+              "h": "03e9f0b81336"
+            },
+            "uiShowTheQuestionMarkButtonThat": {
+              "t": "Prikaži dugme sa znakom pitanja koje otvara vodič za pomoć grafičkom elementu",
+              "src": "machine",
+              "h": "62c4e81a84ca"
+            },
+            "showPictometryButton": {
+              "t": "Прикажи дугме за пиктометријуQShortcut",
+              "src": "machine",
+              "h": "d458064a249b"
+            },
+            "showGoogleStreetViewButton": {
+              "t": "Прикажи дугме за приказ улица Гугл",
+              "src": "machine",
+              "h": "ae6200e41a96"
+            },
+            "showGoogleMaps3dButton": {
+              "t": "Прикажи Гугл мапе 3D дугме",
+              "src": "machine",
+              "h": "79e775e7fb7d"
+            },
+            "showBingSatelliteButton": {
+              "t": "Прикажи дугме ~@ ¦Бинг¦Bing¦ satellitea¦",
+              "src": "machine",
+              "h": "373a4d5273d5"
+            },
+            "showBingStreetsideButton": {
+              "t": "Прикажи дугме Bing Streetside",
+              "src": "machine",
+              "h": "c4976dfd97c2"
+            },
+            "showCopyCoordinatesButton": {
+              "t": "Прикажи копирано дугме Координате@ action: inmenu",
+              "src": "machine",
+              "h": "640e9c88dfa0"
+            }
+          }
         },
         "sv": {
           "file": "36fa24d7742f",

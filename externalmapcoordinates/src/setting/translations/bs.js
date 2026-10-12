@@ -5,21 +5,21 @@ System.register([], function (e) {
       e({
         selectMapWidget: "Odaberi widget karte",
         settings: "Postavke",
-        showScale: "Show Scale",
-        showZoom: "Show Zoom",
-        uiPictometryConfiguration: "Pictometry Configuration",
-        uiPictometryBaseUrl: "Pictometry Base URL",
-        uiEnterTheFullUrlIncludingAspx: "Enter the full URL including .aspx file",
-        uiButtonVisibility: "Button Visibility",
+        showScale: "Pokaži skalu",
+        showZoom: "Pokaži uvećanje",
+        uiPictometryConfiguration: "Podešavanje mrežnog proxy-a",
+        uiPictometryBaseUrl: "URL baze piktometrije",
+        uiEnterTheFullUrlIncludingAspx: "Unesite puni URL uključujući .aspx datoteku",
+        uiButtonVisibility: "Vidljivost dugmadi",
         uiHelp: "Pomoć",
-        uiShowHelpGuide: "Show help guide",
-        uiShowTheQuestionMarkButtonThat: "Show the question-mark button that opens the widget help guide",
-        showPictometryButton: "Show Pictometry Button",
-        showGoogleStreetViewButton: "Show Google Street View Button",
-        showGoogleMaps3dButton: "Show Google Maps 3D Button",
-        showBingSatelliteButton: "Show Bing Satellite Button",
-        showBingStreetsideButton: "Show Bing Streetside Button",
-        showCopyCoordinatesButton: "Show Copy Coordinates Button"
+        uiShowHelpGuide: "Pokaži vodič za pomoć",
+        uiShowTheQuestionMarkButtonThat: "Pokaži dugme sa znakom pitanja koje otvara vodič za pomoć grafičkog elementa",
+        showPictometryButton: "Dugmad za piktometriju",
+        showGoogleStreetViewButton: "Dugmad za pogled na Google Street",
+        showGoogleMaps3dButton: "Pokaži Google mape 3D dugme",
+        showBingSatelliteButton: "Dugmad sa satelitom u Bingu",
+        showBingStreetsideButton: "Dugmad za Bing Streetside",
+        showCopyCoordinatesButton: "Dugmad za _kopiranje"
       })
     }
   }

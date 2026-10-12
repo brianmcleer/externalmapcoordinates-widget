@@ -5,21 +5,21 @@ System.register([], function (e) {
       e({
         selectMapWidget: "Izaberite vidžet za mapu",
         settings: "Podešavanja",
-        showScale: "Show Scale",
-        showZoom: "Show Zoom",
-        uiPictometryConfiguration: "Pictometry Configuration",
-        uiPictometryBaseUrl: "Pictometry Base URL",
-        uiEnterTheFullUrlIncludingAspx: "Enter the full URL including .aspx file",
-        uiButtonVisibility: "Button Visibility",
+        showScale: "Прикажи размеруQShortcut",
+        showZoom: "Прикажи увеличањеQShortcut",
+        uiPictometryConfiguration: "Подешавање пиктометријеComment",
+        uiPictometryBaseUrl: "УРЛ базе пиктометријеName",
+        uiEnterTheFullUrlIncludingAspx: "Унесите пун УРЛ укључујући .aspx фајл",
+        uiButtonVisibility: "Dugme Vidljivost",
         uiHelp: "Pomoć",
-        uiShowHelpGuide: "Show help guide",
-        uiShowTheQuestionMarkButtonThat: "Show the question-mark button that opens the widget help guide",
-        showPictometryButton: "Show Pictometry Button",
-        showGoogleStreetViewButton: "Show Google Street View Button",
-        showGoogleMaps3dButton: "Show Google Maps 3D Button",
-        showBingSatelliteButton: "Show Bing Satellite Button",
-        showBingStreetsideButton: "Show Bing Streetside Button",
-        showCopyCoordinatesButton: "Show Copy Coordinates Button"
+        uiShowHelpGuide: "Pokaži vodič za pomoć",
+        uiShowTheQuestionMarkButtonThat: "Prikaži dugme sa znakom pitanja koje otvara vodič za pomoć grafičkom elementu",
+        showPictometryButton: "Прикажи дугме за пиктометријуQShortcut",
+        showGoogleStreetViewButton: "Прикажи дугме за приказ улица Гугл",
+        showGoogleMaps3dButton: "Прикажи Гугл мапе 3D дугме",
+        showBingSatelliteButton: "Прикажи дугме ~@ ¦Бинг¦Bing¦ satellitea¦",
+        showBingStreetsideButton: "Прикажи дугме Bing Streetside",
+        showCopyCoordinatesButton: "Прикажи копирано дугме Координате@ action: inmenu"
       })
     }
   }

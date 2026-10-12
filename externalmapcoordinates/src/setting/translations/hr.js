@@ -5,21 +5,21 @@ System.register([], function (e) {
       e({
         selectMapWidget: "Odaberi widget karte",
         settings: "Postavke",
-        showScale: "Show Scale",
-        showZoom: "Show Zoom",
-        uiPictometryConfiguration: "Pictometry Configuration",
-        uiPictometryBaseUrl: "Pictometry Base URL",
-        uiEnterTheFullUrlIncludingAspx: "Enter the full URL including .aspx file",
-        uiButtonVisibility: "Button Visibility",
+        showScale: "Prikaži skalu",
+        showZoom: "Pokaži uvećanje",
+        uiPictometryConfiguration: "Podešavanje piktometrija",
+        uiPictometryBaseUrl: "URL baze piktometrija",
+        uiEnterTheFullUrlIncludingAspx: "Unesite puni URL uključujući .aspx datoteku",
+        uiButtonVisibility: "Vidljivost gumba",
         uiHelp: "Pomoć",
-        uiShowHelpGuide: "Show help guide",
-        uiShowTheQuestionMarkButtonThat: "Show the question-mark button that opens the widget help guide",
-        showPictometryButton: "Show Pictometry Button",
-        showGoogleStreetViewButton: "Show Google Street View Button",
-        showGoogleMaps3dButton: "Show Google Maps 3D Button",
-        showBingSatelliteButton: "Show Bing Satellite Button",
-        showBingStreetsideButton: "Show Bing Streetside Button",
-        showCopyCoordinatesButton: "Show Copy Coordinates Button"
+        uiShowHelpGuide: "Prikaži vodič pomoći",
+        uiShowTheQuestionMarkButtonThat: "Prikaži gumb s upitnikom koji otvara vodič za pomoć widgetu",
+        showPictometryButton: "Prikaži tipku za piktometriju",
+        showGoogleStreetViewButton: "Prikaži gumb Google Street View",
+        showGoogleMaps3dButton: "Prikaži Google mape 3D gumb",
+        showBingSatelliteButton: "Prikaži gumb Bing satelita",
+        showBingStreetsideButton: "Prikaži Bing Streetside gumb",
+        showCopyCoordinatesButton: "Prikaži gumb za koordinate Kopiraja"
       })
     }
   }
